@@ -1,1 +1,9 @@
-{}
+{
+  "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+  "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
+  "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
+  "item.deathnote.book_of_death": "Book Of Death",
+  "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
+  "item_group.deathnote.death": "Death",
+  "gui.deathnote.skillls.button_skill1": "Skill1"
+}

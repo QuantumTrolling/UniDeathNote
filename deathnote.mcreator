@@ -1,9 +1,152 @@
 {
-  "mod_elements": [],
-  "variable_elements": [],
+  "mod_elements": [
+    {
+      "name": "BookOfDeath",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "book_of_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/item/BookOfDeathItem.java",
+          "src/main/resources/assets/deathnote/models/item/book_of_death.json"
+        ]
+      }
+    },
+    {
+      "name": "Death",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "death",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "Skillls",
+      "type": "gui",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skillls",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/world/inventory/SkilllsMenu.java",
+          "src/main/java/net/mcreator/deathnote/network/SkilllsButtonMessage.java",
+          "src/main/java/net/mcreator/deathnote/client/gui/SkilllsScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "BookOfDeathRightclicked",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "book_of_death_rightclicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/BookOfDeathRightclickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GhostlyHunger",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostly_hunger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/GhostlyHungerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SkillHunger",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "skill_hunger",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SkillHungerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "GhostlyHunger",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "isRecoveringFood",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+      "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
+      "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
+      "item.deathnote.book_of_death": "Book Of Death",
+      "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
+      "item_group.deathnote.death": "Death",
+      "gui.deathnote.skillls.button_skill1": "Skill1"
+    }
   },
   "foldersRoot": {
     "name": "~",

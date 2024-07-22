@@ -29,6 +29,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.deathnote.init.DeathnoteModTabs;
+import net.mcreator.deathnote.init.DeathnoteModMenus;
+import net.mcreator.deathnote.init.DeathnoteModItems;
+
 import java.util.function.Supplier;
 import java.util.function.Function;
 import java.util.function.BiConsumer;
@@ -47,6 +51,11 @@ public class DeathnoteMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		DeathnoteModItems.REGISTRY.register(bus);
+
+		DeathnoteModTabs.REGISTRY.register(bus);
+
+		DeathnoteModMenus.REGISTRY.register(bus);
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
