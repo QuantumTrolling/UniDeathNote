@@ -67,7 +67,8 @@ public class DeathnoteModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.GhostlyHunger = original.GhostlyHunger;
-			clone.isRecoveringFood = original.isRecoveringFood;
+			clone.HungerActivated = original.HungerActivated;
+			clone.foodLevel = original.foodLevel;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -105,7 +106,8 @@ public class DeathnoteModVariables {
 
 	public static class PlayerVariables {
 		public boolean GhostlyHunger = false;
-		public boolean isRecoveringFood = false;
+		public boolean HungerActivated = false;
+		public double foodLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -115,14 +117,16 @@ public class DeathnoteModVariables {
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("GhostlyHunger", GhostlyHunger);
-			nbt.putBoolean("isRecoveringFood", isRecoveringFood);
+			nbt.putBoolean("HungerActivated", HungerActivated);
+			nbt.putDouble("foodLevel", foodLevel);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
 			GhostlyHunger = nbt.getBoolean("GhostlyHunger");
-			isRecoveringFood = nbt.getBoolean("isRecoveringFood");
+			HungerActivated = nbt.getBoolean("HungerActivated");
+			foodLevel = nbt.getDouble("foodLevel");
 		}
 	}
 
@@ -148,7 +152,8 @@ public class DeathnoteModVariables {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.GhostlyHunger = message.data.GhostlyHunger;
-					variables.isRecoveringFood = message.data.isRecoveringFood;
+					variables.HungerActivated = message.data.HungerActivated;
+					variables.foodLevel = message.data.foodLevel;
 				}
 			});
 			context.setPacketHandled(true);

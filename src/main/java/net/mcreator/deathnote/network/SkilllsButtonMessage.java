@@ -64,7 +64,7 @@ public class SkilllsButtonMessage {
 			return;
 		if (buttonID == 1) {
 
-			GhostlyHungerProcedure.execute(world, entity);
+			GhostlyHungerProcedure.execute(entity);
 		}
 	}
 

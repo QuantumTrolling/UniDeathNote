@@ -45,7 +45,7 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 136 && mouseX < leftPos + 160 && mouseY > topPos + 13 && mouseY < topPos + 37)
+		if (mouseX > leftPos + 137 && mouseX < leftPos + 161 && mouseY > topPos + 13 && mouseY < topPos + 37)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_empty"), mouseX, mouseY);
 		if (mouseX > leftPos + 110 && mouseX < leftPos + 134 && mouseY > topPos + 40 && mouseY < topPos + 64)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_empty1"), mouseX, mouseY);

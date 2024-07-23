@@ -90,10 +90,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -120,6 +116,29 @@
           }
         ]
       }
+    },
+    {
+      "name": "OnFoodEating",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_food_eating",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/OnFoodEatingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -130,10 +149,16 @@
       "value": "false"
     },
     {
-      "name": "isRecoveringFood",
+      "name": "HungerActivated",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "foodLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],

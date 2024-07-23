@@ -8,7 +8,6 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -32,26 +31,18 @@ public class SkillHungerProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
-			if ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) != 20 && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).isRecoveringFood) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Yep +1"), false);
+			if ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) < 20
+					&& (entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) != (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).foodLevel) {
 				{
-					boolean _setval = true;
+					double _setval = entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.isRecoveringFood = _setval;
+						capability.foodLevel = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				if (entity instanceof Player _player)
-					_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) + 1));
-				DeathnoteMod.queueServerWork(120, () -> {
-					{
-						boolean _setval = false;
-						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.isRecoveringFood = _setval;
-							capability.syncPlayerVariables(entity);
-						});
-					}
+				DeathnoteMod.queueServerWork(240, () -> {
+					if (entity instanceof Player _player)
+						_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) + 1));
 				});
 			}
 		}
