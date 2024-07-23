@@ -41,6 +41,13 @@ public class OnFoodEatingProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.GhotlyHungerLevel = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		}
 	}

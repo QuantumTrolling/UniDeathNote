@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
+import net.mcreator.deathnote.procedures.VengefulSpiritProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
@@ -62,9 +63,13 @@ public class SkilllsButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 1) {
+		if (buttonID == 0) {
 
 			GhostlyHungerProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			VengefulSpiritProcedure.execute(entity);
 		}
 	}
 

@@ -22,10 +22,8 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	ImageButton imagebutton_icon_star;
-	ImageButton imagebutton_icon_star1;
-	ImageButton imagebutton_icon_star2;
-	ImageButton imagebutton_icon_star3;
+	ImageButton imagebutton_skillgui;
+	ImageButton imagebutton_skillgui1;
 
 	public SkilllsScreen(SkilllsMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -38,21 +36,15 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("deathnote:textures/screens/skillls.png");
-
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 137 && mouseX < leftPos + 161 && mouseY > topPos + 13 && mouseY < topPos + 37)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_empty"), mouseX, mouseY);
-		if (mouseX > leftPos + 110 && mouseX < leftPos + 134 && mouseY > topPos + 40 && mouseY < topPos + 64)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_empty1"), mouseX, mouseY);
-		if (mouseX > leftPos + 65 && mouseX < leftPos + 89 && mouseY > topPos + 28 && mouseY < topPos + 52)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_maghnitokiniez"), mouseX, mouseY);
-		if (mouseX > leftPos + 104 && mouseX < leftPos + 128 && mouseY > topPos + 81 && mouseY < topPos + 105)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_biestieliesnost"), mouseX, mouseY);
+		if (mouseX > leftPos + 154 && mouseX < leftPos + 178 && mouseY > topPos + 10 && mouseY < topPos + 34)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_prizrachnyi_gholod"), mouseX, mouseY);
+		if (mouseX > leftPos + 135 && mouseX < leftPos + 159 && mouseY > topPos + 62 && mouseY < topPos + 86)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_mstitielnyi_dukh"), mouseX, mouseY);
 	}
 
 	@Override
@@ -60,7 +52,9 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui1.png"), this.leftPos + -38, this.topPos + -11, 0, 0, 250, 180, 250, 180);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -90,25 +84,21 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_icon_star = new ImageButton(this.leftPos + 114, this.topPos + 43, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_icon_star.png"), 16, 32, e -> {
+		imagebutton_skillgui = new ImageButton(this.leftPos + 150, this.topPos + 7, 32, 32, 0, 0, 32, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_skillgui.png"), 32, 64, e -> {
+			if (true) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new SkilllsButtonMessage(0, x, y, z));
+				SkilllsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
 		});
-		guistate.put("button:imagebutton_icon_star", imagebutton_icon_star);
-		this.addRenderableWidget(imagebutton_icon_star);
-		imagebutton_icon_star1 = new ImageButton(this.leftPos + 141, this.topPos + 16, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_icon_star1.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_skillgui", imagebutton_skillgui);
+		this.addRenderableWidget(imagebutton_skillgui);
+		imagebutton_skillgui1 = new ImageButton(this.leftPos + 131, this.topPos + 58, 32, 32, 0, 0, 32, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_skillgui1.png"), 32, 64, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SkilllsButtonMessage(1, x, y, z));
 				SkilllsButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_icon_star1", imagebutton_icon_star1);
-		this.addRenderableWidget(imagebutton_icon_star1);
-		imagebutton_icon_star2 = new ImageButton(this.leftPos + 69, this.topPos + 31, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_icon_star2.png"), 16, 32, e -> {
-		});
-		guistate.put("button:imagebutton_icon_star2", imagebutton_icon_star2);
-		this.addRenderableWidget(imagebutton_icon_star2);
-		imagebutton_icon_star3 = new ImageButton(this.leftPos + 108, this.topPos + 84, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_icon_star3.png"), 16, 32, e -> {
-		});
-		guistate.put("button:imagebutton_icon_star3", imagebutton_icon_star3);
-		this.addRenderableWidget(imagebutton_icon_star3);
+		guistate.put("button:imagebutton_skillgui1", imagebutton_skillgui1);
+		this.addRenderableWidget(imagebutton_skillgui1);
 	}
 }

@@ -7,102 +7,68 @@
     "height": 166,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
-    "renderBgLayer": true,
+    "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
       {
+        "type": "image",
+        "data": {
+          "image": "gui1.png",
+          "use1Xscale": false,
+          "x": 87,
+          "y": 26
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillgui",
+          "image": "skillgui.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHunger"
+          },
+          "x": 276,
+          "y": 44
+        }
+      },
+      {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_empty",
+          "name": "tooltip_prizrachnyi_gholod",
           "text": {
             "fixedValue": "Призрачный голод"
           },
           "width": 24,
           "height": 24,
-          "x": 263,
-          "y": 50
+          "x": 280,
+          "y": 47
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_icon_star",
-          "image": "icon_star.png",
-          "hoveredImage": "",
-          "x": 240,
-          "y": 80
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_icon_star1",
-          "image": "icon_star.png",
+          "name": "imagebutton_skillgui1",
+          "image": "skillgui.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "GhostlyHunger"
+            "name": "VengefulSpirit"
           },
-          "x": 267,
-          "y": 53
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_icon_star2",
-          "image": "icon_star.png",
-          "hoveredImage": "",
-          "x": 195,
-          "y": 68
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_icon_star3",
-          "image": "icon_star.png",
-          "hoveredImage": "",
-          "x": 234,
-          "y": 121
+          "x": 257,
+          "y": 95
         }
       },
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_empty1",
+          "name": "tooltip_mstitielnyi_dukh",
           "text": {
-            "fixedValue": "Мстительный дух:"
+            "fixedValue": "Мстительный дух"
           },
           "width": 24,
           "height": 24,
-          "x": 236,
-          "y": 77
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_maghnitokiniez",
-          "text": {
-            "fixedValue": "Магнитокинез"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 191,
-          "y": 65
-        }
-      },
-      {
-        "type": "tooltip",
-        "data": {
-          "name": "tooltip_biestieliesnost",
-          "text": {
-            "fixedValue": "Бестелесность"
-          },
-          "width": 24,
-          "height": 24,
-          "x": 230,
-          "y": 118
+          "x": 261,
+          "y": 99
         }
       }
     ],

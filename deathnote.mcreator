@@ -139,6 +139,149 @@
           }
         ]
       }
+    },
+    {
+      "name": "GhostlyHungerTask",
+      "type": "overlay",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostly_hunger_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/GhostlyHungerTaskOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowGhotstlyHungerTask",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_ghotstly_hunger_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowGhotstlyHungerTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpirit",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/VengefulSpiritProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritTask",
+      "type": "overlay",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/VengefulSpiritTaskOverlay.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowVengefulSpiritTask",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_vengeful_spirit_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpiritEffects",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_effects",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SpiritEffectsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SpiritEffectsReciver",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_effects_reciver",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SpiritEffectsReciverProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -149,7 +292,7 @@
       "value": "false"
     },
     {
-      "name": "HungerActivated",
+      "name": "GhostlyHungerButton",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -159,18 +302,48 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "GhotlyHungerLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "VengefulSpirit",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "VengefulspiritButton",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "NimberofEffect",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+      "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
-      "item.deathnote.book_of_death": "Book Of Death",
+      "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
+      "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
+      "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "item_group.deathnote.death": "Death",
-      "gui.deathnote.skillls.button_skill1": "Skill1"
+      "gui.deathnote.skillls.button_skill1": "Skill1",
+      "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+      "item.deathnote.book_of_death": "Book Of Death",
+      "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
+      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить"
     }
   },
   "foldersRoot": {

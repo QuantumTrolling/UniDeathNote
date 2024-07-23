@@ -1,9 +1,15 @@
 {
-  "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+  "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
   "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
   "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
-  "item.deathnote.book_of_death": "Book Of Death",
+  "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
+  "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
+  "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
   "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
   "item_group.deathnote.death": "Death",
-  "gui.deathnote.skillls.button_skill1": "Skill1"
+  "gui.deathnote.skillls.button_skill1": "Skill1",
+  "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
+  "item.deathnote.book_of_death": "Book Of Death",
+  "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
+  "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить"
 }
