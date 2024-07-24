@@ -68,11 +68,12 @@ public class DeathnoteModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.GhostlyHunger = original.GhostlyHunger;
 			clone.GhostlyHungerButton = original.GhostlyHungerButton;
-			clone.foodLevel = original.foodLevel;
-			clone.GhotlyHungerLevel = original.GhotlyHungerLevel;
 			clone.VengefulSpirit = original.VengefulSpirit;
 			clone.VengefulspiritButton = original.VengefulspiritButton;
+			clone.foodLevel = original.foodLevel;
+			clone.GhotlyHungerLevel = original.GhotlyHungerLevel;
 			clone.NimberofEffect = original.NimberofEffect;
+			clone.VengefulSpiritLevel = original.VengefulSpiritLevel;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -111,11 +112,12 @@ public class DeathnoteModVariables {
 	public static class PlayerVariables {
 		public boolean GhostlyHunger = false;
 		public boolean GhostlyHungerButton = false;
-		public double foodLevel = 0;
-		public double GhotlyHungerLevel = 0;
 		public boolean VengefulSpirit = false;
 		public boolean VengefulspiritButton = false;
+		public double foodLevel = 0;
+		public double GhotlyHungerLevel = 0;
 		public double NimberofEffect = 0;
+		public double VengefulSpiritLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -126,11 +128,12 @@ public class DeathnoteModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("GhostlyHunger", GhostlyHunger);
 			nbt.putBoolean("GhostlyHungerButton", GhostlyHungerButton);
-			nbt.putDouble("foodLevel", foodLevel);
-			nbt.putDouble("GhotlyHungerLevel", GhotlyHungerLevel);
 			nbt.putBoolean("VengefulSpirit", VengefulSpirit);
 			nbt.putBoolean("VengefulspiritButton", VengefulspiritButton);
+			nbt.putDouble("foodLevel", foodLevel);
+			nbt.putDouble("GhotlyHungerLevel", GhotlyHungerLevel);
 			nbt.putDouble("NimberofEffect", NimberofEffect);
+			nbt.putDouble("VengefulSpiritLevel", VengefulSpiritLevel);
 			return nbt;
 		}
 
@@ -138,11 +141,12 @@ public class DeathnoteModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			GhostlyHunger = nbt.getBoolean("GhostlyHunger");
 			GhostlyHungerButton = nbt.getBoolean("GhostlyHungerButton");
-			foodLevel = nbt.getDouble("foodLevel");
-			GhotlyHungerLevel = nbt.getDouble("GhotlyHungerLevel");
 			VengefulSpirit = nbt.getBoolean("VengefulSpirit");
 			VengefulspiritButton = nbt.getBoolean("VengefulspiritButton");
+			foodLevel = nbt.getDouble("foodLevel");
+			GhotlyHungerLevel = nbt.getDouble("GhotlyHungerLevel");
 			NimberofEffect = nbt.getDouble("NimberofEffect");
+			VengefulSpiritLevel = nbt.getDouble("VengefulSpiritLevel");
 		}
 	}
 
@@ -169,11 +173,12 @@ public class DeathnoteModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.GhostlyHunger = message.data.GhostlyHunger;
 					variables.GhostlyHungerButton = message.data.GhostlyHungerButton;
-					variables.foodLevel = message.data.foodLevel;
-					variables.GhotlyHungerLevel = message.data.GhotlyHungerLevel;
 					variables.VengefulSpirit = message.data.VengefulSpirit;
 					variables.VengefulspiritButton = message.data.VengefulspiritButton;
+					variables.foodLevel = message.data.foodLevel;
+					variables.GhotlyHungerLevel = message.data.GhotlyHungerLevel;
 					variables.NimberofEffect = message.data.NimberofEffect;
+					variables.VengefulSpiritLevel = message.data.VengefulSpiritLevel;
 				}
 			});
 			context.setPacketHandled(true);

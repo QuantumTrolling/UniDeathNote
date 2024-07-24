@@ -298,18 +298,6 @@
       "value": "false"
     },
     {
-      "name": "foodLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "GhotlyHungerLevel",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "VengefulSpirit",
       "type": "logic",
       "scope": "player_persistent",
@@ -322,7 +310,25 @@
       "value": "false"
     },
     {
+      "name": "foodLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GhotlyHungerLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "NimberofEffect",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "VengefulSpiritLevel",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
@@ -335,8 +341,8 @@
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
-      "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
+      "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "item_group.deathnote.death": "Death",
       "gui.deathnote.skillls.button_skill1": "Skill1",
