@@ -11,7 +11,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.client.gui.screens.MenuScreens;
 
+import net.mcreator.deathnote.client.gui.VengefulSpiritGUIScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
+import net.mcreator.deathnote.client.gui.GhostlyHungerGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DeathnoteModScreens {
@@ -19,6 +21,8 @@ public class DeathnoteModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(DeathnoteModMenus.SKILLLS.get(), SkilllsScreen::new);
+			MenuScreens.register(DeathnoteModMenus.GHOSTLY_HUNGER_GUI.get(), GhostlyHungerGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.VENGEFUL_SPIRIT_GUI.get(), VengefulSpiritGUIScreen::new);
 		});
 	}
 }

@@ -282,6 +282,129 @@
           }
         ]
       }
+    },
+    {
+      "name": "GhostlyHungerGUI",
+      "type": "gui",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostly_hunger_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/network/GhostlyHungerGUIButtonMessage.java",
+          "src/main/java/net/mcreator/deathnote/world/inventory/GhostlyHungerGUIMenu.java",
+          "src/main/java/net/mcreator/deathnote/client/gui/GhostlyHungerGUIScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "GhostlyHungerGUIShow",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostly_hunger_gui_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/GhostlyHungerGUIShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritGUI",
+      "type": "gui",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/gui/VengefulSpiritGUIScreen.java",
+          "src/main/java/net/mcreator/deathnote/world/inventory/VengefulSpiritGUIMenu.java",
+          "src/main/java/net/mcreator/deathnote/network/VengefulSpiritGUIButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritGUIShow",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_gui_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/VengefulSpiritGUIShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritDebuff",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_debuff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/VengefulSpiritDebuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -332,24 +455,43 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "SpiritDebuff",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "в зависимости от моба который вас убил",
       "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
+      "gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Мертвецкий голод] - Съесть гнилую плоть",
+      "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
+      "gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Еда больше не восполняет тебе голод",
+      "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух:",
+      "item_group.deathnote.death": "Death",
+      "gui.deathnote.skillls.button_skill1": "Skill1",
+      "gui.deathnote.ghostly_hunger_gui.button_priniat": "Принять",
+      "item.deathnote.book_of_death": "Book Of Death",
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
-      "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
+      "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод восполняется сам",
+      "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти получаете бесконечный эффект",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
-      "item_group.deathnote.death": "Death",
-      "gui.deathnote.skillls.button_skill1": "Skill1",
+      "gui.deathnote.vengeful_spirit_gui.button_priniat": "Принять",
+      "gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Твое здоровье снижается (-20% макс здоровья) ",
+      "gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:  +1 уровень к эффекту",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
-      "item.deathnote.book_of_death": "Book Of Death",
+      "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику упокоить нежить",
       "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
-      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить"
+      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить",
+      "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод:",
+      "gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +1 ед сытости в минуту (за каждый уровень)"
     }
   },
   "foldersRoot": {

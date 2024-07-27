@@ -74,6 +74,7 @@ public class DeathnoteModVariables {
 			clone.GhotlyHungerLevel = original.GhotlyHungerLevel;
 			clone.NimberofEffect = original.NimberofEffect;
 			clone.VengefulSpiritLevel = original.VengefulSpiritLevel;
+			clone.SpiritDebuff = original.SpiritDebuff;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -118,6 +119,7 @@ public class DeathnoteModVariables {
 		public double GhotlyHungerLevel = 0;
 		public double NimberofEffect = 0;
 		public double VengefulSpiritLevel = 0;
+		public double SpiritDebuff = 10.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -134,6 +136,7 @@ public class DeathnoteModVariables {
 			nbt.putDouble("GhotlyHungerLevel", GhotlyHungerLevel);
 			nbt.putDouble("NimberofEffect", NimberofEffect);
 			nbt.putDouble("VengefulSpiritLevel", VengefulSpiritLevel);
+			nbt.putDouble("SpiritDebuff", SpiritDebuff);
 			return nbt;
 		}
 
@@ -147,6 +150,7 @@ public class DeathnoteModVariables {
 			GhotlyHungerLevel = nbt.getDouble("GhotlyHungerLevel");
 			NimberofEffect = nbt.getDouble("NimberofEffect");
 			VengefulSpiritLevel = nbt.getDouble("VengefulSpiritLevel");
+			SpiritDebuff = nbt.getDouble("SpiritDebuff");
 		}
 	}
 
@@ -179,6 +183,7 @@ public class DeathnoteModVariables {
 					variables.GhotlyHungerLevel = message.data.GhotlyHungerLevel;
 					variables.NimberofEffect = message.data.NimberofEffect;
 					variables.VengefulSpiritLevel = message.data.VengefulSpiritLevel;
+					variables.SpiritDebuff = message.data.SpiritDebuff;
 				}
 			});
 			context.setPacketHandled(true);

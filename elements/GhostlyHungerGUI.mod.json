@@ -1,0 +1,120 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui1.png",
+          "use1Xscale": false,
+          "x": 87,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prizrachnyi_gholod",
+          "text": {
+            "fixedValue": "Призрачный голод:"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 101,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kak_otkryt_zadacha_miertvietskii",
+          "text": {
+            "fixedValue": "Задача [Мертвецкий голод] - Съесть гнилую плоть"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
+          "text": {
+            "fixedValue": "+ Твой голод восполняется сам"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 68
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
+          "text": {
+            "fixedValue": "- Еда больше не восполняет тебе голод"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prokachka_1_ied_sytosti_v_minutu",
+          "text": {
+            "fixedValue": "Прокачка: +1 ед сытости в минуту (за каждый уровень)"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_priniat",
+          "text": "Принять",
+          "onClick": {
+            "name": "GhostlyHunger"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 186,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

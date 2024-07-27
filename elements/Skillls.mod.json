@@ -26,10 +26,10 @@
           "image": "skillgui.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "GhostlyHunger"
+            "name": "GhostlyHungerGUIShow"
           },
-          "x": 276,
-          "y": 44
+          "x": 247,
+          "y": 43
         }
       },
       {
@@ -41,8 +41,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 280,
-          "y": 48
+          "x": 252,
+          "y": 46
         }
       },
       {
@@ -52,10 +52,10 @@
           "image": "skillgui.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "VengefulSpirit"
+            "name": "VengefulSpiritGUIShow"
           },
-          "x": 257,
-          "y": 95
+          "x": 223,
+          "y": 68
         }
       },
       {
@@ -67,8 +67,17 @@
           },
           "width": 24,
           "height": 24,
-          "x": 261,
-          "y": 99
+          "x": 227,
+          "y": 72
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_for_skills2.png",
+          "use1Xscale": false,
+          "x": 85,
+          "y": 19
         }
       }
     ],
