@@ -76,8 +76,34 @@
         "data": {
           "image": "gui_for_skills2.png",
           "use1Xscale": false,
-          "x": 85,
-          "y": 19
+          "x": 91,
+          "y": 26
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_skillgui2",
+          "image": "skillgui.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisGUIShow"
+          },
+          "x": 234,
+          "y": 98
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_maghnitokiniez",
+          "text": {
+            "fixedValue": "Магнитокинез"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 101
         }
       }
     ],

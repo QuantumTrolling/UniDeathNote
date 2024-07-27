@@ -11,41 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.deathnote.world.inventory.SkilllsMenu;
-import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
-import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
-import net.mcreator.deathnote.procedures.GhostlyHungerGUIShowProcedure;
+import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
+import net.mcreator.deathnote.procedures.MagnetokinesisProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SkilllsButtonMessage {
+public class MagnetokinesisGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public SkilllsButtonMessage(FriendlyByteBuf buffer) {
+	public MagnetokinesisGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public SkilllsButtonMessage(int buttonID, int x, int y, int z) {
+	public MagnetokinesisGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(SkilllsButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(MagnetokinesisGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(SkilllsButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(MagnetokinesisGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -60,26 +58,18 @@ public class SkilllsButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = SkilllsMenu.guistate;
+		HashMap guistate = MagnetokinesisGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			GhostlyHungerGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
-
-			VengefulSpiritGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			MagnetokinesisGUIShowProcedure.execute(world, x, y, z, entity);
+			MagnetokinesisProcedure.execute(entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		DeathnoteMod.addNetworkMessage(SkilllsButtonMessage.class, SkilllsButtonMessage::buffer, SkilllsButtonMessage::new, SkilllsButtonMessage::handler);
+		DeathnoteMod.addNetworkMessage(MagnetokinesisGUIButtonMessage.class, MagnetokinesisGUIButtonMessage::buffer, MagnetokinesisGUIButtonMessage::new, MagnetokinesisGUIButtonMessage::handler);
 	}
 }

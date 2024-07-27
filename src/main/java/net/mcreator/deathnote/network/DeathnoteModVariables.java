@@ -75,6 +75,8 @@ public class DeathnoteModVariables {
 			clone.NimberofEffect = original.NimberofEffect;
 			clone.VengefulSpiritLevel = original.VengefulSpiritLevel;
 			clone.SpiritDebuff = original.SpiritDebuff;
+			clone.Magnetokinesis = original.Magnetokinesis;
+			clone.MagnetokinesisButton = original.MagnetokinesisButton;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -120,6 +122,8 @@ public class DeathnoteModVariables {
 		public double NimberofEffect = 0;
 		public double VengefulSpiritLevel = 0;
 		public double SpiritDebuff = 10.0;
+		public boolean Magnetokinesis = false;
+		public boolean MagnetokinesisButton = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -137,6 +141,8 @@ public class DeathnoteModVariables {
 			nbt.putDouble("NimberofEffect", NimberofEffect);
 			nbt.putDouble("VengefulSpiritLevel", VengefulSpiritLevel);
 			nbt.putDouble("SpiritDebuff", SpiritDebuff);
+			nbt.putBoolean("Magnetokinesis", Magnetokinesis);
+			nbt.putBoolean("MagnetokinesisButton", MagnetokinesisButton);
 			return nbt;
 		}
 
@@ -151,6 +157,8 @@ public class DeathnoteModVariables {
 			NimberofEffect = nbt.getDouble("NimberofEffect");
 			VengefulSpiritLevel = nbt.getDouble("VengefulSpiritLevel");
 			SpiritDebuff = nbt.getDouble("SpiritDebuff");
+			Magnetokinesis = nbt.getBoolean("Magnetokinesis");
+			MagnetokinesisButton = nbt.getBoolean("MagnetokinesisButton");
 		}
 	}
 
@@ -184,6 +192,8 @@ public class DeathnoteModVariables {
 					variables.NimberofEffect = message.data.NimberofEffect;
 					variables.VengefulSpiritLevel = message.data.VengefulSpiritLevel;
 					variables.SpiritDebuff = message.data.SpiritDebuff;
+					variables.Magnetokinesis = message.data.Magnetokinesis;
+					variables.MagnetokinesisButton = message.data.MagnetokinesisButton;
 				}
 			});
 			context.setPacketHandled(true);

@@ -1,0 +1,120 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui1.png",
+          "use1Xscale": false,
+          "x": 87,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prizrachnyi_gholod",
+          "text": {
+            "fixedValue": "Магнитокинез"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 101,
+          "y": 41
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kak_otkryt_zadacha_miertvietskii",
+          "text": {
+            "fixedValue": "Задача [Магнитное прикосновение] - Принести 1 железную кирку"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 55
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
+          "text": {
+            "fixedValue": "+ Случайный камень рядом с тобой становиться рудой"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
+          "text": {
+            "fixedValue": "- Уменьшает ваш урон"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 81
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prokachka_1_ied_sytosti_v_minutu",
+          "text": {
+            "fixedValue": "Прокачка: +5 блоков и -1 секунда кд"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 95,
+          "y": 93
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_priniat",
+          "text": "Принять",
+          "onClick": {
+            "name": "Magnetokinesis"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 186,
+          "y": 134
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
