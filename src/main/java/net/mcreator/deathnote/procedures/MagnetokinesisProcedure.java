@@ -16,6 +16,13 @@ public class MagnetokinesisProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				boolean _setval = true;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.Magnetokinesis = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

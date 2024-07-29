@@ -77,6 +77,9 @@ public class DeathnoteModVariables {
 			clone.SpiritDebuff = original.SpiritDebuff;
 			clone.Magnetokinesis = original.Magnetokinesis;
 			clone.MagnetokinesisButton = original.MagnetokinesisButton;
+			clone.MagnetokinesisLevel = original.MagnetokinesisLevel;
+			clone.MagnetokinesisDebuff = original.MagnetokinesisDebuff;
+			clone.MagnetokinesisCD = original.MagnetokinesisCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -124,6 +127,9 @@ public class DeathnoteModVariables {
 		public double SpiritDebuff = 10.0;
 		public boolean Magnetokinesis = false;
 		public boolean MagnetokinesisButton = false;
+		public double MagnetokinesisLevel = 0;
+		public double MagnetokinesisDebuff = 10.0;
+		public boolean MagnetokinesisCD = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +149,9 @@ public class DeathnoteModVariables {
 			nbt.putDouble("SpiritDebuff", SpiritDebuff);
 			nbt.putBoolean("Magnetokinesis", Magnetokinesis);
 			nbt.putBoolean("MagnetokinesisButton", MagnetokinesisButton);
+			nbt.putDouble("MagnetokinesisLevel", MagnetokinesisLevel);
+			nbt.putDouble("MagnetokinesisDebuff", MagnetokinesisDebuff);
+			nbt.putBoolean("MagnetokinesisCD", MagnetokinesisCD);
 			return nbt;
 		}
 
@@ -159,6 +168,9 @@ public class DeathnoteModVariables {
 			SpiritDebuff = nbt.getDouble("SpiritDebuff");
 			Magnetokinesis = nbt.getBoolean("Magnetokinesis");
 			MagnetokinesisButton = nbt.getBoolean("MagnetokinesisButton");
+			MagnetokinesisLevel = nbt.getDouble("MagnetokinesisLevel");
+			MagnetokinesisDebuff = nbt.getDouble("MagnetokinesisDebuff");
+			MagnetokinesisCD = nbt.getBoolean("MagnetokinesisCD");
 		}
 	}
 
@@ -194,6 +206,9 @@ public class DeathnoteModVariables {
 					variables.SpiritDebuff = message.data.SpiritDebuff;
 					variables.Magnetokinesis = message.data.Magnetokinesis;
 					variables.MagnetokinesisButton = message.data.MagnetokinesisButton;
+					variables.MagnetokinesisLevel = message.data.MagnetokinesisLevel;
+					variables.MagnetokinesisDebuff = message.data.MagnetokinesisDebuff;
+					variables.MagnetokinesisCD = message.data.MagnetokinesisCD;
 				}
 			});
 			context.setPacketHandled(true);

@@ -38,7 +38,8 @@
           "src/main/java/net/mcreator/deathnote/network/SkilllsButtonMessage.java",
           "src/main/java/net/mcreator/deathnote/client/gui/SkilllsScreen.java"
         ]
-      }
+      },
+      "path": "~/GUIs"
     },
     {
       "name": "BookOfDeathRightclicked",
@@ -92,7 +93,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/SkillsOnButtonClick"
     },
     {
       "name": "SkillHunger",
@@ -151,7 +153,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/client/screens/GhostlyHungerTaskOverlay.java"
         ]
-      }
+      },
+      "path": "~/GUIs/Overlays"
     },
     {
       "name": "ShowGhotstlyHungerTask",
@@ -171,7 +174,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillTask"
     },
     {
       "name": "VengefulSpirit",
@@ -190,7 +194,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/SkillsOnButtonClick"
     },
     {
       "name": "VengefulSpiritTask",
@@ -203,7 +208,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/client/screens/VengefulSpiritTaskOverlay.java"
         ]
-      }
+      },
+      "path": "~/GUIs/Overlays"
     },
     {
       "name": "ShowVengefulSpiritTask",
@@ -223,7 +229,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillTask"
     },
     {
       "name": "SpiritEffects",
@@ -296,7 +303,8 @@
           "src/main/java/net/mcreator/deathnote/world/inventory/GhostlyHungerGUIMenu.java",
           "src/main/java/net/mcreator/deathnote/client/gui/GhostlyHungerGUIScreen.java"
         ]
-      }
+      },
+      "path": "~/GUIs"
     },
     {
       "name": "GhostlyHungerGUIShow",
@@ -331,7 +339,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillGUI"
     },
     {
       "name": "VengefulSpiritGUI",
@@ -346,7 +355,8 @@
           "src/main/java/net/mcreator/deathnote/world/inventory/VengefulSpiritGUIMenu.java",
           "src/main/java/net/mcreator/deathnote/network/VengefulSpiritGUIButtonMessage.java"
         ]
-      }
+      },
+      "path": "~/GUIs"
     },
     {
       "name": "VengefulSpiritGUIShow",
@@ -381,7 +391,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillGUI"
     },
     {
       "name": "VengefulSpiritDebuff",
@@ -419,7 +430,8 @@
           "src/main/java/net/mcreator/deathnote/network/MagnetokinesisGUIButtonMessage.java",
           "src/main/java/net/mcreator/deathnote/world/inventory/MagnetokinesisGUIMenu.java"
         ]
-      }
+      },
+      "path": "~/GUIs"
     },
     {
       "name": "MagnetokinesisGUIShow",
@@ -454,7 +466,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillGUI"
     },
     {
       "name": "MagnetokinesisTask",
@@ -467,7 +480,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/client/screens/MagnetokinesisTaskOverlay.java"
         ]
-      }
+      },
+      "path": "~/GUIs/Overlays"
     },
     {
       "name": "Magnetokinesis",
@@ -486,7 +500,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/SkillsOnButtonClick"
     },
     {
       "name": "ShowMagnetokinesisTask",
@@ -506,7 +521,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/ShowSkillTask"
     },
     {
       "name": "TurnIntoIron",
@@ -523,6 +539,81 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagnetokinesisDebuff",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetokinesis_debuff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/MagnetokinesisDebuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagnetokinesisSkill",
+      "type": "keybind",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetokinesis_skill",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/network/MagnetokinesisSkillMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "MagnetCD",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/MagnetCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -594,20 +685,49 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "MagnetokinesisLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "MagnetokinesisDebuff",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "10.0"
+    },
+    {
+      "name": "MagnetokinesisCD",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "magnetokinesis",
+      "files": [
+        "magnetokinesis"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    }
+  ],
   "language_map": {
     "en_us": {
-      "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "в зависимости от моба который вас убил",
+      "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "эффект в зависимости от моба который вас убил",
       "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
-      "gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Мертвецкий голод] - Съесть гнилую плоть",
+      "gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi": "железной рудой",
+      "gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Мертвецкий голод] - Съесть гнилую",
+      "gui.deathnote.vengeful_spirit_gui.label_upokoit_niezhit": "упокоить нежить.",
       "gui.deathnote.ghostly_hunger_task.label_siest_ghniluiu_plot": "- Съесть гнилую плоть",
       "gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Еда больше не восполняет тебе голод",
       "gui.deathnote.magnetokinesis_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Магнитное прикосновение]",
-      "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух:",
+      "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух",
+      "gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Случайный камень рядом с тобой становиться",
       "item_group.deathnote.death": "Death",
-      "gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Случайный камень рядом с тобой становиться рудой",
       "gui.deathnote.skillls.button_skill1": "Skill1",
       "gui.deathnote.ghostly_hunger_gui.button_priniat": "Принять",
       "gui.deathnote.magnetokinesis_gui.label_prizrachnyi_gholod": "Магнитокинез",
@@ -615,29 +735,55 @@
       "gui.deathnote.magnetokinesis_gui.button_priniat": "Принять",
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
+      "key.deathnote.magnetokinesis_skill": "Magnetokinesis Skill",
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
       "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод восполняется сам",
-      "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти получаете бесконечный эффект",
+      "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти получаете бесконечный",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "gui.deathnote.vengeful_spirit_gui.button_priniat": "Принять",
-      "gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Твое здоровье снижается (-20% макс здоровья) ",
-      "gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Магнитное прикосновение] - Принести 1 железную кирку",
+      "gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Ваше здоровье снижается (-20% макс здоровья)",
+      "gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Магнитное прикосновение] - Принести",
+      "gui.deathnote.magnetokinesis_gui.label_1_zhielieznuiu_kirku": "1 железную кирку.",
       "gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:  +1 уровень к эффекту",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
       "gui.deathnote.magnetokinesis_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Уменьшает ваш урон",
       "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "- Принести 1 железную кирку",
-      "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику упокоить нежить",
+      "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику",
+      "subtitles.magnetokinesis": "",
       "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.magnetokinesis_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +5 блоков и -1 секунда кд",
       "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить",
-      "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод:",
-      "gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +1 ед сытости в минуту (за каждый уровень)"
+      "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод",
+      "gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +1 ед сытости в минуту",
+      "gui.deathnote.ghostly_hunger_gui.label_plot": "плоть."
     }
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "GUIs",
+        "children": [
+          {
+            "name": "Overlays",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "SkillsOnButtonClick",
+        "children": []
+      },
+      {
+        "name": "ShowSkillGUI",
+        "children": []
+      },
+      {
+        "name": "ShowSkillTask",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "deathnote",

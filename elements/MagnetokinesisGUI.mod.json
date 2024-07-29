@@ -30,8 +30,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 101,
-          "y": 41
+          "x": 96,
+          "y": 35
         }
       },
       {
@@ -39,14 +39,14 @@
         "data": {
           "name": "label_kak_otkryt_zadacha_miertvietskii",
           "text": {
-            "fixedValue": "Задача [Магнитное прикосновение] - Принести 1 железную кирку"
+            "fixedValue": "Задача [Магнитное прикосновение] - Принести"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 55
+          "x": 96,
+          "y": 53
         }
       },
       {
@@ -54,14 +54,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Случайный камень рядом с тобой становиться рудой"
+            "fixedValue": "+ Случайный камень рядом с тобой становиться"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 71
+          "y": 89
         }
       },
       {
@@ -75,8 +75,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 81
+          "x": 96,
+          "y": 125
         }
       },
       {
@@ -90,8 +90,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 93
+          "x": 96,
+          "y": 152
         }
       },
       {
@@ -105,7 +105,37 @@
           "width": 61,
           "height": 20,
           "x": 186,
-          "y": 134
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_zhielieznuiu_kirku",
+          "text": {
+            "fixedValue": "1 железную кирку."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_zhielieznoi_rudoi",
+          "text": {
+            "fixedValue": "железной рудой"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 107
         }
       }
     ],

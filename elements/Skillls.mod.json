@@ -20,19 +20,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_skillgui",
-          "image": "skillgui.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "GhostlyHungerGUIShow"
-          },
-          "x": 247,
-          "y": 43
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_prizrachnyi_gholod",
@@ -41,21 +28,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 252,
-          "y": 46
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_skillgui1",
-          "image": "skillgui.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "VengefulSpiritGUIShow"
-          },
-          "x": 223,
-          "y": 68
+          "x": 250,
+          "y": 49
         }
       },
       {
@@ -81,19 +55,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_skillgui2",
-          "image": "skillgui.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "MagnetokinesisGUIShow"
-          },
-          "x": 234,
-          "y": 98
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_maghnitokiniez",
@@ -104,6 +65,45 @@
           "height": 24,
           "x": 238,
           "y": 101
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1ghostly_hunger",
+          "image": "1ghostly_hunger.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHungerGUIShow"
+          },
+          "x": 255,
+          "y": 52
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_2vengeful_spirit",
+          "image": "2vengeful_spirit.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritGUIShow"
+          },
+          "x": 231,
+          "y": 76
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_3magnetogenesis",
+          "image": "3magnetogenesis.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisGUIShow"
+          },
+          "x": 243,
+          "y": 105
         }
       }
     ],

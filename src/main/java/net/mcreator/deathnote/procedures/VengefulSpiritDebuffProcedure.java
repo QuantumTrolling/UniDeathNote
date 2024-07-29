@@ -46,11 +46,11 @@ public class VengefulSpiritDebuffProcedure {
 				if (!(((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH)
 						.hasModifier((new AttributeModifier(UUID.fromString("80c91759-1b7a-43ed-8a1e-29a6d25cac8e"),
 								("debuff" + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff),
-								((-0.2) * (1 + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff)), AttributeModifier.Operation.MULTIPLY_BASE)))))
+								((-0.2) * (1 + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff)), AttributeModifier.Operation.MULTIPLY_TOTAL)))))
 					((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH)
 							.addTransientModifier((new AttributeModifier(UUID.fromString("80c91759-1b7a-43ed-8a1e-29a6d25cac8e"),
 									("debuff" + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff),
-									((-0.2) * (1 + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff)), AttributeModifier.Operation.MULTIPLY_BASE)));
+									((-0.2) * (1 + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SpiritDebuff)), AttributeModifier.Operation.MULTIPLY_TOTAL)));
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Debuff"), false);
 			}

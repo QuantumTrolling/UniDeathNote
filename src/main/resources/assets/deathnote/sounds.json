@@ -1,0 +1,10 @@
+{
+  "magnetokinesis": {
+    "sounds": [
+      {
+        "name": "deathnote:magnetokinesis",
+        "stream": false
+      }
+    ]
+  }
+}

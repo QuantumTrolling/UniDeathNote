@@ -69,12 +69,13 @@ public class VengefulSpiritGUIScreen extends AbstractContainerScreen<VengefulSpi
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod"), -24, 4, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii"), -30, 18, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -30, 31, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -29, 61, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu"), -29, 79, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va"), -20, 43, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod"), -29, -2, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii"), -29, 16, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -29, 52, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -29, 88, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu"), -29, 115, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va"), -29, 70, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_upokoit_niezhit"), -29, 34, -1, false);
 	}
 
 	@Override
@@ -90,7 +91,7 @@ public class VengefulSpiritGUIScreen extends AbstractContainerScreen<VengefulSpi
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new VengefulSpiritGUIButtonMessage(0, x, y, z));
 				VengefulSpiritGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 60, this.topPos + 97, 61, 20).build();
+		}).bounds(this.leftPos + 60, this.topPos + 133, 61, 20).build();
 		guistate.put("button:button_priniat", button_priniat);
 		this.addRenderableWidget(button_priniat);
 	}

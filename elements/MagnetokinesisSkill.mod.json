@@ -1,0 +1,12 @@
+{
+  "_fv": 47,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "1",
+    "keyBindingName": "Magnetokinesis Skill",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "TurnIntoIron"
+    }
+  }
+}

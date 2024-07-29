@@ -69,11 +69,13 @@ public class MagnetokinesisGUIScreen extends AbstractContainerScreen<Magnetokine
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_prizrachnyi_gholod"), -24, 4, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii"), -30, 18, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -29, 34, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -30, 44, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_prokachka_1_ied_sytosti_v_minutu"), -30, 56, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_prizrachnyi_gholod"), -29, -2, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii"), -29, 16, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -29, 52, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -29, 88, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_prokachka_1_ied_sytosti_v_minutu"), -29, 115, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_1_zhielieznuiu_kirku"), -29, 34, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi"), -29, 70, -1, false);
 	}
 
 	@Override
@@ -89,7 +91,7 @@ public class MagnetokinesisGUIScreen extends AbstractContainerScreen<Magnetokine
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new MagnetokinesisGUIButtonMessage(0, x, y, z));
 				MagnetokinesisGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 60, this.topPos + 97, 61, 20).build();
+		}).bounds(this.leftPos + 60, this.topPos + 133, 61, 20).build();
 		guistate.put("button:button_priniat", button_priniat);
 		this.addRenderableWidget(button_priniat);
 	}

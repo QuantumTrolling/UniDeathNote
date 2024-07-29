@@ -24,14 +24,14 @@
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Призрачный голод:"
+            "fixedValue": "Призрачный голод"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 101,
-          "y": 41
+          "x": 96,
+          "y": 35
         }
       },
       {
@@ -39,14 +39,14 @@
         "data": {
           "name": "label_kak_otkryt_zadacha_miertvietskii",
           "text": {
-            "fixedValue": "Задача [Мертвецкий голод] - Съесть гнилую плоть"
+            "fixedValue": "Задача [Мертвецкий голод] - Съесть гнилую"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 55
+          "x": 96,
+          "y": 53
         }
       },
       {
@@ -60,8 +60,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 68
+          "x": 96,
+          "y": 89
         }
       },
       {
@@ -75,8 +75,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 81
+          "x": 96,
+          "y": 107
         }
       },
       {
@@ -84,14 +84,14 @@
         "data": {
           "name": "label_prokachka_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": "Прокачка: +1 ед сытости в минуту (за каждый уровень)"
+            "fixedValue": "Прокачка: +1 ед сытости в минуту"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": 95,
-          "y": 93
+          "x": 96,
+          "y": 134
         }
       },
       {
@@ -104,8 +104,23 @@
           },
           "width": 61,
           "height": 20,
-          "x": 186,
-          "y": 134
+          "x": 177,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_plot",
+          "text": {
+            "fixedValue": "плоть."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
         }
       }
     ],

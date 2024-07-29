@@ -30,6 +30,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.deathnote.init.DeathnoteModTabs;
+import net.mcreator.deathnote.init.DeathnoteModSounds;
 import net.mcreator.deathnote.init.DeathnoteModMenus;
 import net.mcreator.deathnote.init.DeathnoteModItems;
 
@@ -50,6 +51,7 @@ public class DeathnoteMod {
 	public DeathnoteMod() {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		DeathnoteModSounds.REGISTRY.register(bus);
 
 		DeathnoteModItems.REGISTRY.register(bus);
 
