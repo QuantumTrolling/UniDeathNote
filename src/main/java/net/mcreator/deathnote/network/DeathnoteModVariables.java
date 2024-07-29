@@ -80,6 +80,11 @@ public class DeathnoteModVariables {
 			clone.MagnetokinesisLevel = original.MagnetokinesisLevel;
 			clone.MagnetokinesisDebuff = original.MagnetokinesisDebuff;
 			clone.MagnetokinesisCD = original.MagnetokinesisCD;
+			clone.incorporeality = original.incorporeality;
+			clone.incorporealityButton = original.incorporealityButton;
+			clone.incorporealityBuff = original.incorporealityBuff;
+			clone.incorporealityDebuff = original.incorporealityDebuff;
+			clone.incorporealityLevel = original.incorporealityLevel;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -130,6 +135,11 @@ public class DeathnoteModVariables {
 		public double MagnetokinesisLevel = 0;
 		public double MagnetokinesisDebuff = 10.0;
 		public boolean MagnetokinesisCD = false;
+		public boolean incorporeality = false;
+		public boolean incorporealityButton = false;
+		public double incorporealityBuff = 10.0;
+		public double incorporealityDebuff = 10.0;
+		public double incorporealityLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -152,6 +162,11 @@ public class DeathnoteModVariables {
 			nbt.putDouble("MagnetokinesisLevel", MagnetokinesisLevel);
 			nbt.putDouble("MagnetokinesisDebuff", MagnetokinesisDebuff);
 			nbt.putBoolean("MagnetokinesisCD", MagnetokinesisCD);
+			nbt.putBoolean("incorporeality", incorporeality);
+			nbt.putBoolean("incorporealityButton", incorporealityButton);
+			nbt.putDouble("incorporealityBuff", incorporealityBuff);
+			nbt.putDouble("incorporealityDebuff", incorporealityDebuff);
+			nbt.putDouble("incorporealityLevel", incorporealityLevel);
 			return nbt;
 		}
 
@@ -171,6 +186,11 @@ public class DeathnoteModVariables {
 			MagnetokinesisLevel = nbt.getDouble("MagnetokinesisLevel");
 			MagnetokinesisDebuff = nbt.getDouble("MagnetokinesisDebuff");
 			MagnetokinesisCD = nbt.getBoolean("MagnetokinesisCD");
+			incorporeality = nbt.getBoolean("incorporeality");
+			incorporealityButton = nbt.getBoolean("incorporealityButton");
+			incorporealityBuff = nbt.getDouble("incorporealityBuff");
+			incorporealityDebuff = nbt.getDouble("incorporealityDebuff");
+			incorporealityLevel = nbt.getDouble("incorporealityLevel");
 		}
 	}
 
@@ -209,6 +229,11 @@ public class DeathnoteModVariables {
 					variables.MagnetokinesisLevel = message.data.MagnetokinesisLevel;
 					variables.MagnetokinesisDebuff = message.data.MagnetokinesisDebuff;
 					variables.MagnetokinesisCD = message.data.MagnetokinesisCD;
+					variables.incorporeality = message.data.incorporeality;
+					variables.incorporealityButton = message.data.incorporealityButton;
+					variables.incorporealityBuff = message.data.incorporealityBuff;
+					variables.incorporealityDebuff = message.data.incorporealityDebuff;
+					variables.incorporealityLevel = message.data.incorporealityLevel;
 				}
 			});
 			context.setPacketHandled(true);

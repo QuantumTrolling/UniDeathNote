@@ -23,6 +23,7 @@ public class TurnIntoIronProcedure {
 		double dx = 0;
 		double dz = 0;
 		double dy = 0;
+		double getRandom = 0;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Magnetokinesis
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).MagnetokinesisCD) {
 			if (world instanceof Level _level) {
@@ -35,25 +36,89 @@ public class TurnIntoIronProcedure {
 			dx = x - 1;
 			dz = z - 1;
 			dy = y - 1;
+			getRandom = Math.random();
 			for (int index0 = 0; index0 < 6; index0++) {
 				for (int index1 = 0; index1 < 6; index1++) {
 					for (int index2 = 0; index2 < 6; index2++) {
 						if ((world.getBlockState(BlockPos.containing(dx, dy, dz))).getBlock() == Blocks.STONE) {
 							if (Math.random() < 0.2) {
-								{
-									BlockPos _bp = BlockPos.containing(dx, dy, dz);
-									BlockState _bs = Blocks.IRON_ORE.defaultBlockState();
-									BlockState _bso = world.getBlockState(_bp);
-									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
-										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
-										if (_property != null && _bs.getValue(_property) != null)
-											try {
-												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
-											} catch (Exception e) {
-											}
+								if (getRandom < 0.1) {
+									{
+										BlockPos _bp = BlockPos.containing(dx, dy, dz);
+										BlockState _bs = Blocks.DIAMOND_ORE.defaultBlockState();
+										BlockState _bso = world.getBlockState(_bp);
+										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.getValue(_property) != null)
+												try {
+													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												} catch (Exception e) {
+												}
+										}
+										world.setBlock(_bp, _bs, 3);
 									}
-									world.setBlock(_bp, _bs, 3);
+								} else if (getRandom > 0.1 && getRandom < 0.325) {
+									{
+										BlockPos _bp = BlockPos.containing(dx, dy, dz);
+										BlockState _bs = Blocks.COAL_ORE.defaultBlockState();
+										BlockState _bso = world.getBlockState(_bp);
+										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.getValue(_property) != null)
+												try {
+													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												} catch (Exception e) {
+												}
+										}
+										world.setBlock(_bp, _bs, 3);
+									}
+								} else if (getRandom > 0.325 && getRandom < 0.55) {
+									{
+										BlockPos _bp = BlockPos.containing(dx, dy, dz);
+										BlockState _bs = Blocks.GOLD_ORE.defaultBlockState();
+										BlockState _bso = world.getBlockState(_bp);
+										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.getValue(_property) != null)
+												try {
+													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												} catch (Exception e) {
+												}
+										}
+										world.setBlock(_bp, _bs, 3);
+									}
+								} else if (getRandom > 0.55 && getRandom < 0.785) {
+									{
+										BlockPos _bp = BlockPos.containing(dx, dy, dz);
+										BlockState _bs = Blocks.COPPER_ORE.defaultBlockState();
+										BlockState _bso = world.getBlockState(_bp);
+										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.getValue(_property) != null)
+												try {
+													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												} catch (Exception e) {
+												}
+										}
+										world.setBlock(_bp, _bs, 3);
+									}
+								} else {
+									{
+										BlockPos _bp = BlockPos.containing(dx, dy, dz);
+										BlockState _bs = Blocks.IRON_ORE.defaultBlockState();
+										BlockState _bso = world.getBlockState(_bp);
+										for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+											Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+											if (_property != null && _bs.getValue(_property) != null)
+												try {
+													_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+												} catch (Exception e) {
+												}
+										}
+										world.setBlock(_bp, _bs, 3);
+									}
 								}
+								getRandom = Math.random();
 							}
 						}
 						dz = dz + 1;

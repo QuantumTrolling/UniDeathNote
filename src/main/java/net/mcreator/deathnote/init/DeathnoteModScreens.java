@@ -14,6 +14,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.mcreator.deathnote.client.gui.VengefulSpiritGUIScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
 import net.mcreator.deathnote.client.gui.MagnetokinesisGUIScreen;
+import net.mcreator.deathnote.client.gui.IncorporealityGUIScreen;
 import net.mcreator.deathnote.client.gui.GhostlyHungerGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -25,6 +26,7 @@ public class DeathnoteModScreens {
 			MenuScreens.register(DeathnoteModMenus.GHOSTLY_HUNGER_GUI.get(), GhostlyHungerGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.VENGEFUL_SPIRIT_GUI.get(), VengefulSpiritGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.MAGNETOKINESIS_GUI.get(), MagnetokinesisGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.INCORPOREALITY_GUI.get(), IncorporealityGUIScreen::new);
 		});
 	}
 }

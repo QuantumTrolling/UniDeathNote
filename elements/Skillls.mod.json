@@ -105,6 +105,32 @@
           "x": 243,
           "y": 105
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1ghostly_hunger1",
+          "image": "1ghostly_hunger.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "IncorporealityGUIShow"
+          },
+          "x": 202,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_biestieliesnost",
+          "text": {
+            "fixedValue": "Бестелесность"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 198,
+          "y": 102
+        }
       }
     ],
     "gridSettings": {
