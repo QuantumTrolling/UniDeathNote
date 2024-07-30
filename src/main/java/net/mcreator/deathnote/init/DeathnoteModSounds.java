@@ -16,4 +16,5 @@ import net.mcreator.deathnote.DeathnoteMod;
 public class DeathnoteModSounds {
 	public static final DeferredRegister<SoundEvent> REGISTRY = DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, DeathnoteMod.MODID);
 	public static final RegistryObject<SoundEvent> MAGNETOKINESIS = REGISTRY.register("magnetokinesis", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "magnetokinesis")));
+	public static final RegistryObject<SoundEvent> SOULSPLIT = REGISTRY.register("soulsplit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "soulsplit")));
 }

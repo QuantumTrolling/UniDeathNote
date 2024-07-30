@@ -130,13 +130,6 @@ public class TurnIntoIronProcedure {
 				dz = z - 1;
 				dy = dy + 1;
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.MagnetokinesisCD = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			MagnetCDProcedure.execute(world, entity);
 		}
 	}

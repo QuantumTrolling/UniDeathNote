@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.deathnote.client.gui.VengefulSpiritGUIScreen;
+import net.mcreator.deathnote.client.gui.SoulSplitScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
 import net.mcreator.deathnote.client.gui.MagnetokinesisGUIScreen;
 import net.mcreator.deathnote.client.gui.IncorporealityGUIScreen;
@@ -27,6 +28,7 @@ public class DeathnoteModScreens {
 			MenuScreens.register(DeathnoteModMenus.VENGEFUL_SPIRIT_GUI.get(), VengefulSpiritGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.MAGNETOKINESIS_GUI.get(), MagnetokinesisGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.INCORPOREALITY_GUI.get(), IncorporealityGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.SOUL_SPLIT.get(), SoulSplitScreen::new);
 		});
 	}
 }

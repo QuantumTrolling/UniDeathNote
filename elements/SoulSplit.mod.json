@@ -1,0 +1,165 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "gui1.png",
+          "use1Xscale": false,
+          "x": 87,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prizrachnyi_gholod",
+          "text": {
+            "fixedValue": "Расщепление души"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_kak_otkryt_zadacha_miertvietskii",
+          "text": {
+            "fixedValue": "Задача [Раздробить душу] - Принести 1"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
+          "text": {
+            "fixedValue": "+ Вы можете создать свои копии которые"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
+          "text": {
+            "fixedValue": "- При использовании этой способности вы"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prokachka_1_ied_sytosti_v_minutu",
+          "text": {
+            "fixedValue": "Прокачка: +1 клон, +1 секунда длительности, -1 секунда кд, +2 урона"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 161
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_priniat",
+          "text": "Принять",
+          "onClick": {
+            "name": "SoulSplitSkill"
+          },
+          "width": 61,
+          "height": 20,
+          "x": 177,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_zhielieznuiu_kirku",
+          "text": {
+            "fixedValue": "наковальню."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_budut_atakovat_mobov",
+          "text": {
+            "fixedValue": "будут атаковать мобов."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_poluchaietie_uron_v_razmierie_3_sierdie",
+          "text": {
+            "fixedValue": "получаете урон в размере 3 сердечек"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 143
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

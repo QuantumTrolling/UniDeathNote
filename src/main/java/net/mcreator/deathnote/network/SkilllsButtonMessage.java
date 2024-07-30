@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
+import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityGUIShowProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerGUIShowProcedure;
@@ -80,6 +81,10 @@ public class SkilllsButtonMessage {
 		if (buttonID == 3) {
 
 			IncorporealityGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			SoulSplitGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

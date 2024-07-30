@@ -10,6 +10,13 @@ public class MagnetCDProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
+		{
+			boolean _setval = true;
+			entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.MagnetokinesisCD = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 		DeathnoteMod.queueServerWork((int) (20 * (3 - (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).MagnetokinesisLevel)), () -> {
 			{
 				boolean _setval = false;

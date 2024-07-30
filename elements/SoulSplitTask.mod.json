@@ -1,0 +1,51 @@
+{
+  "_fv": 47,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_zadacha_miertvietskii_gholod_sies",
+          "text": {
+            "fixedValue": "Задача [Раздробить душу]"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": -3,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_siest_ghniluiu_plot",
+          "text": {
+            "fixedValue": "- Принести 1 наковальню"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": -3,
+          "y": 35
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ShowSoulSplitTask"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

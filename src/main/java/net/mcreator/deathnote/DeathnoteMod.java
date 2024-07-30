@@ -33,6 +33,7 @@ import net.mcreator.deathnote.init.DeathnoteModTabs;
 import net.mcreator.deathnote.init.DeathnoteModSounds;
 import net.mcreator.deathnote.init.DeathnoteModMenus;
 import net.mcreator.deathnote.init.DeathnoteModItems;
+import net.mcreator.deathnote.init.DeathnoteModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -54,6 +55,7 @@ public class DeathnoteMod {
 		DeathnoteModSounds.REGISTRY.register(bus);
 
 		DeathnoteModItems.REGISTRY.register(bus);
+		DeathnoteModEntities.REGISTRY.register(bus);
 
 		DeathnoteModTabs.REGISTRY.register(bus);
 

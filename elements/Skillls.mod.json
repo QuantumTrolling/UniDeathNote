@@ -131,6 +131,32 @@
           "x": 198,
           "y": 102
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1ghostly_hunger2",
+          "image": "1ghostly_hunger.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SoulSplitGUIShow"
+          },
+          "x": 231,
+          "y": 135
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rasshchieplieniie_dushi",
+          "text": {
+            "fixedValue": "Расщепление души"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 228,
+          "y": 131
+        }
       }
     ],
     "gridSettings": {

@@ -85,6 +85,10 @@ public class DeathnoteModVariables {
 			clone.incorporealityBuff = original.incorporealityBuff;
 			clone.incorporealityDebuff = original.incorporealityDebuff;
 			clone.incorporealityLevel = original.incorporealityLevel;
+			clone.SoulSplit = original.SoulSplit;
+			clone.SoulSplitButton = original.SoulSplitButton;
+			clone.SoulSplitLevel = original.SoulSplitLevel;
+			clone.SoulSplitCD = original.SoulSplitCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -140,6 +144,10 @@ public class DeathnoteModVariables {
 		public double incorporealityBuff = 10.0;
 		public double incorporealityDebuff = 10.0;
 		public double incorporealityLevel = 0;
+		public boolean SoulSplit = false;
+		public boolean SoulSplitButton = false;
+		public double SoulSplitLevel = 0;
+		public boolean SoulSplitCD = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -167,6 +175,10 @@ public class DeathnoteModVariables {
 			nbt.putDouble("incorporealityBuff", incorporealityBuff);
 			nbt.putDouble("incorporealityDebuff", incorporealityDebuff);
 			nbt.putDouble("incorporealityLevel", incorporealityLevel);
+			nbt.putBoolean("SoulSplit", SoulSplit);
+			nbt.putBoolean("SoulSplitButton", SoulSplitButton);
+			nbt.putDouble("SoulSplitLevel", SoulSplitLevel);
+			nbt.putBoolean("SoulSplitCD", SoulSplitCD);
 			return nbt;
 		}
 
@@ -191,6 +203,10 @@ public class DeathnoteModVariables {
 			incorporealityBuff = nbt.getDouble("incorporealityBuff");
 			incorporealityDebuff = nbt.getDouble("incorporealityDebuff");
 			incorporealityLevel = nbt.getDouble("incorporealityLevel");
+			SoulSplit = nbt.getBoolean("SoulSplit");
+			SoulSplitButton = nbt.getBoolean("SoulSplitButton");
+			SoulSplitLevel = nbt.getDouble("SoulSplitLevel");
+			SoulSplitCD = nbt.getBoolean("SoulSplitCD");
 		}
 	}
 
@@ -234,6 +250,10 @@ public class DeathnoteModVariables {
 					variables.incorporealityBuff = message.data.incorporealityBuff;
 					variables.incorporealityDebuff = message.data.incorporealityDebuff;
 					variables.incorporealityLevel = message.data.incorporealityLevel;
+					variables.SoulSplit = message.data.SoulSplit;
+					variables.SoulSplitButton = message.data.SoulSplitButton;
+					variables.SoulSplitLevel = message.data.SoulSplitLevel;
+					variables.SoulSplitCD = message.data.SoulSplitCD;
 				}
 			});
 			context.setPacketHandled(true);
