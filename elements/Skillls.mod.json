@@ -157,6 +157,32 @@
           "x": 228,
           "y": 131
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_6obsession",
+          "image": "6obsession.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ObsessionGUIShow"
+          },
+          "x": 202,
+          "y": 144
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_odierzhimost",
+          "text": {
+            "fixedValue": "Одержимость"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 198,
+          "y": 141
+        }
       }
     ],
     "gridSettings": {

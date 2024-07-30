@@ -14,6 +14,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
+import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
 import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
 import net.mcreator.deathnote.world.inventory.GhostlyHungerGUIMenu;
@@ -27,4 +28,5 @@ public class DeathnoteModMenus {
 	public static final RegistryObject<MenuType<MagnetokinesisGUIMenu>> MAGNETOKINESIS_GUI = REGISTRY.register("magnetokinesis_gui", () -> IForgeMenuType.create(MagnetokinesisGUIMenu::new));
 	public static final RegistryObject<MenuType<IncorporealityGUIMenu>> INCORPOREALITY_GUI = REGISTRY.register("incorporeality_gui", () -> IForgeMenuType.create(IncorporealityGUIMenu::new));
 	public static final RegistryObject<MenuType<SoulSplitMenu>> SOUL_SPLIT = REGISTRY.register("soul_split", () -> IForgeMenuType.create(SoulSplitMenu::new));
+	public static final RegistryObject<MenuType<ObsessionGUIMenu>> OBSESSION_GUI = REGISTRY.register("obsession_gui", () -> IForgeMenuType.create(ObsessionGUIMenu::new));
 }

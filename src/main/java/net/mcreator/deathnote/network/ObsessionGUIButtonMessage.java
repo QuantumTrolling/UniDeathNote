@@ -11,44 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.deathnote.world.inventory.SkilllsMenu;
-import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
-import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
-import net.mcreator.deathnote.procedures.ObsessionGUIShowProcedure;
-import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
-import net.mcreator.deathnote.procedures.IncorporealityGUIShowProcedure;
-import net.mcreator.deathnote.procedures.GhostlyHungerGUIShowProcedure;
+import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
+import net.mcreator.deathnote.procedures.ObsessionProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SkilllsButtonMessage {
+public class ObsessionGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public SkilllsButtonMessage(FriendlyByteBuf buffer) {
+	public ObsessionGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public SkilllsButtonMessage(int buttonID, int x, int y, int z) {
+	public ObsessionGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(SkilllsButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(ObsessionGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(SkilllsButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(ObsessionGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -63,38 +58,18 @@ public class SkilllsButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = SkilllsMenu.guistate;
+		HashMap guistate = ObsessionGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			GhostlyHungerGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 1) {
-
-			VengefulSpiritGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 2) {
-
-			MagnetokinesisGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 3) {
-
-			IncorporealityGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 4) {
-
-			SoulSplitGUIShowProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
-
-			ObsessionGUIShowProcedure.execute(world, x, y, z, entity);
+			ObsessionProcedure.execute(entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		DeathnoteMod.addNetworkMessage(SkilllsButtonMessage.class, SkilllsButtonMessage::buffer, SkilllsButtonMessage::new, SkilllsButtonMessage::handler);
+		DeathnoteMod.addNetworkMessage(ObsessionGUIButtonMessage.class, ObsessionGUIButtonMessage::buffer, ObsessionGUIButtonMessage::new, ObsessionGUIButtonMessage::handler);
 	}
 }

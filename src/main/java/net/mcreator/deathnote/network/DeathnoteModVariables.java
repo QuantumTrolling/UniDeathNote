@@ -89,6 +89,9 @@ public class DeathnoteModVariables {
 			clone.SoulSplitButton = original.SoulSplitButton;
 			clone.SoulSplitLevel = original.SoulSplitLevel;
 			clone.SoulSplitCD = original.SoulSplitCD;
+			clone.Obsession = original.Obsession;
+			clone.ObsessionButton = original.ObsessionButton;
+			clone.ObsessionLevel = original.ObsessionLevel;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -148,6 +151,9 @@ public class DeathnoteModVariables {
 		public boolean SoulSplitButton = false;
 		public double SoulSplitLevel = 0;
 		public boolean SoulSplitCD = false;
+		public boolean Obsession = false;
+		public boolean ObsessionButton = false;
+		public double ObsessionLevel = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -179,6 +185,9 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("SoulSplitButton", SoulSplitButton);
 			nbt.putDouble("SoulSplitLevel", SoulSplitLevel);
 			nbt.putBoolean("SoulSplitCD", SoulSplitCD);
+			nbt.putBoolean("Obsession", Obsession);
+			nbt.putBoolean("ObsessionButton", ObsessionButton);
+			nbt.putDouble("ObsessionLevel", ObsessionLevel);
 			return nbt;
 		}
 
@@ -207,6 +216,9 @@ public class DeathnoteModVariables {
 			SoulSplitButton = nbt.getBoolean("SoulSplitButton");
 			SoulSplitLevel = nbt.getDouble("SoulSplitLevel");
 			SoulSplitCD = nbt.getBoolean("SoulSplitCD");
+			Obsession = nbt.getBoolean("Obsession");
+			ObsessionButton = nbt.getBoolean("ObsessionButton");
+			ObsessionLevel = nbt.getDouble("ObsessionLevel");
 		}
 	}
 
@@ -254,6 +266,9 @@ public class DeathnoteModVariables {
 					variables.SoulSplitButton = message.data.SoulSplitButton;
 					variables.SoulSplitLevel = message.data.SoulSplitLevel;
 					variables.SoulSplitCD = message.data.SoulSplitCD;
+					variables.Obsession = message.data.Obsession;
+					variables.ObsessionButton = message.data.ObsessionButton;
+					variables.ObsessionLevel = message.data.ObsessionLevel;
 				}
 			});
 			context.setPacketHandled(true);
