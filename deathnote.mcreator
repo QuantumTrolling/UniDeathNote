@@ -192,6 +192,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -498,6 +502,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -593,7 +601,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/network/MagnetokinesisSkillMessage.java"
         ]
-      }
+      },
+      "path": "~/Binds"
     },
     {
       "name": "MagnetCD",
@@ -616,7 +625,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/CD"
     },
     {
       "name": "IncorporealityGUI",
@@ -728,7 +738,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/CD"
     },
     {
       "name": "IncorporealityBuff",
@@ -777,7 +788,6 @@
       "registry_name": "uni_ghost",
       "metadata": {
         "files": [
-          "src/main/resources/assets/deathnote/models/item/uni_ghost_spawn_egg.json",
           "src/main/resources/data/deathnote/forge/biome_modifier/uni_ghost_biome_modifier.json",
           "src/main/java/net/mcreator/deathnote/entity/UniGhostEntity.java",
           "src/main/java/net/mcreator/deathnote/client/renderer/UniGhostRenderer.java"
@@ -1005,7 +1015,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/network/SoulSplitBindMessage.java"
         ]
-      }
+      },
+      "path": "~/Binds"
     },
     {
       "name": "SoulSplitCD",
@@ -1028,7 +1039,8 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/CD"
     },
     {
       "name": "ObsessionGUI",
@@ -1170,6 +1182,213 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/deathnote/procedures/ObsessionDebuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Levitation",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/SkillsOnButtonClick"
+    },
+    {
+      "name": "ShowLevitationTask",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_levitation_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowLevitationTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "LevitationGUI",
+      "type": "gui",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/world/inventory/LevitationGUIMenu.java",
+          "src/main/java/net/mcreator/deathnote/client/gui/LevitationGUIScreen.java",
+          "src/main/java/net/mcreator/deathnote/network/LevitationGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "LevitationGUIShow",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_gui_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationGUIShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShowSkillGUI"
+    },
+    {
+      "name": "LevitationBind",
+      "type": "keybind",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/network/LevitationBindMessage.java"
+        ]
+      },
+      "path": "~/Binds"
+    },
+    {
+      "name": "Flying",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flying",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/FlyingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LevitationCD",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CD"
+    },
+    {
+      "name": "LevitationTask",
+      "type": "overlay",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/LevitationTaskOverlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "LevitationDebuff",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_debuff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationDebuffProcedure.java"
         ],
         "dependencies": [
           {
@@ -1340,6 +1559,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "Levitation",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "LevitationButton",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "LevitationLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "LevitationCD",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -1362,19 +1605,25 @@
   ],
   "language_map": {
     "en_us": {
-      "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
+      "gui.deathnote.levitation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете взлетать на некоторое время",
       "gui.deathnote.obsession_gui.button_priniat": "Принять",
+      "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
+      "gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu": " Прокачка: +1 секунда полета, -0.3 секунды кд",
       "gui.deathnote.obsession_gui.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в размере 3 сердечек",
+      "gui.deathnote.levitation_gui.label_prizrachnyi_gholod": "Левитация",
+      "gui.deathnote.skillls.tooltip_lievitatsiia": "Левитация",
       "gui.deathnote.vengeful_spirit_gui.label_upokoit_niezhit": "упокоить нежить.",
       "gui.deathnote.magnetokinesis_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Магнитное прикосновение]",
       "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух",
       "gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +1 клон, +1 секунда длительности, -1 секунда кд, +2 урона",
       "gui.deathnote.obsession_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Не можете спать",
-      "key.deathnote.soul_split_bind": "Magnetokinesis Skill",
+      "key.deathnote.soul_split_bind": "Soul Split Skill",
       "item.deathnote.book_of_death": "Book Of Death",
       "gui.deathnote.magnetokinesis_gui.button_priniat": "Принять",
       "gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете создать свои копии которые",
       "gui.deathnote.soul_split.label_kak_otkryt_zadacha_miertvietskii": "Задача [Раздробить душу] - Принести 1",
+      "gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы медленнее перемещаетесь по бренной земле",
+      "gui.deathnote.levitation_gui.label_budut_atakovat_mobov": "наносимому вами урону.",
       "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Добыть 10 медной, 10 железной руды, 10 золотой руды",
       "gui.deathnote.soul_split_task.label_siest_ghniluiu_plot": "- Принести 1 наковальню",
       "gui.deathnote.obsession_gui.label_prizrachnyi_gholod": "Одержимость",
@@ -1394,8 +1643,8 @@
       "gui.deathnote.incorporeality_gui.label_1_zhielieznuiu_kirku": "10 медной, 10 железной руды, 10 золотой руды.",
       "gui.deathnote.soul_split.label_prizrachnyi_gholod": "Расщепление души",
       "gui.deathnote.magnetokinesis_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Уменьшает ваш урон",
-      "item.deathnote.uni_ghost_spawn_egg": "Uni Ghost Clone Spawn Egg",
       "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "- Принести 1 железную кирку",
+      "gui.deathnote.levitation_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Душа легкая как перо] - Принести",
       "subtitles.magnetokinesis": "",
       "subtitles.soulsplit": "",
       "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
@@ -1405,6 +1654,7 @@
       "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод",
       "gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка: +1 ед сытости в минуту",
       "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "эффект в зависимости от моба который вас убил",
+      "gui.deathnote.levitation_gui.button_priniat": "Принять",
       "gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Не можете носить броню",
       "gui.deathnote.skillls.tooltip_rasshchieplieniie_dushi": "Расщепление души",
       "gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi": "рудой",
@@ -1428,17 +1678,21 @@
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
       "key.deathnote.magnetokinesis_skill": "Magnetokinesis Skill",
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
+      "gui.deathnote.levitation_task.label_siest_ghniluiu_plot": "- Принести 1 перо",
       "gui.deathnote.incorporeality_gui.button_priniat": "Принять",
       "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод восполняется сам",
       "gui.deathnote.obsession_task.label_siest_ghniluiu_plot": "- Принести 1 алмазный меч",
       "gui.deathnote.incorporeality_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Сокровище мертвеца] - Добыть",
+      "key.deathnote.levitation_bind": "Levitation Skill",
       "gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Магнитное прикосновение] - Принести",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
       "gui.deathnote.obsession_gui.label_prokachka_1_ied_sytosti_v_minutu": " Прокачка: +10% к урону",
+      "gui.deathnote.levitation_gui.label_1_zhielieznuiu_kirku": "1 перо.",
       "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику",
       "gui.deathnote.incorporeality_gui.label_prizrachnyi_gholod": "Бестелесность",
       "gui.deathnote.obsession_gui.label_1_zhielieznuiu_kirku": "1 алмазный меч.",
       "gui.deathnote.soul_split.label_budut_atakovat_mobov": "будут атаковать мобов.",
+      "gui.deathnote.levitation_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Душа легкая как перо]",
       "gui.deathnote.ghostly_hunger_gui.label_plot": "плоть."
     }
   },
@@ -1464,6 +1718,14 @@
       },
       {
         "name": "ShowSkillTask",
+        "children": []
+      },
+      {
+        "name": "Binds",
+        "children": []
+      },
+      {
+        "name": "CD",
         "children": []
       }
     ]

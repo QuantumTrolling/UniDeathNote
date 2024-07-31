@@ -61,6 +61,7 @@ public class UniGhostEntity extends TamableAnimal {
 		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(false);
+		setPersistenceRequired();
 	}
 
 	@Override
@@ -88,6 +89,11 @@ public class UniGhostEntity extends TamableAnimal {
 	@Override
 	public MobType getMobType() {
 		return MobType.UNDEFINED;
+	}
+
+	@Override
+	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
+		return false;
 	}
 
 	@Override

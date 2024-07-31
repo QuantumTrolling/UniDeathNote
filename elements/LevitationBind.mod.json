@@ -2,11 +2,11 @@
   "_fv": 47,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "2",
-    "keyBindingName": "Soul Split Skill",
+    "triggerKey": "3",
+    "keyBindingName": "Levitation Skill",
     "keyBindingCategoryKey": "misc",
     "onKeyPressed": {
-      "name": "GhostSummon"
+      "name": "Flying"
     }
   }
 }

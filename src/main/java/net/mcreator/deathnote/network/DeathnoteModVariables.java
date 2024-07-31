@@ -92,6 +92,10 @@ public class DeathnoteModVariables {
 			clone.Obsession = original.Obsession;
 			clone.ObsessionButton = original.ObsessionButton;
 			clone.ObsessionLevel = original.ObsessionLevel;
+			clone.Levitation = original.Levitation;
+			clone.LevitationButton = original.LevitationButton;
+			clone.LevitationLevel = original.LevitationLevel;
+			clone.LevitationCD = original.LevitationCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -154,6 +158,10 @@ public class DeathnoteModVariables {
 		public boolean Obsession = false;
 		public boolean ObsessionButton = false;
 		public double ObsessionLevel = 0;
+		public boolean Levitation = false;
+		public boolean LevitationButton = false;
+		public double LevitationLevel = 0;
+		public boolean LevitationCD = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -188,6 +196,10 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("Obsession", Obsession);
 			nbt.putBoolean("ObsessionButton", ObsessionButton);
 			nbt.putDouble("ObsessionLevel", ObsessionLevel);
+			nbt.putBoolean("Levitation", Levitation);
+			nbt.putBoolean("LevitationButton", LevitationButton);
+			nbt.putDouble("LevitationLevel", LevitationLevel);
+			nbt.putBoolean("LevitationCD", LevitationCD);
 			return nbt;
 		}
 
@@ -219,6 +231,10 @@ public class DeathnoteModVariables {
 			Obsession = nbt.getBoolean("Obsession");
 			ObsessionButton = nbt.getBoolean("ObsessionButton");
 			ObsessionLevel = nbt.getDouble("ObsessionLevel");
+			Levitation = nbt.getBoolean("Levitation");
+			LevitationButton = nbt.getBoolean("LevitationButton");
+			LevitationLevel = nbt.getDouble("LevitationLevel");
+			LevitationCD = nbt.getBoolean("LevitationCD");
 		}
 	}
 
@@ -269,6 +285,10 @@ public class DeathnoteModVariables {
 					variables.Obsession = message.data.Obsession;
 					variables.ObsessionButton = message.data.ObsessionButton;
 					variables.ObsessionLevel = message.data.ObsessionLevel;
+					variables.Levitation = message.data.Levitation;
+					variables.LevitationButton = message.data.LevitationButton;
+					variables.LevitationLevel = message.data.LevitationLevel;
+					variables.LevitationCD = message.data.LevitationCD;
 				}
 			});
 			context.setPacketHandled(true);

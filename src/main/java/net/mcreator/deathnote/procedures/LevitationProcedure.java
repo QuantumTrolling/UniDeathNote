@@ -5,26 +5,26 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
 
-public class VengefulSpiritProcedure {
+public class LevitationProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).VengefulspiritButton == false) {
+		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationButton == false) {
 			{
 				boolean _setval = true;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.VengefulspiritButton = _setval;
+					capability.LevitationButton = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 			{
 				boolean _setval = true;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.VengefulSpirit = _setval;
+					capability.Levitation = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			VengefulSpiritDebuffProcedure.execute(world, entity);
+			LevitationDebuffProcedure.execute(world, entity);
 		}
 	}
 }

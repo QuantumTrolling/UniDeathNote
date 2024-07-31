@@ -17,6 +17,7 @@ import net.minecraft.client.KeyMapping;
 
 import net.mcreator.deathnote.network.SoulSplitBindMessage;
 import net.mcreator.deathnote.network.MagnetokinesisSkillMessage;
+import net.mcreator.deathnote.network.LevitationBindMessage;
 import net.mcreator.deathnote.DeathnoteMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -47,11 +48,25 @@ public class DeathnoteModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping LEVITATION_BIND = new KeyMapping("key.deathnote.levitation_bind", GLFW.GLFW_KEY_3, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new LevitationBindMessage(0, 0));
+				LevitationBindMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(MAGNETOKINESIS_SKILL);
 		event.register(SOUL_SPLIT_BIND);
+		event.register(LEVITATION_BIND);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +76,7 @@ public class DeathnoteModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				MAGNETOKINESIS_SKILL.consumeClick();
 				SOUL_SPLIT_BIND.consumeClick();
+				LEVITATION_BIND.consumeClick();
 			}
 		}
 	}

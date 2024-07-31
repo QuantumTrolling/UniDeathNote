@@ -16,6 +16,7 @@ import net.mcreator.deathnote.client.gui.SoulSplitScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
 import net.mcreator.deathnote.client.gui.ObsessionGUIScreen;
 import net.mcreator.deathnote.client.gui.MagnetokinesisGUIScreen;
+import net.mcreator.deathnote.client.gui.LevitationGUIScreen;
 import net.mcreator.deathnote.client.gui.IncorporealityGUIScreen;
 import net.mcreator.deathnote.client.gui.GhostlyHungerGUIScreen;
 
@@ -31,6 +32,7 @@ public class DeathnoteModScreens {
 			MenuScreens.register(DeathnoteModMenus.INCORPOREALITY_GUI.get(), IncorporealityGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.SOUL_SPLIT.get(), SoulSplitScreen::new);
 			MenuScreens.register(DeathnoteModMenus.OBSESSION_GUI.get(), ObsessionGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.LEVITATION_GUI.get(), LevitationGUIScreen::new);
 		});
 	}
 }

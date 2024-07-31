@@ -11,39 +11,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
-import net.mcreator.deathnote.procedures.VengefulSpiritProcedure;
+import net.mcreator.deathnote.world.inventory.LevitationGUIMenu;
+import net.mcreator.deathnote.procedures.LevitationProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
 import java.util.HashMap;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class VengefulSpiritGUIButtonMessage {
+public class LevitationGUIButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public VengefulSpiritGUIButtonMessage(FriendlyByteBuf buffer) {
+	public LevitationGUIButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public VengefulSpiritGUIButtonMessage(int buttonID, int x, int y, int z) {
+	public LevitationGUIButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(VengefulSpiritGUIButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(LevitationGUIButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(VengefulSpiritGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(LevitationGUIButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -58,18 +58,18 @@ public class VengefulSpiritGUIButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = VengefulSpiritGUIMenu.guistate;
+		HashMap guistate = LevitationGUIMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			VengefulSpiritProcedure.execute(world, entity);
+			LevitationProcedure.execute(world, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		DeathnoteMod.addNetworkMessage(VengefulSpiritGUIButtonMessage.class, VengefulSpiritGUIButtonMessage::buffer, VengefulSpiritGUIButtonMessage::new, VengefulSpiritGUIButtonMessage::handler);
+		DeathnoteMod.addNetworkMessage(LevitationGUIButtonMessage.class, LevitationGUIButtonMessage::buffer, LevitationGUIButtonMessage::new, LevitationGUIButtonMessage::handler);
 	}
 }

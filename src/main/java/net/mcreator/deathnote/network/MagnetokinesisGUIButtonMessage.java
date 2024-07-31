@@ -64,7 +64,7 @@ public class MagnetokinesisGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			MagnetokinesisProcedure.execute(entity);
+			MagnetokinesisProcedure.execute(world, entity);
 		}
 	}
 

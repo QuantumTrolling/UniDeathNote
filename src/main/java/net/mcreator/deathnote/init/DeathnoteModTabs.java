@@ -19,7 +19,6 @@ public class DeathnoteModTabs {
 	public static final RegistryObject<CreativeModeTab> DEATH = REGISTRY.register("death",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.deathnote.death")).icon(() -> new ItemStack(DeathnoteModItems.BOOK_OF_DEATH.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(DeathnoteModItems.BOOK_OF_DEATH.get());
-				tabData.accept(DeathnoteModItems.UNI_GHOST_SPAWN_EGG.get());
 			})
 
 					.build());

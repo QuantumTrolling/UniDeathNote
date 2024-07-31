@@ -16,6 +16,7 @@ import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
 import net.mcreator.deathnote.procedures.ObsessionGUIShowProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
+import net.mcreator.deathnote.procedures.LevitationGUIShowProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityGUIShowProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerGUIShowProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -90,6 +91,10 @@ public class SkilllsButtonMessage {
 		if (buttonID == 5) {
 
 			ObsessionGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 6) {
+
+			LevitationGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
