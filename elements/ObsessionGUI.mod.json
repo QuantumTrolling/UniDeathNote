@@ -11,42 +11,18 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui1.png",
-          "use1Xscale": false,
-          "x": 87,
-          "y": 26
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Одержимость"
+            "fixedValue": "Одержимость:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_kak_otkryt_zadacha_miertvietskii",
-          "text": {
-            "fixedValue": "Задача [Незримость] - Принести"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 53
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -54,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Ночью вы получаете бонус  +50% к"
+            "fixedValue": "+ Ночью вы получаете"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 89
+          "x": 78,
+          "y": 80
         }
       },
       {
@@ -72,11 +48,11 @@
             "fixedValue": "- Не можете спать"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 125
+          "x": 78,
+          "y": 134
         }
       },
       {
@@ -84,14 +60,14 @@
         "data": {
           "name": "label_prokachka_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": " Прокачка: +10% к урону"
+            "fixedValue": "Прокачка:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 143
+          "x": 222,
+          "y": 62
         }
       },
       {
@@ -105,22 +81,7 @@
           "width": 61,
           "height": 20,
           "x": 177,
-          "y": 170
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_1_zhielieznuiu_kirku",
-          "text": {
-            "fixedValue": "1 алмазный меч."
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 71
+          "y": 179
         }
       },
       {
@@ -128,14 +89,152 @@
         "data": {
           "name": "label_budut_atakovat_mobov",
           "text": {
-            "fixedValue": "наносимому вами урону."
+            "fixedValue": "-мому вами урону."
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 78,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guilonglong.png",
+          "use1Xscale": false,
+          "x": 33,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_bonus_50_k_nanosimomu",
+          "text": {
+            "fixedValue": "бонус  +50% к наноси-"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_10_k_uronu",
+          "text": {
+            "fixedValue": "+10% к урону"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5",
+          "text": {
+            "fixedValue": "/ 5"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 285,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_obsession_level_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "ObsessionLevelOutPut"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "onClick": {
+            "name": "ObsessionPowerUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 231,
           "y": 107
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "-",
+          "onClick": {
+            "name": "ObsessionLowering"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 276,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ochki",
+          "text": {
+            "fixedValue": "Очки:"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 231,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "OutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 258,
+          "y": 143
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "obsession.png",
+          "use1Xscale": false,
+          "x": 177,
+          "y": -1
         }
       }
     ],

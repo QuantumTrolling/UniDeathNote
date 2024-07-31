@@ -17,7 +17,7 @@ public class SoulSplitCDProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		DeathnoteMod.queueServerWork((int) (20 * (3 - (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplitLevel)), () -> {
+		DeathnoteMod.queueServerWork((int) (20 * (3 - 0.3 * (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplitLevel)), () -> {
 			{
 				boolean _setval = false;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

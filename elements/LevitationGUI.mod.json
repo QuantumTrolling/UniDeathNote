@@ -11,42 +11,18 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui1.png",
-          "use1Xscale": false,
-          "x": 87,
-          "y": 26
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Левитация"
+            "fixedValue": "Левитация:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_kak_otkryt_zadacha_miertvietskii",
-          "text": {
-            "fixedValue": "Задача [Душа легкая как перо] - Принести"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 53
+          "x": 87,
+          "y": 62
         }
       },
       {
@@ -54,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Вы можете взлетать на некоторое время"
+            "fixedValue": "+ Вы можете взлетать"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 89
+          "x": 87,
+          "y": 80
         }
       },
       {
@@ -69,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Вы медленнее перемещаетесь по бренной земле"
+            "fixedValue": "- Вы медленнее пере-"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 107
+          "x": 87,
+          "y": 116
         }
       },
       {
@@ -84,14 +60,14 @@
         "data": {
           "name": "label_prokachka_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": " Прокачка: +1 секунда полета, -0.3 секунды кд"
+            "fixedValue": "Прокачка:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 134
+          "x": 222,
+          "y": 62
         }
       },
       {
@@ -104,23 +80,182 @@
           },
           "width": 61,
           "height": 20,
-          "x": 177,
-          "y": 170
+          "x": 186,
+          "y": 179
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guilonglong.png",
+          "use1Xscale": false,
+          "x": 42,
+          "y": 44
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_1_zhielieznuiu_kirku",
+          "name": "label_na_niekotoroie_vriemia",
           "text": {
-            "fixedValue": "1 перо."
+            "fixedValue": "на некоторое время"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 71
+          "x": 87,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_mieshchaieties_po_briennoi_ziemlie",
+          "text": {
+            "fixedValue": "мещаетесь по бренной"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ziemlie",
+          "text": {
+            "fixedValue": "земле."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_siekunda_polieta_03_siekundy",
+          "text": {
+            "fixedValue": "+1 секунда полета, -0.3"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_siekundy_otkata",
+          "text": {
+            "fixedValue": "секунды отката."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5",
+          "text": {
+            "fixedValue": "/ 5"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 294,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_levitation_level_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "LevitationLevelOutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 285,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "onClick": {
+            "name": "LevitationPowerUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 240,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "-",
+          "onClick": {
+            "name": "LevitationLowering"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ochki",
+          "text": {
+            "fixedValue": "Очки:"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 249,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "OutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 143
         }
       }
     ],

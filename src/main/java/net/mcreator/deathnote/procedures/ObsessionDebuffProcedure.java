@@ -28,7 +28,7 @@ public class ObsessionDebuffProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession) {
+		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession && world.dayTime() > 12999 && world.dayTime() < 23001) {
 			{
 				BlockPos _pos = BlockPos.containing(x, y, z);
 				Block.dropResources(world.getBlockState(_pos), world, BlockPos.containing(x, y, z), null);

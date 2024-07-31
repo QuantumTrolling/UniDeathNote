@@ -9,7 +9,6 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
 
@@ -35,16 +34,12 @@ public class NightBuffProcedure {
 			return;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession) {
 			if (world.dayTime() == 13000) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Start"), false);
 				if (!(((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).hasModifier((new AttributeModifier(UUID.fromString("bb521812-67a6-45aa-ba85-0093e7825fbc"), "obsession",
 						(0.5 + 0.1 * (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).ObsessionLevel), AttributeModifier.Operation.MULTIPLY_TOTAL)))))
 					((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).addTransientModifier((new AttributeModifier(UUID.fromString("bb521812-67a6-45aa-ba85-0093e7825fbc"), "obsession",
 							(0.5 + 0.1 * (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).ObsessionLevel), AttributeModifier.Operation.MULTIPLY_TOTAL)));
 			}
 			if (world.dayTime() == 23000) {
-				if (!world.isClientSide() && world.getServer() != null)
-					world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("Stop"), false);
 				((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.ATTACK_DAMAGE).removeModifier(UUID.fromString("bb521812-67a6-45aa-ba85-0093e7825fbc"));
 			}
 		}

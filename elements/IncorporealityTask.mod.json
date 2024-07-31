@@ -15,8 +15,8 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": -3,
-          "y": 17
+          "x": -21,
+          "y": 8
         }
       },
       {
@@ -24,14 +24,29 @@
         "data": {
           "name": "label_siest_ghniluiu_plot",
           "text": {
-            "fixedValue": "- Добыть 10 медной, 10 железной руды, 10 золотой руды"
+            "fixedValue": "- Добыть 10 медной, 10 железной"
           },
           "color": {
             "value": -1,
             "falpha": 0.0
           },
-          "x": -3,
-          "y": 35
+          "x": -21,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_rudy_10_zolotoi_rudy",
+          "text": {
+            "fixedValue": "руды, 10 золотой руды."
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": -21,
+          "y": 44
         }
       }
     ],

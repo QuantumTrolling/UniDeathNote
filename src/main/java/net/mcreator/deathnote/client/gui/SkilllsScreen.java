@@ -50,7 +50,7 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_prizrachnyi_gholod"), mouseX, mouseY);
 		if (mouseX > leftPos + 101 && mouseX < leftPos + 125 && mouseY > topPos + 35 && mouseY < topPos + 59)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_mstitielnyi_dukh"), mouseX, mouseY);
-		if (mouseX > leftPos + 112 && mouseX < leftPos + 136 && mouseY > topPos + 64 && mouseY < topPos + 88)
+		if (mouseX > leftPos + 111 && mouseX < leftPos + 135 && mouseY > topPos + 64 && mouseY < topPos + 88)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_maghnitokiniez"), mouseX, mouseY);
 		if (mouseX > leftPos + 72 && mouseX < leftPos + 96 && mouseY > topPos + 65 && mouseY < topPos + 89)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_biestieliesnost"), mouseX, mouseY);
@@ -68,7 +68,7 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui1.png"), this.leftPos + -38, this.topPos + -11, 0, 0, 250, 180, 250, 180);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/guii.png"), this.leftPos + -33, this.topPos + -3, 0, 0, 240, 165, 240, 165);
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_for_skills2.png"), this.leftPos + -34, this.topPos + -11, 0, 0, 240, 165, 240, 165);
 

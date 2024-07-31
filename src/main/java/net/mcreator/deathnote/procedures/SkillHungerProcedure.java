@@ -42,7 +42,7 @@ public class SkillHungerProcedure {
 				}
 				DeathnoteMod.queueServerWork(240, () -> {
 					if (entity instanceof Player _player)
-						_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0)
+						_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) + 1
 								+ (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhotlyHungerLevel));
 				});
 			}

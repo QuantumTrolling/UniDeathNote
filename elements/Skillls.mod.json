@@ -11,15 +11,6 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui1.png",
-          "use1Xscale": false,
-          "x": 87,
-          "y": 26
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_prizrachnyi_gholod",
@@ -46,15 +37,6 @@
         }
       },
       {
-        "type": "image",
-        "data": {
-          "image": "gui_for_skills2.png",
-          "use1Xscale": false,
-          "x": 91,
-          "y": 26
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_maghnitokiniez",
@@ -63,7 +45,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 238,
+          "x": 237,
           "y": 101
         }
       },
@@ -208,6 +190,24 @@
           "height": 24,
           "x": 169,
           "y": 131
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guii.png",
+          "use1Xscale": false,
+          "x": 92,
+          "y": 34
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_for_skills2.png",
+          "use1Xscale": false,
+          "x": 91,
+          "y": 26
         }
       }
     ],

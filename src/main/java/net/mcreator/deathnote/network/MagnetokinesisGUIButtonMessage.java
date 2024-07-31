@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
 import net.mcreator.deathnote.procedures.MagnetokinesisProcedure;
+import net.mcreator.deathnote.procedures.MagnetokinesisPowerUpProcedure;
+import net.mcreator.deathnote.procedures.MagnetokinesisLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class MagnetokinesisGUIButtonMessage {
 		if (buttonID == 0) {
 
 			MagnetokinesisProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			MagnetokinesisPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			MagnetokinesisLoweringProcedure.execute(entity);
 		}
 	}
 

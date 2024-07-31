@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.LevitationGUIMenu;
 import net.mcreator.deathnote.procedures.LevitationProcedure;
+import net.mcreator.deathnote.procedures.LevitationPowerUpProcedure;
+import net.mcreator.deathnote.procedures.LevitationLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class LevitationGUIButtonMessage {
 		if (buttonID == 0) {
 
 			LevitationProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			LevitationPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			LevitationLoweringProcedure.execute(entity);
 		}
 	}
 

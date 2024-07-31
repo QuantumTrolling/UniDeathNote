@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
+import net.mcreator.deathnote.procedures.SoulSplitLevelOutPutProcedure;
+import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.SoulSplitButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
 
@@ -23,6 +25,8 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	private final int x, y, z;
 	private final Player entity;
 	Button button_priniat;
+	Button button_empty;
+	Button button_empty1;
 
 	public SoulSplitScreen(SoulSplitMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,7 +52,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui1.png"), this.leftPos + -38, this.topPos + -11, 0, 0, 250, 180, 250, 180);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/guilonglong.png"), this.leftPos + -83, this.topPos + 7, 0, 0, 339, 165, 339, 165);
 
 		RenderSystem.disableBlend();
 	}
@@ -69,14 +73,26 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prizrachnyi_gholod"), -29, -2, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_kak_otkryt_zadacha_miertvietskii"), -29, 16, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1"), -29, 52, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -29, 88, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu"), -29, 124, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_zhielieznuiu_kirku"), -29, 34, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_budut_atakovat_mobov"), -29, 70, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_poluchaietie_uron_v_razmierie_3_sierdie"), -29, 106, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu"), 96, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_budut_atakovat_mobov"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_poluchaietie_uron_v_razmierie_3_sierdie"), -38, 133, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_atakovat_mobov"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_etoi_sposobnosti_vy"), -38, 115, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_razmierie_3_sierdiechiek"), -38, 151, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_klon_1_siekunda_dlitielnosti"), 96, 43, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona"), 96, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona1"), 96, 79, -12829636, false);
+		guiGraphics.drawString(this.font,
+
+				SoulSplitLevelOutPutProcedure.execute(entity), 159, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_3"), 168, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ochki"), 123, 124, -16764109, false);
+		guiGraphics.drawString(this.font,
+
+				OutPutProcedure.execute(entity), 150, 124, -16764109, false);
 	}
 
 	@Override
@@ -92,8 +108,24 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(0, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 51, this.topPos + 133, 61, 20).build();
+		}).bounds(this.leftPos + 60, this.topPos + 142, 61, 20).build();
 		guistate.put("button:button_priniat", button_priniat);
 		this.addRenderableWidget(button_priniat);
+		button_empty = Button.builder(Component.translatable("gui.deathnote.soul_split.button_empty"), e -> {
+			if (true) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(1, x, y, z));
+				SoulSplitButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 114, this.topPos + 97, 30, 20).build();
+		guistate.put("button:button_empty", button_empty);
+		this.addRenderableWidget(button_empty);
+		button_empty1 = Button.builder(Component.translatable("gui.deathnote.soul_split.button_empty1"), e -> {
+			if (true) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(2, x, y, z));
+				SoulSplitButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 159, this.topPos + 97, 30, 20).build();
+		guistate.put("button:button_empty1", button_empty1);
+		this.addRenderableWidget(button_empty1);
 	}
 }

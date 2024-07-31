@@ -36,8 +36,9 @@ public class IncorporealityTaskOverlay {
 			z = entity.getZ();
 		}
 		if (ShowIncorporealityTaskProcedure.execute(entity)) {
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.incorporeality_task.label_zadacha_miertvietskii_gholod_sies"), posX + -216, posY + -103, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot"), posX + -216, posY + -85, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.incorporeality_task.label_zadacha_miertvietskii_gholod_sies"), posX + -234, posY + -112, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot"), posX + -234, posY + -94, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.incorporeality_task.label_rudy_10_zolotoi_rudy"), posX + -234, posY + -76, -1, false);
 		}
 	}
 }

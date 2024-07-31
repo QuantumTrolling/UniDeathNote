@@ -11,42 +11,18 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui1.png",
-          "use1Xscale": false,
-          "x": 87,
-          "y": 26
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Магнитокинез"
+            "fixedValue": "Магнитокинез:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_kak_otkryt_zadacha_miertvietskii",
-          "text": {
-            "fixedValue": "Задача [Магнитное прикосновение] - Принести"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 53
+          "y": 62
         }
       },
       {
@@ -54,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Случайный камень рядом с тобой становиться"
+            "fixedValue": "+ Случайный камень"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 89
+          "y": 80
         }
       },
       {
@@ -72,11 +48,11 @@
             "fixedValue": "- Уменьшает ваш урон"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 125
+          "y": 134
         }
       },
       {
@@ -84,14 +60,14 @@
         "data": {
           "name": "label_prokachka_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": "Прокачка: +5 блоков и -1 секунда кд"
+            "fixedValue": "Прокачка:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 152
+          "x": 240,
+          "y": 62
         }
       },
       {
@@ -105,22 +81,7 @@
           "width": 61,
           "height": 20,
           "x": 186,
-          "y": 170
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_1_zhielieznuiu_kirku",
-          "text": {
-            "fixedValue": "1 железную кирку."
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 71
+          "y": 179
         }
       },
       {
@@ -128,14 +89,167 @@
         "data": {
           "name": "label_zhielieznoi_rudoi",
           "text": {
-            "fixedValue": "рудой"
+            "fixedValue": "рудой."
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
           "x": 96,
-          "y": 107
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_riadom_s_vami",
+          "text": {
+            "fixedValue": "рядом с вами становится"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 96,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_magnitokinesis_level_out_pu",
+          "text": {
+            "fixedValue": "",
+            "name": "MagnitokinesisLevelOutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 294,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_3",
+          "text": {
+            "fixedValue": "/ 3"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 303,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_5_ruda_1_siekunda_kd",
+          "text": {
+            "fixedValue": "+5 руда, - 1 секунда"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_otkata",
+          "text": {
+            "fixedValue": "отката."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 240,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ochki",
+          "text": {
+            "fixedValue": "Очки:"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 267,
+          "y": 143
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "OutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 294,
+          "y": 143
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "onClick": {
+            "name": "MagnetokinesisPowerUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 258,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "-",
+          "onClick": {
+            "name": "MagnetokinesisLowering"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 303,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guilonglong.png",
+          "use1Xscale": false,
+          "x": 51,
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "magnetogenesis.png",
+          "use1Xscale": false,
+          "x": 186,
+          "y": -1
         }
       }
     ],

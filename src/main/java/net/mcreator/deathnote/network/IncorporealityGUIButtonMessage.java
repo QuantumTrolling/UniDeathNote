@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
 import net.mcreator.deathnote.procedures.IncorporealityProcedure;
+import net.mcreator.deathnote.procedures.IncorporealityPowerUpProcedure;
+import net.mcreator.deathnote.procedures.IncorporealityLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class IncorporealityGUIButtonMessage {
 		if (buttonID == 0) {
 
 			IncorporealityProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			IncorporealityPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			IncorporealityLoweringProcedure.execute(entity);
 		}
 	}
 

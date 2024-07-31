@@ -10,6 +10,8 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.GhostlyHungerGUIMenu;
+import net.mcreator.deathnote.procedures.OutPutProcedure;
+import net.mcreator.deathnote.procedures.GhostlyHungerLevelOutPutProcedure;
 import net.mcreator.deathnote.network.GhostlyHungerGUIButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
 
@@ -23,6 +25,8 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 	private final int x, y, z;
 	private final Player entity;
 	Button button_priniat;
+	Button button_empty;
+	Button button_empty1;
 
 	public GhostlyHungerGUIScreen(GhostlyHungerGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,7 +52,9 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui1.png"), this.leftPos + -38, this.topPos + -11, 0, 0, 250, 180, 250, 180);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/guilonglong.png"), this.leftPos + -83, this.topPos + 7, 0, 0, 339, 165, 339, 165);
+
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/ghostly_hunger.png"), this.leftPos + 51, this.topPos + -38, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -69,12 +75,22 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod"), -29, -2, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii"), -29, 16, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -29, 52, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -29, 70, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu"), -29, 97, -1, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_plot"), -29, 34, -1, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_sam"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu"), 105, 43, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_v_minutu"), 105, 61, -16764109, false);
+		guiGraphics.drawString(this.font,
+
+				OutPutProcedure.execute(entity), 141, 106, -16764109, false);
+		guiGraphics.drawString(this.font,
+
+				GhostlyHungerLevelOutPutProcedure.execute(entity), 168, 25, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_3"), 177, 25, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_ochki"), 114, 106, -12829636, false);
 	}
 
 	@Override
@@ -90,8 +106,24 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new GhostlyHungerGUIButtonMessage(0, x, y, z));
 				GhostlyHungerGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 51, this.topPos + 133, 61, 20).build();
+		}).bounds(this.leftPos + 60, this.topPos + 142, 61, 20).build();
 		guistate.put("button:button_priniat", button_priniat);
 		this.addRenderableWidget(button_priniat);
+		button_empty = Button.builder(Component.translatable("gui.deathnote.ghostly_hunger_gui.button_empty"), e -> {
+			if (true) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new GhostlyHungerGUIButtonMessage(1, x, y, z));
+				GhostlyHungerGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 123, this.topPos + 79, 30, 20).build();
+		guistate.put("button:button_empty", button_empty);
+		this.addRenderableWidget(button_empty);
+		button_empty1 = Button.builder(Component.translatable("gui.deathnote.ghostly_hunger_gui.button_empty1"), e -> {
+			if (true) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new GhostlyHungerGUIButtonMessage(2, x, y, z));
+				GhostlyHungerGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}).bounds(this.leftPos + 168, this.topPos + 79, 30, 20).build();
+		guistate.put("button:button_empty1", button_empty1);
+		this.addRenderableWidget(button_empty1);
 	}
 }

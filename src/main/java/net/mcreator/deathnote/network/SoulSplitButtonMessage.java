@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.procedures.SoulSplitSkillProcedure;
+import net.mcreator.deathnote.procedures.SoulSplitPowerUpProcedure;
+import net.mcreator.deathnote.procedures.SoulSplitLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class SoulSplitButtonMessage {
 		if (buttonID == 0) {
 
 			SoulSplitSkillProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			SoulSplitPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			SoulSplitLoweringProcedure.execute(entity);
 		}
 	}
 

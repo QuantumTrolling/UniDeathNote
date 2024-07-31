@@ -11,42 +11,18 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "gui1.png",
-          "use1Xscale": false,
-          "x": 87,
-          "y": 26
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Расщепление души"
+            "fixedValue": "Расщепление души:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 35
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_kak_otkryt_zadacha_miertvietskii",
-          "text": {
-            "fixedValue": "Задача [Раздробить душу] - Принести 1"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 53
+          "x": 87,
+          "y": 62
         }
       },
       {
@@ -54,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Вы можете создать свои копии которые"
+            "fixedValue": "+ Вы можете создать"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 89
+          "x": 87,
+          "y": 80
         }
       },
       {
@@ -69,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- При использовании этой способности вы"
+            "fixedValue": "- При использовании "
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 125
+          "x": 87,
+          "y": 134
         }
       },
       {
@@ -84,14 +60,14 @@
         "data": {
           "name": "label_prokachka_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": "Прокачка: +1 клон, +1 секунда длительности, -1 секунда кд, +2 урона"
+            "fixedValue": "Прокачка:"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 161
+          "x": 222,
+          "y": 62
         }
       },
       {
@@ -104,23 +80,8 @@
           },
           "width": 61,
           "height": 20,
-          "x": 177,
-          "y": 170
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_1_zhielieznuiu_kirku",
-          "text": {
-            "fixedValue": "наковальню."
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "x": 96,
-          "y": 71
+          "x": 186,
+          "y": 179
         }
       },
       {
@@ -128,14 +89,14 @@
         "data": {
           "name": "label_budut_atakovat_mobov",
           "text": {
-            "fixedValue": "будут атаковать мобов."
+            "fixedValue": "двойников которые будут"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 107
+          "x": 87,
+          "y": 98
         }
       },
       {
@@ -143,14 +104,203 @@
         "data": {
           "name": "label_poluchaietie_uron_v_razmierie_3_sierdie",
           "text": {
-            "fixedValue": "получаете урон в размере 3 сердечек"
+            "fixedValue": "получаете урон в"
           },
           "color": {
-            "value": -1,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
-          "y": 143
+          "x": 87,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "guilonglong.png",
+          "use1Xscale": false,
+          "x": 42,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_atakovat_mobov",
+          "text": {
+            "fixedValue": "атаковать мобов."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 116
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_etoi_sposobnosti_vy",
+          "text": {
+            "fixedValue": "этой способности вы"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 152
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_razmierie_3_sierdiechiek",
+          "text": {
+            "fixedValue": "размере 3 сердечек."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 188
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_klon_1_siekunda_dlitielnosti",
+          "text": {
+            "fixedValue": "+1 клон, +1 секунда"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_siekunda_otkata_2_urona",
+          "text": {
+            "fixedValue": "длительности двойников,"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 98
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1_siekunda_otkata_2_urona1",
+          "text": {
+            "fixedValue": "-1 секунда отката."
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 222,
+          "y": 116
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty",
+          "text": "+",
+          "onClick": {
+            "name": "SoulSplitPowerUp"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 240,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_soul_split_level_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "SoulSplitLevelOutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 285,
+          "y": 62
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_empty1",
+          "text": "-",
+          "onClick": {
+            "name": "SoulSplitLowering"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_3",
+          "text": {
+            "fixedValue": "/ 3"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 294,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ochki",
+          "text": {
+            "fixedValue": "Очки:"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 249,
+          "y": 161
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "OutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 276,
+          "y": 161
         }
       }
     ],

@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.GhostlyHungerGUIMenu;
 import net.mcreator.deathnote.procedures.GhostlyHungerProcedure;
+import net.mcreator.deathnote.procedures.GhostlyHungerPowerUpProcedure;
+import net.mcreator.deathnote.procedures.GhostlyHungerLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class GhostlyHungerGUIButtonMessage {
 		if (buttonID == 0) {
 
 			GhostlyHungerProcedure.execute(entity);
+		}
+		if (buttonID == 1) {
+
+			GhostlyHungerPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			GhostlyHungerLoweringProcedure.execute(entity);
 		}
 	}
 

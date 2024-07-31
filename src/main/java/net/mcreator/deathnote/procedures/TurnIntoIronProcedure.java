@@ -41,7 +41,7 @@ public class TurnIntoIronProcedure {
 				for (int index1 = 0; index1 < 6; index1++) {
 					for (int index2 = 0; index2 < 6; index2++) {
 						if ((world.getBlockState(BlockPos.containing(dx, dy, dz))).getBlock() == Blocks.STONE) {
-							if (Math.random() < 0.2) {
+							if (Math.random() < 0.2 + 0.1 * (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).MagnetokinesisLevel) {
 								if (getRandom < 0.1) {
 									{
 										BlockPos _bp = BlockPos.containing(dx, dy, dz);

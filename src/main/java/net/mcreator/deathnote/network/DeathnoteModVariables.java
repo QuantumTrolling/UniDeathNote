@@ -96,6 +96,7 @@ public class DeathnoteModVariables {
 			clone.LevitationButton = original.LevitationButton;
 			clone.LevitationLevel = original.LevitationLevel;
 			clone.LevitationCD = original.LevitationCD;
+			clone.Points = original.Points;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -162,6 +163,7 @@ public class DeathnoteModVariables {
 		public boolean LevitationButton = false;
 		public double LevitationLevel = 0;
 		public boolean LevitationCD = false;
+		public double Points = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -200,6 +202,7 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("LevitationButton", LevitationButton);
 			nbt.putDouble("LevitationLevel", LevitationLevel);
 			nbt.putBoolean("LevitationCD", LevitationCD);
+			nbt.putDouble("Points", Points);
 			return nbt;
 		}
 
@@ -235,6 +238,7 @@ public class DeathnoteModVariables {
 			LevitationButton = nbt.getBoolean("LevitationButton");
 			LevitationLevel = nbt.getDouble("LevitationLevel");
 			LevitationCD = nbt.getBoolean("LevitationCD");
+			Points = nbt.getDouble("Points");
 		}
 	}
 
@@ -289,6 +293,7 @@ public class DeathnoteModVariables {
 					variables.LevitationButton = message.data.LevitationButton;
 					variables.LevitationLevel = message.data.LevitationLevel;
 					variables.LevitationCD = message.data.LevitationCD;
+					variables.Points = message.data.Points;
 				}
 			});
 			context.setPacketHandled(true);

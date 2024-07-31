@@ -33,16 +33,16 @@ public class OnFoodEatingProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHungerButton) {
 			if (itemstack.getItem() == Items.ROTTEN_FLESH && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
 				{
-					boolean _setval = true;
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.GhostlyHunger = _setval;
+						capability.Points = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
 				{
-					double _setval = 1;
+					boolean _setval = true;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.GhotlyHungerLevel = _setval;
+						capability.GhostlyHunger = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}

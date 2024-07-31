@@ -13,6 +13,8 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritProcedure;
+import net.mcreator.deathnote.procedures.VengefulSpiritPowerUpProcedure;
+import net.mcreator.deathnote.procedures.VengefulSpiritLoweringProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -65,6 +67,14 @@ public class VengefulSpiritGUIButtonMessage {
 		if (buttonID == 0) {
 
 			VengefulSpiritProcedure.execute(world, entity);
+		}
+		if (buttonID == 1) {
+
+			VengefulSpiritPowerUpProcedure.execute(entity);
+		}
+		if (buttonID == 2) {
+
+			VengefulSpiritLoweringProcedure.execute(entity);
 		}
 	}
 
