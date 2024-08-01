@@ -1904,6 +1904,290 @@
         ],
         "dependencies": []
       }
+    },
+    {
+      "name": "Teleportation",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportationProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleportBind",
+      "type": "keybind",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_bind",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/network/TeleportBindMessage.java"
+        ]
+      },
+      "path": "~/Binds"
+    },
+    {
+      "name": "Teleport",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SkillsOnButtonClick"
+    },
+    {
+      "name": "ShowTeleportTask",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_teleport_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowTeleportTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "TeleportGUI",
+      "type": "gui",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/network/TeleportGUIButtonMessage.java",
+          "src/main/java/net/mcreator/deathnote/world/inventory/TeleportGUIMenu.java",
+          "src/main/java/net/mcreator/deathnote/client/gui/TeleportGUIScreen.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "TeleportGUIShow",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_gui_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportGUIShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShowSkillGUI"
+    },
+    {
+      "name": "TeleportTask",
+      "type": "overlay",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/TeleportTaskOverlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "TeleportCD",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_cd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportCDProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/CD"
+    },
+    {
+      "name": "TeleportPowerUp",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_power_up",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportPowerUpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/PowerUp"
+    },
+    {
+      "name": "TeleportLowering",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_lowering",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportLoweringProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Lowering"
+    },
+    {
+      "name": "TeleportLevelOutPut",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_level_out_put",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportLevelOutPutProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OutPuts"
+    },
+    {
+      "name": "TeleportDebuff",
+      "type": "procedure",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_debuff",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportDebuffProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ForCDRestartAfterDeath",
+      "type": "procedure",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "for_cd_restart_after_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ForCDRestartAfterDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/CD"
     }
   ],
   "variable_elements": [
@@ -2092,6 +2376,30 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "10.0"
+    },
+    {
+      "name": "Teleport",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "TeleportButton",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "TeleportLevel",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "TeleportCD",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -2123,8 +2431,8 @@
   "language_map": {
     "en_us": {
       "gui.deathnote.levitation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете взлетать",
-      "gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.obsession_gui.button_priniat": "Принять",
+      "gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.obsession_gui.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в размере 3 сердечек",
       "gui.deathnote.ghostly_hunger_gui.label_ochki": "Очки:",
       "gui.deathnote.levitation_gui.label_prizrachnyi_gholod": "Левитация:",
@@ -2132,18 +2440,20 @@
       "gui.deathnote.incorporeality_gui.label_pieriedvizhieniia": "передвижения.",
       "gui.deathnote.incorporeality_gui.label_5": "/ 5",
       "gui.deathnote.levitation_gui.label_5": "/ 5",
-      "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух:",
       "gui.deathnote.levitation_gui.button_empty1": "-",
+      "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух:",
       "gui.deathnote.levitation_gui.label_ziemlie": "земле.",
+      "gui.deathnote.teleport_gui.label_na_niekotoroie_vriemia": "20 блоков в строну ку-",
       "gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia": "на некоторое время.",
       "gui.deathnote.obsession_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Не можете спать.",
       "gui.deathnote.soul_split.label_ochki": "Очки:",
-      "gui.deathnote.magnetokinesis_gui.button_priniat": "Принять",
-      "item.deathnote.book_of_death": "Book Of Death",
       "gui.deathnote.vengeful_spirit_gui.label_1_urovien_k_effiektu": "+1 уровень к эффекту.",
+      "item.deathnote.book_of_death": "Book Of Death",
+      "gui.deathnote.magnetokinesis_gui.button_priniat": "Принять",
       "subtitles.levitation": "",
       "gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы медленнее пере-",
       "gui.deathnote.levitation_gui.label_budut_atakovat_mobov": "наносимому вами урону.",
+      "key.deathnote.teleport_bind": "Teleport Skill",
       "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Добыть 10 медной, 10 железной",
       "gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod": "-полняет тебе голод.",
       "gui.deathnote.obsession_gui.label_ochki": "Очки:",
@@ -2151,6 +2461,7 @@
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "gui.deathnote.ghostly_hunger_gui.button_empty": "+",
+      "gui.deathnote.teleport_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Око перемещения]",
       "gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Ваше здоровье сни-",
       "gui.deathnote.obsession_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Ночью вы получаете",
       "gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании ",
@@ -2195,18 +2506,26 @@
       "gui.deathnote.vengeful_spirit_gui.label_5": "/ 5",
       "gui.deathnote.magnetokinesis_gui.label_5_ruda_1_siekunda_kd": "+5 руда, - 1 секунда",
       "gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Магнитное прикосновение] - Принести",
+      "gui.deathnote.teleport_gui.label_ochki": "Очки:",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
       "gui.deathnote.obsession_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.vengeful_spirit_gui.button_empty1": "-",
+      "gui.deathnote.teleport_gui.label_prizrachnyi_gholod": "Бестелесное перемещение:",
       "gui.deathnote.levitation_gui.label_1_zhielieznuiu_kirku": "1 перо.",
+      "gui.deathnote.teleport_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Телепортируетесь на",
       "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику",
       "gui.deathnote.incorporeality_gui.label_ochki": "Очки:",
+      "gui.deathnote.teleport_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Боязнь святой воды",
+      "gui.deathnote.skillls.tooltip_biestieliesnoie_pieriemieshchieniie": "Бестелесное перемещение",
       "entity.deathnote.undertaker": "Undertaker",
       "gui.deathnote.ghostly_hunger_gui.label_plot": "- Съесть гнилую плоть.",
       "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
+      "gui.deathnote.teleport_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.skillls.tooltip_lievitatsiia": "Левитация",
+      "gui.deathnote.teleport_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.vengeful_spirit_gui.label_ubil1": "убил.",
       "gui.deathnote.obsession_gui.label_5": "/ 5",
+      "gui.deathnote.teleport_gui.label_da_smotritie": "-да смотрите.",
       "gui.deathnote.magnetokinesis_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Магнитное прикосновение]",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona": "длительности двойников,",
       "gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
@@ -2223,10 +2542,12 @@
       "gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Получаете +10% к",
       "gui.deathnote.vengeful_spirit_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_gui.label_budut_atakovat_mobov": "-мому вами урону.",
+      "gui.deathnote.teleport_task.label_siest_ghniluiu_plot": "- Добыть 1 эндер жемчуг",
       "gui.deathnote.magnetokinesis_gui.label_1_zhielieznuiu_kirku": "1 железную кирку.",
       "gui.deathnote.obsession_gui.label_10_k_uronu": "+10% к урону",
       "gui.deathnote.incorporeality_task.label_rudy_10_zolotoi_rudy": "руды, 10 золотой руды.",
       "gui.deathnote.incorporeality_gui.button_empty1": "-",
+      "gui.deathnote.teleport_gui.label_5": "/ 5",
       "gui.deathnote.incorporeality_gui.label_broniu": "броню.",
       "gui.deathnote.ghostly_hunger_gui.button_empty1": "-",
       "gui.deathnote.vengeful_spirit_gui.label_ochki": "Очки:",
@@ -2255,6 +2576,7 @@
       "gui.deathnote.magnetokinesis_gui.button_empty": "+",
       "gui.deathnote.magnetokinesis_gui.label_3": "/ 3",
       "gui.deathnote.ghostly_hunger_gui.button_priniat": "Принять",
+      "gui.deathnote.teleport_gui.label_ziemlie": "земле.",
       "gui.deathnote.obsession_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Незримость] ",
       "gui.deathnote.vengeful_spirit_gui.label_ot_moba_kotoryi_vas_ubil": "эффект в зависимости",
       "gui.deathnote.vengeful_spirit_gui.label_snizhaietsia_20_maks_zdorovia": "-жается (-20%).",
@@ -2273,6 +2595,8 @@
       "gui.deathnote.incorporeality_gui.label_prizrachnyi_gholod": "Бестелесность:",
       "gui.deathnote.obsession_gui.label_1_zhielieznuiu_kirku": "1 алмазный меч.",
       "gui.deathnote.soul_split.label_budut_atakovat_mobov": "свои копии которые бу-",
+      "gui.deathnote.teleport_gui.label_mieshchaieties_po_briennoi_ziemlie": "(Нельзя входить в воду)",
+      "gui.deathnote.teleport_gui.label_1_siekunda_polieta_03_siekundy": "-1 секунда отката.",
       "gui.deathnote.levitation_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Душа легкая как перо]",
       "gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu": "+1 ед сытости в",
       "gui.deathnote.soul_split.button_empty": "+"

@@ -13,6 +13,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
+import net.mcreator.deathnote.procedures.TeleportGUIShowProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
 import net.mcreator.deathnote.procedures.ObsessionGUIShowProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
@@ -95,6 +96,10 @@ public class SkilllsButtonMessage {
 		if (buttonID == 6) {
 
 			LevitationGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 7) {
+
+			TeleportGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

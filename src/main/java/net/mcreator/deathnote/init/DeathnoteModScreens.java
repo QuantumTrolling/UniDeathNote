@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.deathnote.client.gui.VengefulSpiritGUIScreen;
+import net.mcreator.deathnote.client.gui.TeleportGUIScreen;
 import net.mcreator.deathnote.client.gui.SoulSplitScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
 import net.mcreator.deathnote.client.gui.ObsessionGUIScreen;
@@ -33,6 +34,7 @@ public class DeathnoteModScreens {
 			MenuScreens.register(DeathnoteModMenus.SOUL_SPLIT.get(), SoulSplitScreen::new);
 			MenuScreens.register(DeathnoteModMenus.OBSESSION_GUI.get(), ObsessionGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.LEVITATION_GUI.get(), LevitationGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.TELEPORT_GUI.get(), TeleportGUIScreen::new);
 		});
 	}
 }

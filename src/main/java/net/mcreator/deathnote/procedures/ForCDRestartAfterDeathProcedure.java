@@ -12,9 +12,9 @@ import net.mcreator.deathnote.network.DeathnoteModVariables;
 import javax.annotation.Nullable;
 
 @Mod.EventBusSubscriber
-public class ForCDRestartProcedure {
+public class ForCDRestartAfterDeathProcedure {
 	@SubscribeEvent
-	public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+	public static void onPlayerRespawned(PlayerEvent.PlayerRespawnEvent event) {
 		execute(event, event.getEntity());
 	}
 

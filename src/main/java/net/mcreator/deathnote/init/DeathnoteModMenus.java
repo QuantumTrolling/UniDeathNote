@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
+import net.mcreator.deathnote.world.inventory.TeleportGUIMenu;
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
@@ -31,4 +32,5 @@ public class DeathnoteModMenus {
 	public static final RegistryObject<MenuType<SoulSplitMenu>> SOUL_SPLIT = REGISTRY.register("soul_split", () -> IForgeMenuType.create(SoulSplitMenu::new));
 	public static final RegistryObject<MenuType<ObsessionGUIMenu>> OBSESSION_GUI = REGISTRY.register("obsession_gui", () -> IForgeMenuType.create(ObsessionGUIMenu::new));
 	public static final RegistryObject<MenuType<LevitationGUIMenu>> LEVITATION_GUI = REGISTRY.register("levitation_gui", () -> IForgeMenuType.create(LevitationGUIMenu::new));
+	public static final RegistryObject<MenuType<TeleportGUIMenu>> TELEPORT_GUI = REGISTRY.register("teleport_gui", () -> IForgeMenuType.create(TeleportGUIMenu::new));
 }

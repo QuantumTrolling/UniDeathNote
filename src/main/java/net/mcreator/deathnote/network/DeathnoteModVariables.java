@@ -97,6 +97,10 @@ public class DeathnoteModVariables {
 			clone.LevitationLevel = original.LevitationLevel;
 			clone.LevitationCD = original.LevitationCD;
 			clone.Points = original.Points;
+			clone.Teleport = original.Teleport;
+			clone.TeleportButton = original.TeleportButton;
+			clone.TeleportLevel = original.TeleportLevel;
+			clone.TeleportCD = original.TeleportCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -164,6 +168,10 @@ public class DeathnoteModVariables {
 		public double LevitationLevel = 0;
 		public boolean LevitationCD = false;
 		public double Points = 10.0;
+		public boolean Teleport = false;
+		public boolean TeleportButton = false;
+		public double TeleportLevel = 0;
+		public boolean TeleportCD = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -203,6 +211,10 @@ public class DeathnoteModVariables {
 			nbt.putDouble("LevitationLevel", LevitationLevel);
 			nbt.putBoolean("LevitationCD", LevitationCD);
 			nbt.putDouble("Points", Points);
+			nbt.putBoolean("Teleport", Teleport);
+			nbt.putBoolean("TeleportButton", TeleportButton);
+			nbt.putDouble("TeleportLevel", TeleportLevel);
+			nbt.putBoolean("TeleportCD", TeleportCD);
 			return nbt;
 		}
 
@@ -239,6 +251,10 @@ public class DeathnoteModVariables {
 			LevitationLevel = nbt.getDouble("LevitationLevel");
 			LevitationCD = nbt.getBoolean("LevitationCD");
 			Points = nbt.getDouble("Points");
+			Teleport = nbt.getBoolean("Teleport");
+			TeleportButton = nbt.getBoolean("TeleportButton");
+			TeleportLevel = nbt.getDouble("TeleportLevel");
+			TeleportCD = nbt.getBoolean("TeleportCD");
 		}
 	}
 
@@ -294,6 +310,10 @@ public class DeathnoteModVariables {
 					variables.LevitationLevel = message.data.LevitationLevel;
 					variables.LevitationCD = message.data.LevitationCD;
 					variables.Points = message.data.Points;
+					variables.Teleport = message.data.Teleport;
+					variables.TeleportButton = message.data.TeleportButton;
+					variables.TeleportLevel = message.data.TeleportLevel;
+					variables.TeleportCD = message.data.TeleportCD;
 				}
 			});
 			context.setPacketHandled(true);

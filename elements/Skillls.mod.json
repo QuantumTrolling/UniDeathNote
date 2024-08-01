@@ -209,6 +209,32 @@
           "x": 91,
           "y": 26
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_1ghostly_hunger4",
+          "image": "1ghostly_hunger.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "TeleportGUIShow"
+          },
+          "x": 203,
+          "y": 68
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_biestieliesnoie_pieriemieshchieniie",
+          "text": {
+            "fixedValue": "Бестелесное перемещение"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 197,
+          "y": 64
+        }
       }
     ],
     "gridSettings": {
