@@ -77,19 +77,19 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_budut_atakovat_mobov"), -38, 79, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_bonus_50_k_nanosimomu"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_budut_atakovat_mobov"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_bonus_50_k_nanosimomu"), -38, 52, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_10_k_uronu"), 105, 43, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_5"), 168, 25, -16764109, false);
 		guiGraphics.drawString(this.font,
 
 				ObsessionLevelOutPutProcedure.execute(entity), 159, 25, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_ochki"), 105, 88, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.obsession_gui.label_ochki"), 114, 88, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 132, 88, -16764109, false);
+				OutPutProcedure.execute(entity), 141, 88, -16764109, false);
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_plus_1 = new ImageButton(this.leftPos + 114, this.topPos + 61, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 61, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ObsessionGUIButtonMessage(0, x, y, z));
 				ObsessionGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -108,7 +108,7 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 		});
 		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
 		this.addRenderableWidget(imagebutton_plus_1);
-		imagebutton_minus_1 = new ImageButton(this.leftPos + 150, this.topPos + 61, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 61, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ObsessionGUIButtonMessage(1, x, y, z));
 				ObsessionGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);

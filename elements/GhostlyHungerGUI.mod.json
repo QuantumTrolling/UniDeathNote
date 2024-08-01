@@ -30,7 +30,7 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Твой голод"
+            "fixedValue": "+ Твой голод воспол-"
           },
           "color": {
             "value": -16764109,
@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Еда больше не"
+            "fixedValue": "- Еда больше не вос-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 116
+          "y": 107
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_sam",
           "text": {
-            "fixedValue": "восполняется сам."
+            "fixedValue": "-няется сам."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -90,14 +90,14 @@
         "data": {
           "name": "label_vospolniaiet_tiebie_gholod",
           "text": {
-            "fixedValue": "восполняет тебе голод"
+            "fixedValue": "-полняет тебе голод."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 116
         }
       },
       {
@@ -127,7 +127,7 @@
             "falpha": 0.0
           },
           "x": 231,
-          "y": 98
+          "y": 89
         }
       },
       {

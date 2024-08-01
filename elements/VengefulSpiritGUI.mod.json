@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Ваше здоровье"
+            "fixedValue": "- Ваше здоровье сни-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 170
+          "y": 134
         }
       },
       {
@@ -82,7 +82,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -97,7 +97,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 116
+          "y": 98
         }
       },
       {
@@ -112,7 +112,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 107
         }
       },
       {
@@ -120,14 +120,14 @@
         "data": {
           "name": "label_snizhaietsia_20_maks_zdorovia",
           "text": {
-            "fixedValue": "снижается"
+            "fixedValue": "-жается (-20%)."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 188
+          "y": 143
         }
       },
       {
@@ -157,7 +157,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 152
+          "y": 116
         }
       },
       {

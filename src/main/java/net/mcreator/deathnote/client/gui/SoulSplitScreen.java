@@ -75,24 +75,24 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu"), 96, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_budut_atakovat_mobov"), -38, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_poluchaietie_uron_v_razmierie_3_sierdie"), -38, 133, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_atakovat_mobov"), -38, 79, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_etoi_sposobnosti_vy"), -38, 115, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_razmierie_3_sierdiechiek"), -38, 151, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_budut_atakovat_mobov"), -38, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_poluchaietie_uron_v_razmierie_3_sierdie"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_atakovat_mobov"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_etoi_sposobnosti_vy"), -38, 88, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_razmierie_3_sierdiechiek"), -38, 106, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_klon_1_siekunda_dlitielnosti"), 96, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona"), 96, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona1"), 96, 79, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona"), 96, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona1"), 96, 61, -12829636, false);
 		guiGraphics.drawString(this.font,
 
 				SoulSplitLevelOutPutProcedure.execute(entity), 159, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_3"), 168, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ochki"), 123, 124, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_ochki"), 114, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 150, 124, -16764109, false);
+				OutPutProcedure.execute(entity), 141, 106, -16764109, false);
 	}
 
 	@Override
@@ -103,7 +103,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 97, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(0, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -111,7 +111,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		});
 		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
 		this.addRenderableWidget(imagebutton_plus_1);
-		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 97, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(1, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 1, x, y, z);

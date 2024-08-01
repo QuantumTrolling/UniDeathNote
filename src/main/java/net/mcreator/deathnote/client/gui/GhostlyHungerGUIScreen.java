@@ -77,12 +77,12 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 70, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_sam"), -38, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod"), -38, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_sam"), -38, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod"), -38, 79, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu"), 105, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_v_minutu"), 105, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_v_minutu"), 105, 52, -16764109, false);
 		guiGraphics.drawString(this.font,
 
 				OutPutProcedure.execute(entity), 141, 106, -16764109, false);

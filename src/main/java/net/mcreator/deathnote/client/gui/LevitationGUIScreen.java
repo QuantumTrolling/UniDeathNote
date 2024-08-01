@@ -75,21 +75,21 @@ public class LevitationGUIScreen extends AbstractContainerScreen<LevitationGUIMe
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu"), 96, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia"), -38, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_mieshchaieties_po_briennoi_ziemlie"), -38, 97, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ziemlie"), -38, 115, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_1_siekunda_polieta_03_siekundy"), 96, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_siekundy_otkata"), 96, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 70, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia"), -38, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_mieshchaieties_po_briennoi_ziemlie"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ziemlie"), -38, 88, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_1_siekunda_polieta_03_siekundy"), 105, 43, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_siekundy_otkata"), 105, 52, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_5"), 168, 25, -16764109, false);
 		guiGraphics.drawString(this.font,
 
 				LevitationLevelOutPutProcedure.execute(entity), 159, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ochki"), 114, 106, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.levitation_gui.label_ochki"), 114, 97, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 141, 106, -16764109, false);
+				OutPutProcedure.execute(entity), 141, 97, -16764109, false);
 	}
 
 	@Override
@@ -100,7 +100,7 @@ public class LevitationGUIScreen extends AbstractContainerScreen<LevitationGUIMe
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 70, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new LevitationGUIButtonMessage(0, x, y, z));
 				LevitationGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -108,7 +108,7 @@ public class LevitationGUIScreen extends AbstractContainerScreen<LevitationGUIMe
 		});
 		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
 		this.addRenderableWidget(imagebutton_plus_1);
-		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 70, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new LevitationGUIButtonMessage(1, x, y, z));
 				LevitationGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);

@@ -75,10 +75,10 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 70, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia"), -38, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_broniu"), -38, 97, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia"), -38, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_broniu"), -38, 79, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_10_k_skorosti"), 105, 43, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_pieriedvizhieniia"), 105, 61, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_5"), 168, 25, -16764109, false);

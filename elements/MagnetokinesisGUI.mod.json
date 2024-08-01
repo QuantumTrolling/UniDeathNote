@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Уменьшает ваш урон"
+            "fixedValue": "- Уменьшает ваш урон."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 116
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_zhielieznoi_rudoi",
           "text": {
-            "fixedValue": "рудой."
+            "fixedValue": "-вится рудой."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 116
+          "y": 98
         }
       },
       {
@@ -90,14 +90,14 @@
         "data": {
           "name": "label_riadom_s_vami",
           "text": {
-            "fixedValue": "рядом с вами становится"
+            "fixedValue": "рядом с вами стано-"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -158,7 +158,7 @@
             "falpha": 0.0
           },
           "x": 231,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -172,7 +172,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 249,
+          "x": 240,
           "y": 143
         }
       },
@@ -188,7 +188,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 276,
+          "x": 267,
           "y": 143
         }
       },
@@ -219,7 +219,7 @@
           "onClick": {
             "name": "MagnetokinesisPowerUp"
           },
-          "x": 258,
+          "x": 249,
           "y": 116
         }
       },
@@ -232,7 +232,7 @@
           "onClick": {
             "name": "MagnetokinesisLowering"
           },
-          "x": 294,
+          "x": 285,
           "y": 116
         }
       },

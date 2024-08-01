@@ -15,7 +15,7 @@
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Бестелесность"
+            "fixedValue": "Бестелесность:"
           },
           "color": {
             "value": -16764109,
@@ -52,7 +52,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 116
+          "y": 107
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_skorosti_pieriedvizhieniia",
           "text": {
-            "fixedValue": "скорости передвижения"
+            "fixedValue": "скорости передвижения."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -97,7 +97,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 116
         }
       },
       {
