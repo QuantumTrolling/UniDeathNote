@@ -6,7 +6,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
@@ -24,9 +24,9 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_priniat;
-	Button button_empty;
-	Button button_empty1;
+	ImageButton imagebutton_plus_1;
+	ImageButton imagebutton_minus_1;
+	ImageButton imagebutton_accept2;
 
 	public SoulSplitScreen(SoulSplitMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -103,29 +103,29 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	@Override
 	public void init() {
 		super.init();
-		button_priniat = Button.builder(Component.translatable("gui.deathnote.soul_split.button_priniat"), e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 97, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(0, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 60, this.topPos + 142, 61, 20).build();
-		guistate.put("button:button_priniat", button_priniat);
-		this.addRenderableWidget(button_priniat);
-		button_empty = Button.builder(Component.translatable("gui.deathnote.soul_split.button_empty"), e -> {
+		});
+		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
+		this.addRenderableWidget(imagebutton_plus_1);
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 97, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(1, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 114, this.topPos + 97, 30, 20).build();
-		guistate.put("button:button_empty", button_empty);
-		this.addRenderableWidget(button_empty);
-		button_empty1 = Button.builder(Component.translatable("gui.deathnote.soul_split.button_empty1"), e -> {
+		});
+		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
+		this.addRenderableWidget(imagebutton_minus_1);
+		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(2, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 159, this.topPos + 97, 30, 20).build();
-		guistate.put("button:button_empty1", button_empty1);
-		this.addRenderableWidget(button_empty1);
+		});
+		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
+		this.addRenderableWidget(imagebutton_accept2);
 	}
 }

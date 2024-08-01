@@ -66,15 +66,15 @@ public class GhostlyHungerGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			GhostlyHungerProcedure.execute(entity);
+			GhostlyHungerPowerUpProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			GhostlyHungerPowerUpProcedure.execute(entity);
+			GhostlyHungerLoweringProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			GhostlyHungerLoweringProcedure.execute(entity);
+			GhostlyHungerProcedure.execute(entity);
 		}
 	}
 

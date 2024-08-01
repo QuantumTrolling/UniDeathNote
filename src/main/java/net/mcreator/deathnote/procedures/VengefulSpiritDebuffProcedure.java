@@ -6,7 +6,6 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
@@ -23,8 +22,6 @@ public class VengefulSpiritDebuffProcedure {
 				((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH)
 						.addTransientModifier((new AttributeModifier(UUID.fromString("80c91759-1b7a-43ed-8a1e-29a6d25cac8e"), "debuff", (-0.2), AttributeModifier.Operation.MULTIPLY_TOTAL)));
 			entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.GENERIC)), 4);
-			if (!world.isClientSide() && world.getServer() != null)
-				world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("VengefulDebuff"), false);
 		}
 	}
 }

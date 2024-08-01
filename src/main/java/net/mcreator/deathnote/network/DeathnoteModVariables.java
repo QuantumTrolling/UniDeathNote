@@ -163,7 +163,7 @@ public class DeathnoteModVariables {
 		public boolean LevitationButton = false;
 		public double LevitationLevel = 0;
 		public boolean LevitationCD = false;
-		public double Points = 0;
+		public double Points = 10.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

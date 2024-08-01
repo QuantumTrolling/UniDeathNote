@@ -71,20 +71,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "Levitation"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
-        }
-      },
-      {
         "type": "image",
         "data": {
           "image": "guilonglong.png",
@@ -200,34 +186,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "LevitationPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 240,
-          "y": 116
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "LevitationLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_ochki",
@@ -238,7 +196,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 249,
+          "x": 240,
           "y": 143
         }
       },
@@ -254,8 +212,47 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 276,
+          "x": 267,
           "y": 143
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "LevitationPowerUp"
+          },
+          "x": 249,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "LevitationLowering"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Levitation"
+          },
+          "x": 186,
+          "y": 179
         }
       }
     ],

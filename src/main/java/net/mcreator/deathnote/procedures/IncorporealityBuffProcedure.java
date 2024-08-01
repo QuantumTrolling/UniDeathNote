@@ -34,6 +34,7 @@ public class IncorporealityBuffProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality) {
 			if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporealityBuff != (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new DeathnoteModVariables.PlayerVariables())).incorporealityLevel) {
+				((LivingEntity) entity).getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MOVEMENT_SPEED).removeModifier(UUID.fromString("5dac431c-7705-46e0-8247-7c8f87903b11"));
 				{
 					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporealityLevel;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

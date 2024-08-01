@@ -52,7 +52,7 @@ public class LevitationBindMessage {
 			return;
 		if (type == 0) {
 
-			FlyingProcedure.execute(world, entity);
+			FlyingProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

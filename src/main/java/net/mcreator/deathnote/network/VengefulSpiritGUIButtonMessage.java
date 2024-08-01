@@ -66,15 +66,15 @@ public class VengefulSpiritGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			VengefulSpiritProcedure.execute(world, entity);
+			VengefulSpiritPowerUpProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			VengefulSpiritPowerUpProcedure.execute(entity);
+			VengefulSpiritLoweringProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			VengefulSpiritLoweringProcedure.execute(entity);
+			VengefulSpiritProcedure.execute(world, entity);
 		}
 	}
 

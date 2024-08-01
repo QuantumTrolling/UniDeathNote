@@ -71,20 +71,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "Incorporeality"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_skorosti_pieriedvizhieniia",
@@ -145,34 +131,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "IncorporealityPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 240,
-          "y": 116
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "IncorporealityLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_5",
@@ -215,7 +173,7 @@
             "falpha": 0.0
           },
           "x": 240,
-          "y": 152
+          "y": 143
         }
       },
       {
@@ -231,7 +189,7 @@
             "falpha": 0.0
           },
           "x": 267,
-          "y": 152
+          "y": 143
         }
       },
       {
@@ -241,6 +199,45 @@
           "use1Xscale": false,
           "x": 42,
           "y": 44
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Incorporeality"
+          },
+          "x": 186,
+          "y": 179
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "IncorporealityPowerUp"
+          },
+          "x": 249,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "IncorporealityLowering"
+          },
+          "x": 285,
+          "y": 116
         }
       }
     ],

@@ -66,15 +66,15 @@ public class ObsessionGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			ObsessionProcedure.execute(entity);
+			ObsessionPowerUpProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			ObsessionPowerUpProcedure.execute(entity);
+			ObsessionLoweringProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			ObsessionLoweringProcedure.execute(entity);
+			ObsessionProcedure.execute(entity);
 		}
 	}
 

@@ -66,15 +66,15 @@ public class SoulSplitButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			SoulSplitSkillProcedure.execute(entity);
+			SoulSplitPowerUpProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			SoulSplitPowerUpProcedure.execute(entity);
+			SoulSplitLoweringProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			SoulSplitLoweringProcedure.execute(entity);
+			SoulSplitSkillProcedure.execute(entity);
 		}
 	}
 

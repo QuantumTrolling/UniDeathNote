@@ -71,20 +71,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "GhostlyHunger"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_sam",
@@ -142,34 +128,6 @@
           },
           "x": 231,
           "y": 98
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "GhostlyHungerPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 249,
-          "y": 116
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "GhostlyHungerLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 294,
-          "y": 116
         }
       },
       {
@@ -250,6 +208,45 @@
           "use1Xscale": false,
           "x": 177,
           "y": -1
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHungerPowerUp"
+          },
+          "x": 249,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHungerLowering"
+          },
+          "x": 285,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHunger"
+          },
+          "x": 186,
+          "y": 179
         }
       }
     ],

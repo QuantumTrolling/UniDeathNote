@@ -71,20 +71,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "VengefulSpirit"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_poluchaietie_bieskoniechnyi",
@@ -157,34 +143,6 @@
           },
           "x": 231,
           "y": 80
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "VengefulSpiritPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 240,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "VengefulSpiritLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 285,
-          "y": 107
         }
       },
       {
@@ -280,6 +238,45 @@
           "use1Xscale": false,
           "x": 186,
           "y": -1
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritPowerUp"
+          },
+          "x": 249,
+          "y": 107
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritLowering"
+          },
+          "x": 285,
+          "y": 107
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpirit"
+          },
+          "x": 186,
+          "y": 179
         }
       }
     ],

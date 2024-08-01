@@ -1,12 +1,11 @@
 package net.mcreator.deathnote.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
 
 public class LevitationProcedure {
-	public static void execute(LevelAccessor world, Entity entity) {
+	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationButton == false) {
@@ -24,7 +23,7 @@ public class LevitationProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			LevitationDebuffProcedure.execute(world, entity);
+			LevitationDebuffProcedure.execute(entity);
 		}
 	}
 }

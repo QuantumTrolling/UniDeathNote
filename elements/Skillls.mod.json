@@ -58,7 +58,7 @@
           "onClick": {
             "name": "GhostlyHungerGUIShow"
           },
-          "x": 255,
+          "x": 256,
           "y": 52
         }
       },
@@ -71,7 +71,7 @@
           "onClick": {
             "name": "VengefulSpiritGUIShow"
           },
-          "x": 231,
+          "x": 232,
           "y": 76
         }
       },
@@ -97,7 +97,7 @@
           "onClick": {
             "name": "IncorporealityGUIShow"
           },
-          "x": 202,
+          "x": 203,
           "y": 106
         }
       },
@@ -123,7 +123,7 @@
           "onClick": {
             "name": "SoulSplitGUIShow"
           },
-          "x": 231,
+          "x": 232,
           "y": 135
         }
       },
@@ -136,7 +136,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 228,
+          "x": 227,
           "y": 131
         }
       },
@@ -149,8 +149,8 @@
           "onClick": {
             "name": "ObsessionGUIShow"
           },
-          "x": 202,
-          "y": 144
+          "x": 203,
+          "y": 142
         }
       },
       {
@@ -162,8 +162,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 198,
-          "y": 141
+          "x": 197,
+          "y": 139
         }
       },
       {
@@ -175,7 +175,7 @@
           "onClick": {
             "name": "LevitationGUIShow"
           },
-          "x": 173,
+          "x": 175,
           "y": 135
         }
       },
@@ -188,7 +188,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 169,
+          "x": 168,
           "y": 131
         }
       },

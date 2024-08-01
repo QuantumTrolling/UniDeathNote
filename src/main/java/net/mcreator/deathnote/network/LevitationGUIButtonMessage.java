@@ -66,15 +66,15 @@ public class LevitationGUIButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			LevitationProcedure.execute(world, entity);
+			LevitationPowerUpProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			LevitationPowerUpProcedure.execute(entity);
+			LevitationLoweringProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			LevitationLoweringProcedure.execute(entity);
+			LevitationProcedure.execute(entity);
 		}
 	}
 

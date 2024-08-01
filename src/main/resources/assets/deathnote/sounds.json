@@ -14,5 +14,13 @@
         "stream": false
       }
     ]
+  },
+  "levitation": {
+    "sounds": [
+      {
+        "name": "deathnote:levitation",
+        "stream": false
+      }
+    ]
   }
 }

@@ -21,7 +21,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 87,
           "y": 62
         }
       },
@@ -36,7 +36,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 87,
           "y": 80
         }
       },
@@ -51,7 +51,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 87,
           "y": 134
         }
       },
@@ -66,22 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 240,
+          "x": 231,
           "y": 62
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "Magnetokinesis"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
         }
       },
       {
@@ -95,7 +81,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 87,
           "y": 116
         }
       },
@@ -110,7 +96,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 96,
+          "x": 87,
           "y": 98
         }
       },
@@ -126,7 +112,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
+          "x": 285,
           "y": 62
         }
       },
@@ -141,7 +127,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 303,
+          "x": 294,
           "y": 62
         }
       },
@@ -156,7 +142,7 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 240,
+          "x": 231,
           "y": 80
         }
       },
@@ -171,7 +157,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 240,
+          "x": 231,
           "y": 98
         }
       },
@@ -186,7 +172,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
+          "x": 249,
           "y": 143
         }
       },
@@ -202,36 +188,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
+          "x": 276,
           "y": 143
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "MagnetokinesisPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 116
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "MagnetokinesisLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 303,
-          "y": 116
         }
       },
       {
@@ -239,7 +197,7 @@
         "data": {
           "image": "guilonglong.png",
           "use1Xscale": false,
-          "x": 51,
+          "x": 42,
           "y": 44
         }
       },
@@ -250,6 +208,45 @@
           "use1Xscale": false,
           "x": 186,
           "y": -1
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisPowerUp"
+          },
+          "x": 258,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisLowering"
+          },
+          "x": 294,
+          "y": 116
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Magnetokinesis"
+          },
+          "x": 186,
+          "y": 179
         }
       }
     ],

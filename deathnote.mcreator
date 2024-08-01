@@ -502,10 +502,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -582,10 +578,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -1221,10 +1213,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1334,6 +1322,18 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -1393,10 +1393,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -1848,6 +1844,66 @@
         ]
       },
       "path": "~/Lowering"
+    },
+    {
+      "name": "OnWorldExit",
+      "type": "procedure",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_world_exit",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/OnWorldExitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Undertaker",
+      "type": "livingentity",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/entity/UndertakerEntity.java",
+          "src/main/java/net/mcreator/deathnote/client/renderer/UndertakerRenderer.java",
+          "src/main/resources/assets/deathnote/models/item/undertaker_spawn_egg.json"
+        ]
+      }
+    },
+    {
+      "name": "UndertakerRightClickedOnEntity",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker_right_clicked_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/UndertakerRightClickedOnEntityProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -2035,7 +2091,7 @@
       "name": "Points",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "10.0"
     }
   ],
   "sound_elements": [
@@ -2051,6 +2107,14 @@
       "name": "soulsplit",
       "files": [
         "soulsplit"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "levitation",
+      "files": [
+        "levitation"
       ],
       "category": "neutral",
       "subtitle": ""
@@ -2077,6 +2141,7 @@
       "gui.deathnote.magnetokinesis_gui.button_priniat": "Принять",
       "item.deathnote.book_of_death": "Book Of Death",
       "gui.deathnote.vengeful_spirit_gui.label_1_urovien_k_effiektu": "+1 уровень к эффекту.",
+      "subtitles.levitation": "",
       "gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы медленнее пере-",
       "gui.deathnote.levitation_gui.label_budut_atakovat_mobov": "наносимому вами урону.",
       "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Добыть 10 медной, 10 железной",
@@ -2136,6 +2201,7 @@
       "gui.deathnote.levitation_gui.label_1_zhielieznuiu_kirku": "1 перо.",
       "gui.deathnote.vengeful_spirit_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Могильный дар] - Помочь могильщику",
       "gui.deathnote.incorporeality_gui.label_ochki": "Очки:",
+      "entity.deathnote.undertaker": "Undertaker",
       "gui.deathnote.ghostly_hunger_gui.label_plot": "- Съесть гнилую плоть.",
       "gui.deathnote.ghostly_hunger_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Мертвецкий голод]:",
       "gui.deathnote.skillls.tooltip_lievitatsiia": "Левитация",
@@ -2182,6 +2248,7 @@
       "gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Еда больше не",
       "gui.deathnote.incorporeality_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_3": "/ 3",
+      "item.deathnote.undertaker_spawn_egg": "Undertaker Spawn Egg",
       "item_group.deathnote.death": "Death",
       "gui.deathnote.magnetokinesis_gui.label_otkata": "отката.",
       "gui.deathnote.skillls.button_skill1": "Skill1",

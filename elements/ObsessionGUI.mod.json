@@ -21,7 +21,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 87,
           "y": 62
         }
       },
@@ -36,7 +36,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 87,
           "y": 80
         }
       },
@@ -51,7 +51,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 87,
           "y": 134
         }
       },
@@ -66,22 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
+          "x": 231,
           "y": 62
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "Obsession"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 177,
-          "y": 179
         }
       },
       {
@@ -95,7 +81,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 87,
           "y": 116
         }
       },
@@ -104,7 +90,7 @@
         "data": {
           "image": "guilonglong.png",
           "use1Xscale": false,
-          "x": 33,
+          "x": 42,
           "y": 44
         }
       },
@@ -119,7 +105,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 78,
+          "x": 87,
           "y": 98
         }
       },
@@ -134,7 +120,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
+          "x": 231,
           "y": 80
         }
       },
@@ -149,7 +135,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 285,
+          "x": 294,
           "y": 62
         }
       },
@@ -165,36 +151,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 276,
+          "x": 285,
           "y": 62
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "ObsessionPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 231,
-          "y": 107
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "ObsessionLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 276,
-          "y": 107
         }
       },
       {
@@ -209,7 +167,7 @@
             "falpha": 0.0
           },
           "x": 231,
-          "y": 143
+          "y": 125
         }
       },
       {
@@ -225,7 +183,7 @@
             "falpha": 0.0
           },
           "x": 258,
-          "y": 143
+          "y": 125
         }
       },
       {
@@ -235,6 +193,45 @@
           "use1Xscale": false,
           "x": 177,
           "y": -1
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ObsessionPowerUp"
+          },
+          "x": 240,
+          "y": 98
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ObsessionLowering"
+          },
+          "x": 276,
+          "y": 98
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Obsession"
+          },
+          "x": 186,
+          "y": 188
         }
       }
     ],

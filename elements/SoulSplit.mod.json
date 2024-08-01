@@ -71,20 +71,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_priniat",
-          "text": "Принять",
-          "onClick": {
-            "name": "SoulSplitSkill"
-          },
-          "width": 61,
-          "height": 20,
-          "x": 186,
-          "y": 179
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_budut_atakovat_mobov",
@@ -214,20 +200,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_empty",
-          "text": "+",
-          "onClick": {
-            "name": "SoulSplitPowerUp"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 240,
-          "y": 134
-        }
-      },
-      {
         "type": "label",
         "data": {
           "name": "label_proc_soul_split_level_out_put",
@@ -241,20 +213,6 @@
           },
           "x": 285,
           "y": 62
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_empty1",
-          "text": "-",
-          "onClick": {
-            "name": "SoulSplitLowering"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 285,
-          "y": 134
         }
       },
       {
@@ -301,6 +259,45 @@
           },
           "x": 276,
           "y": 161
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SoulSplitPowerUp"
+          },
+          "x": 249,
+          "y": 134
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus_1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SoulSplitLowering"
+          },
+          "x": 285,
+          "y": 134
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SoulSplitSkill"
+          },
+          "x": 186,
+          "y": 179
         }
       }
     ],
