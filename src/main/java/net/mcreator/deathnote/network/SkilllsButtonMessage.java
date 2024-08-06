@@ -16,8 +16,10 @@ import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
 import net.mcreator.deathnote.procedures.TeleportGUIShowProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
 import net.mcreator.deathnote.procedures.ObsessionGUIShowProcedure;
+import net.mcreator.deathnote.procedures.ManifestationGUIShowProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
 import net.mcreator.deathnote.procedures.LevitationGUIShowProcedure;
+import net.mcreator.deathnote.procedures.IntangibilityGUIShowProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityGUIShowProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerGUIShowProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -100,6 +102,14 @@ public class SkilllsButtonMessage {
 		if (buttonID == 7) {
 
 			TeleportGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 8) {
+
+			IntangibilityGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 9) {
+
+			ManifestationGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

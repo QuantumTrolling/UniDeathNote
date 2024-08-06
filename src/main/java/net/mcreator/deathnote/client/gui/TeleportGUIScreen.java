@@ -74,11 +74,10 @@ public class TeleportGUIScreen extends AbstractContainerScreen<TeleportGUIMenu> 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 88, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_na_niekotoroie_vriemia"), -38, 52, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_mieshchaieties_po_briennoi_ziemlie"), -38, 88, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_na_niekotoroie_vriemia"), -38, 61, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_1_siekunda_polieta_03_siekundy"), 105, 43, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_5"), 168, 25, -16764109, false);
 		guiGraphics.drawString(this.font,
@@ -88,7 +87,8 @@ public class TeleportGUIScreen extends AbstractContainerScreen<TeleportGUIMenu> 
 		guiGraphics.drawString(this.font,
 
 				OutPutProcedure.execute(entity), 141, 88, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_da_smotritie"), -38, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_da_smotritie"), -38, 70, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_niie"), -38, 34, -12829636, false);
 	}
 
 	@Override

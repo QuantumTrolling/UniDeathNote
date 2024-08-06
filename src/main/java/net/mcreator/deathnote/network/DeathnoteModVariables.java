@@ -101,6 +101,14 @@ public class DeathnoteModVariables {
 			clone.TeleportButton = original.TeleportButton;
 			clone.TeleportLevel = original.TeleportLevel;
 			clone.TeleportCD = original.TeleportCD;
+			clone.Intangibility = original.Intangibility;
+			clone.IntangibilityButton = original.IntangibilityButton;
+			clone.IntangibilityLevel = original.IntangibilityLevel;
+			clone.IntangibilityDebuff = original.IntangibilityDebuff;
+			clone.Manifestation = original.Manifestation;
+			clone.ManifestationButton = original.ManifestationButton;
+			clone.ManifestationLevel = original.ManifestationLevel;
+			clone.ManifestationCD = original.ManifestationCD;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -172,6 +180,14 @@ public class DeathnoteModVariables {
 		public boolean TeleportButton = false;
 		public double TeleportLevel = 0;
 		public boolean TeleportCD = false;
+		public boolean Intangibility = false;
+		public boolean IntangibilityButton = false;
+		public double IntangibilityLevel = 0;
+		public boolean IntangibilityDebuff = false;
+		public boolean Manifestation = false;
+		public boolean ManifestationButton = false;
+		public double ManifestationLevel = 0;
+		public boolean ManifestationCD = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -215,6 +231,14 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("TeleportButton", TeleportButton);
 			nbt.putDouble("TeleportLevel", TeleportLevel);
 			nbt.putBoolean("TeleportCD", TeleportCD);
+			nbt.putBoolean("Intangibility", Intangibility);
+			nbt.putBoolean("IntangibilityButton", IntangibilityButton);
+			nbt.putDouble("IntangibilityLevel", IntangibilityLevel);
+			nbt.putBoolean("IntangibilityDebuff", IntangibilityDebuff);
+			nbt.putBoolean("Manifestation", Manifestation);
+			nbt.putBoolean("ManifestationButton", ManifestationButton);
+			nbt.putDouble("ManifestationLevel", ManifestationLevel);
+			nbt.putBoolean("ManifestationCD", ManifestationCD);
 			return nbt;
 		}
 
@@ -255,6 +279,14 @@ public class DeathnoteModVariables {
 			TeleportButton = nbt.getBoolean("TeleportButton");
 			TeleportLevel = nbt.getDouble("TeleportLevel");
 			TeleportCD = nbt.getBoolean("TeleportCD");
+			Intangibility = nbt.getBoolean("Intangibility");
+			IntangibilityButton = nbt.getBoolean("IntangibilityButton");
+			IntangibilityLevel = nbt.getDouble("IntangibilityLevel");
+			IntangibilityDebuff = nbt.getBoolean("IntangibilityDebuff");
+			Manifestation = nbt.getBoolean("Manifestation");
+			ManifestationButton = nbt.getBoolean("ManifestationButton");
+			ManifestationLevel = nbt.getDouble("ManifestationLevel");
+			ManifestationCD = nbt.getBoolean("ManifestationCD");
 		}
 	}
 
@@ -314,6 +346,14 @@ public class DeathnoteModVariables {
 					variables.TeleportButton = message.data.TeleportButton;
 					variables.TeleportLevel = message.data.TeleportLevel;
 					variables.TeleportCD = message.data.TeleportCD;
+					variables.Intangibility = message.data.Intangibility;
+					variables.IntangibilityButton = message.data.IntangibilityButton;
+					variables.IntangibilityLevel = message.data.IntangibilityLevel;
+					variables.IntangibilityDebuff = message.data.IntangibilityDebuff;
+					variables.Manifestation = message.data.Manifestation;
+					variables.ManifestationButton = message.data.ManifestationButton;
+					variables.ManifestationLevel = message.data.ManifestationLevel;
+					variables.ManifestationCD = message.data.ManifestationCD;
 				}
 			});
 			context.setPacketHandled(true);

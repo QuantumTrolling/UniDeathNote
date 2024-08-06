@@ -16,8 +16,10 @@ import net.mcreator.deathnote.world.inventory.TeleportGUIMenu;
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
+import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
 import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
 import net.mcreator.deathnote.world.inventory.LevitationGUIMenu;
+import net.mcreator.deathnote.world.inventory.IntangibilityGUIMenu;
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
 import net.mcreator.deathnote.world.inventory.GhostlyHungerGUIMenu;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -33,4 +35,6 @@ public class DeathnoteModMenus {
 	public static final RegistryObject<MenuType<ObsessionGUIMenu>> OBSESSION_GUI = REGISTRY.register("obsession_gui", () -> IForgeMenuType.create(ObsessionGUIMenu::new));
 	public static final RegistryObject<MenuType<LevitationGUIMenu>> LEVITATION_GUI = REGISTRY.register("levitation_gui", () -> IForgeMenuType.create(LevitationGUIMenu::new));
 	public static final RegistryObject<MenuType<TeleportGUIMenu>> TELEPORT_GUI = REGISTRY.register("teleport_gui", () -> IForgeMenuType.create(TeleportGUIMenu::new));
+	public static final RegistryObject<MenuType<IntangibilityGUIMenu>> INTANGIBILITY_GUI = REGISTRY.register("intangibility_gui", () -> IForgeMenuType.create(IntangibilityGUIMenu::new));
+	public static final RegistryObject<MenuType<ManifestationGUIMenu>> MANIFESTATION_GUI = REGISTRY.register("manifestation_gui", () -> IForgeMenuType.create(ManifestationGUIMenu::new));
 }

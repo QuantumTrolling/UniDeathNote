@@ -15,7 +15,7 @@
         "data": {
           "name": "label_prizrachnyi_gholod",
           "text": {
-            "fixedValue": "Бестелесное перемеще-"
+            "fixedValue": "Неосязаемость:"
           },
           "color": {
             "value": -16764109,
@@ -30,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Телепортируетесь на"
+            "fixedValue": "+ С шансом 50% игнори-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 89
+          "y": 80
         }
       },
       {
@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Боязнь святой воды."
+            "fixedValue": "- Вы больше не можете"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 125
+          "y": 107
         }
       },
       {
@@ -66,7 +66,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
+          "x": 222,
           "y": 62
         }
       },
@@ -84,14 +84,14 @@
         "data": {
           "name": "label_na_niekotoroie_vriemia",
           "text": {
-            "fixedValue": "20 блоков в строну ку-"
+            "fixedValue": "-руете урон."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 89
         }
       },
       {
@@ -99,13 +99,13 @@
         "data": {
           "name": "label_1_siekunda_polieta_03_siekundy",
           "text": {
-            "fixedValue": "-1 секунда отката."
+            "fixedValue": "+10% шанс игнорировать"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
+          "x": 222,
           "y": 80
         }
       },
@@ -120,7 +120,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
+          "x": 285,
           "y": 62
         }
       },
@@ -130,13 +130,13 @@
           "name": "label_proc_levitation_level_out_put",
           "text": {
             "fixedValue": "",
-            "name": "TeleportLevelOutPut"
+            "name": "IntangibilityLevelOutPut"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 285,
+          "x": 276,
           "y": 62
         }
       },
@@ -152,7 +152,7 @@
             "falpha": 0.0
           },
           "x": 240,
-          "y": 125
+          "y": 134
         }
       },
       {
@@ -168,7 +168,7 @@
             "falpha": 0.0
           },
           "x": 267,
-          "y": 125
+          "y": 134
         }
       },
       {
@@ -178,10 +178,10 @@
           "image": "plus_1.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "TeleportPowerUp"
+            "name": "IntangibilityPowerUp"
           },
           "x": 249,
-          "y": 98
+          "y": 107
         }
       },
       {
@@ -191,10 +191,10 @@
           "image": "minus_1.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "TeleportLowering"
+            "name": "IntangibilityLowering"
           },
           "x": 285,
-          "y": 98
+          "y": 107
         }
       },
       {
@@ -204,7 +204,7 @@
           "image": "accept2.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "Teleport"
+            "name": "Intangibility"
           },
           "x": 186,
           "y": 179
@@ -213,31 +213,31 @@
       {
         "type": "label",
         "data": {
-          "name": "label_da_smotritie",
+          "name": "label_lomat_bloki",
           "text": {
-            "fixedValue": "-да смотрите."
+            "fixedValue": "ломать блоки."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
           "x": 87,
-          "y": 107
+          "y": 116
         }
       },
       {
         "type": "label",
         "data": {
-          "name": "label_niie",
+          "name": "label_uron",
           "text": {
-            "fixedValue": "-ние:"
+            "fixedValue": "урон."
           },
           "color": {
-            "value": -12829636,
+            "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 71
+          "x": 222,
+          "y": 89
         }
       }
     ],
