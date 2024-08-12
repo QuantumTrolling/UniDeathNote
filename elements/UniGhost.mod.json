@@ -5,7 +5,7 @@
     "mobName": "Uni Ghost Clone",
     "mobLabel": "",
     "mobModelName": "ModelUniGhostClone",
-    "mobModelTexture": "uni_games_ghost.png",
+    "mobModelTexture": "uni_games_2.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false

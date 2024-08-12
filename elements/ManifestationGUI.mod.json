@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -36,8 +36,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -51,8 +51,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 107
+          "x": 78,
+          "y": 89
         }
       },
       {
@@ -66,17 +66,17 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 62
+          "x": 78,
+          "y": 134
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
@@ -90,8 +90,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -99,14 +99,14 @@
         "data": {
           "name": "label_1_siekunda_polieta_03_siekundy",
           "text": {
-            "fixedValue": "+1 секунда длительности"
+            "fixedValue": "+1 секунда длительно-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 80
+          "x": 78,
+          "y": 143
         }
       },
       {
@@ -121,7 +121,7 @@
             "falpha": 0.0
           },
           "x": 285,
-          "y": 62
+          "y": 143
         }
       },
       {
@@ -137,22 +137,7 @@
             "falpha": 0.0
           },
           "x": 276,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 134
+          "y": 143
         }
       },
       {
@@ -167,44 +152,47 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 134
+          "x": 186,
+          "y": 35
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
+          "image": "plus1.png",
           "hoveredImage": "",
           "onClick": {
             "name": "ManifestationPowerUp"
           },
-          "x": 249,
-          "y": 107
+          "x": 258,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
+          "image": "minus2.png",
           "hoveredImage": "",
           "onClick": {
             "name": "ManifestationLowering"
           },
-          "x": 285,
-          "y": 107
+          "x": 294,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_accept2",
-          "image": "accept2.png",
+          "image": "accept4.png",
           "hoveredImage": "",
           "onClick": {
             "name": "Manifestation"
+          },
+          "displayCondition": {
+            "name": "ShowManifestButton"
           },
           "x": 186,
           "y": 179
@@ -215,14 +203,14 @@
         "data": {
           "name": "label_lomat_bloki",
           "text": {
-            "fixedValue": "этой способности вы по-"
+            "fixedValue": "этой способности вы"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -230,14 +218,14 @@
         "data": {
           "name": "label_uron",
           "text": {
-            "fixedValue": "-1 секунда отката."
+            "fixedValue": "-сти,-1 секунда отката."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 89
+          "x": 78,
+          "y": 152
         }
       },
       {
@@ -245,14 +233,14 @@
         "data": {
           "name": "label_luchaietie_uron_v_razmie",
           "text": {
-            "fixedValue": "-лучаете урон в  разме-"
+            "fixedValue": "получаете урон в раз-"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 125
+          "x": 78,
+          "y": 107
         }
       },
       {
@@ -260,14 +248,23 @@
         "data": {
           "name": "label_rie_3_sierdiechiek",
           "text": {
-            "fixedValue": "ре 3 сердечек."
+            "fixedValue": "-мере 3 сердечек."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 134
+          "x": 78,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "manifestation.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 53
         }
       }
     ],

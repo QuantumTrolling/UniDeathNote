@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
 import net.mcreator.deathnote.world.inventory.TeleportGUIMenu;
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
+import net.mcreator.deathnote.world.inventory.RevivalGUIMenu;
 import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
 import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
 import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
@@ -37,4 +38,5 @@ public class DeathnoteModMenus {
 	public static final RegistryObject<MenuType<TeleportGUIMenu>> TELEPORT_GUI = REGISTRY.register("teleport_gui", () -> IForgeMenuType.create(TeleportGUIMenu::new));
 	public static final RegistryObject<MenuType<IntangibilityGUIMenu>> INTANGIBILITY_GUI = REGISTRY.register("intangibility_gui", () -> IForgeMenuType.create(IntangibilityGUIMenu::new));
 	public static final RegistryObject<MenuType<ManifestationGUIMenu>> MANIFESTATION_GUI = REGISTRY.register("manifestation_gui", () -> IForgeMenuType.create(ManifestationGUIMenu::new));
+	public static final RegistryObject<MenuType<RevivalGUIMenu>> REVIVAL_GUI = REGISTRY.register("revival_gui", () -> IForgeMenuType.create(RevivalGUIMenu::new));
 }

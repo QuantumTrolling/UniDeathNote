@@ -38,7 +38,7 @@
     "baseTexture": "",
     "overlayTarget": "Ingame",
     "displayCondition": {
-      "name": "ShowSoulSplitTask"
+      "name": "ShowObsessionTask"
     },
     "gridSettings": {
       "sx": 18,

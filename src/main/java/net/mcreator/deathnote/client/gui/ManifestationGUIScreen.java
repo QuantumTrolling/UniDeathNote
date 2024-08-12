@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
+import net.mcreator.deathnote.procedures.ShowManifestButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.ManifestationLevelOutPutProcedure;
 import net.mcreator.deathnote.network.ManifestationGUIButtonMessage;
@@ -52,7 +53,9 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/guilonglong.png"), this.leftPos + -83, this.topPos + 7, 0, 0, 339, 165, 339, 165);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
+
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/manifestation.png"), this.leftPos + 123, this.topPos + 16, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -73,24 +76,23 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 70, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_prokachka_1_ied_sytosti_v_minutu"), 96, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_na_niekotoroie_vriemia"), -38, 52, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_1_siekunda_polieta_03_siekundy"), 96, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_5"), 159, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_prizrachnyi_gholod"), -47, 7, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -47, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -47, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_prokachka_1_ied_sytosti_v_minutu"), -47, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_na_niekotoroie_vriemia"), -47, 34, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_1_siekunda_polieta_03_siekundy"), -47, 106, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_5"), 159, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				ManifestationLevelOutPutProcedure.execute(entity), 150, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_ochki"), 114, 97, -16764109, false);
+				ManifestationLevelOutPutProcedure.execute(entity), 150, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 141, 97, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_lomat_bloki"), -38, 79, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_uron"), 96, 52, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie"), -38, 88, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_rie_3_sierdiechiek"), -38, 97, -16764109, false);
+				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_lomat_bloki"), -47, 61, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_uron"), -47, 115, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie"), -47, 70, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_rie_3_sierdiechiek"), -47, 79, -16764109, false);
 	}
 
 	@Override
@@ -101,7 +103,7 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 70, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 132, this.topPos + 115, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ManifestationGUIButtonMessage(0, x, y, z));
 				ManifestationGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -109,7 +111,7 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 		});
 		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
 		this.addRenderableWidget(imagebutton_plus_1);
-		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 70, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 168, this.topPos + 115, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ManifestationGUIButtonMessage(1, x, y, z));
 				ManifestationGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -118,11 +120,17 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (true) {
+			if (ShowManifestButtonProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ManifestationGUIButtonMessage(2, x, y, z));
 				ManifestationGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowManifestButtonProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
 		this.addRenderableWidget(imagebutton_accept2);
 	}

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "texture_altar_uni"
+      },
+      "name": "default"
+    }
+  }
+}

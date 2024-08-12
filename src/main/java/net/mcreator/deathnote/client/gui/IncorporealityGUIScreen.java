@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
+import net.mcreator.deathnote.procedures.ShowIncorporealityButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityLevelOutPutProcedure;
 import net.mcreator.deathnote.network.IncorporealityGUIButtonMessage;
@@ -52,7 +53,9 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/guilonglong.png"), this.leftPos + -83, this.topPos + 7, 0, 0, 339, 165, 339, 165);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
+
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/disembodied.png"), this.leftPos + 123, this.topPos + 25, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -73,22 +76,21 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prizrachnyi_gholod"), -38, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -38, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -38, 70, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prokachka_1_ied_sytosti_v_minutu"), 105, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia"), -38, 52, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_broniu"), -38, 79, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_10_k_skorosti"), 105, 43, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_pieriedvizhieniia"), 105, 61, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_5"), 168, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prizrachnyi_gholod"), -47, 7, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1"), -47, 25, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie"), -47, 52, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_prokachka_1_ied_sytosti_v_minutu"), -47, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia"), -47, 34, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_broniu"), -47, 61, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_10_k_skorosti"), -47, 97, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_pieriedvizhieniia"), -47, 106, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_5"), 159, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				IncorporealityLevelOutPutProcedure.execute(entity), 159, 25, -16764109, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.incorporeality_gui.label_ochki"), 114, 106, -16764109, false);
+				IncorporealityLevelOutPutProcedure.execute(entity), 150, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 141, 106, -16764109, false);
+				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
 	}
 
 	@Override
@@ -100,14 +102,20 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 	public void init() {
 		super.init();
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (true) {
+			if (ShowIncorporealityButtonProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new IncorporealityGUIButtonMessage(0, x, y, z));
 				IncorporealityGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowIncorporealityButtonProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
 		this.addRenderableWidget(imagebutton_accept2);
-		imagebutton_plus_1 = new ImageButton(this.leftPos + 123, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
+		imagebutton_plus_1 = new ImageButton(this.leftPos + 132, this.topPos + 115, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_plus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new IncorporealityGUIButtonMessage(1, x, y, z));
 				IncorporealityGUIButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -115,7 +123,7 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 		});
 		guistate.put("button:imagebutton_plus_1", imagebutton_plus_1);
 		this.addRenderableWidget(imagebutton_plus_1);
-		imagebutton_minus_1 = new ImageButton(this.leftPos + 159, this.topPos + 79, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
+		imagebutton_minus_1 = new ImageButton(this.leftPos + 168, this.topPos + 115, 19, 19, 0, 0, 19, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_minus_1.png"), 19, 38, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new IncorporealityGUIButtonMessage(2, x, y, z));
 				IncorporealityGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);

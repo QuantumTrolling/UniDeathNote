@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -30,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Твой голод воспол-"
+            "fixedValue": "+ Твой голод восполня-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Еда больше не вос-"
+            "fixedValue": "- Еда больше не воспол-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 107
+          "x": 78,
+          "y": 89
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 78,
+          "y": 116
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_sam",
           "text": {
-            "fixedValue": "-няется сам."
+            "fixedValue": "-ется сам."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -90,14 +90,14 @@
         "data": {
           "name": "label_vospolniaiet_tiebie_gholod",
           "text": {
-            "fixedValue": "-полняет тебе голод."
+            "fixedValue": "-няет тебе голод."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -105,29 +105,14 @@
         "data": {
           "name": "label_1_ied_sytosti_v_minutu",
           "text": {
-            "fixedValue": "+1 ед сытости в"
+            "fixedValue": "+1 ед сытости в минуту."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_v_minutu",
-          "text": {
-            "fixedValue": "минуту."
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 231,
-          "y": 89
+          "x": 78,
+          "y": 134
         }
       },
       {
@@ -142,8 +127,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 143
+          "x": 186,
+          "y": 35
         }
       },
       {
@@ -158,8 +143,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 276,
+          "y": 143
         }
       },
       {
@@ -173,32 +158,59 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 303,
-          "y": 62
+          "x": 285,
+          "y": 143
         }
       },
       {
-        "type": "label",
+        "type": "imagebutton",
         "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
+          "name": "imagebutton_plus_1",
+          "image": "plus1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHungerPowerUp"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
+          "x": 258,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHungerLowering"
           },
-          "x": 240,
-          "y": 143
+          "x": 294,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept4.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "GhostlyHunger"
+          },
+          "displayCondition": {
+            "name": "ShowGHButton"
+          },
+          "x": 186,
+          "y": 179
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
@@ -206,47 +218,8 @@
         "data": {
           "image": "ghostly_hunger.png",
           "use1Xscale": false,
-          "x": 177,
-          "y": -1
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "GhostlyHungerPowerUp"
-          },
           "x": 249,
-          "y": 116
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "GhostlyHungerLowering"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_accept2",
-          "image": "accept2.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "GhostlyHunger"
-          },
-          "x": 186,
-          "y": 179
+          "y": 53
         }
       }
     ],

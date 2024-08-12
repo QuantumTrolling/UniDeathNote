@@ -1,0 +1,132 @@
+{
+  "_fv": 47,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_prizrachnyi_gholod",
+          "text": {
+            "fixedValue": "Воскрешение:"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
+          "text": {
+            "fixedValue": "+ Вы перестаете вести"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 62
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_final.png",
+          "use1Xscale": false,
+          "x": 33,
+          "y": 26
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_na_niekotoroie_vriemia",
+          "text": {
+            "fixedValue": "жизнь духа и станови-"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 71
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept4.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Revival"
+          },
+          "displayCondition": {
+            "name": "ShowRevivalButton"
+          },
+          "x": 186,
+          "y": 179
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_ties_chieloviekom",
+          "text": {
+            "fixedValue": "тесь человеком."
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 80
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "resurrection.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_out_put",
+          "text": {
+            "fixedValue": "",
+            "name": "OutPut"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 186,
+          "y": 35
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

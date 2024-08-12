@@ -192,10 +192,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1902,7 +1898,12 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/procedures/UndertakerRightClickedOnEntityProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       }
     },
     {
@@ -2627,6 +2628,428 @@
         ]
       },
       "path": "~/Binds"
+    },
+    {
+      "name": "Altar",
+      "type": "block",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "altar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/deathnote/models/block/altar.json",
+          "src/main/resources/assets/deathnote/blockstates/altar.json",
+          "src/main/resources/assets/deathnote/models/item/altar.json",
+          "src/main/java/net/mcreator/deathnote/block/AltarBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "AltarOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "altar_on_block_right_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/AltarOnBlockRightClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritTask2",
+      "type": "overlay",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_task_2",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/VengefulSpiritTask2Overlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "ShowVengefulSpiritTaskDop",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_vengeful_spirit_task_dop",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritTaskDopProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "RevivalGUI",
+      "type": "gui",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revival_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/world/inventory/RevivalGUIMenu.java",
+          "src/main/java/net/mcreator/deathnote/client/gui/RevivalGUIScreen.java",
+          "src/main/java/net/mcreator/deathnote/network/RevivalGUIButtonMessage.java"
+        ]
+      },
+      "path": "~/GUIs"
+    },
+    {
+      "name": "Revival",
+      "type": "procedure",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revival",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/RevivalProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/SkillsOnButtonClick"
+    },
+    {
+      "name": "RevivalGUIShow",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revival_gui_show",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/RevivalGUIShowProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ShowSkillGUI"
+    },
+    {
+      "name": "ShowRevivalTask",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_revival_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "RevivalTask",
+      "type": "overlay",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revival_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/RevivalTaskOverlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "SoulShard",
+      "type": "item",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_shard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/item/SoulShardItem.java",
+          "src/main/resources/assets/deathnote/models/item/soul_shard.json"
+        ]
+      }
+    },
+    {
+      "name": "ShowGHButton",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_gh_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowGHButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowVenSpitButton",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_ven_spit_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVenSpitButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowMagnetoButton",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_magneto_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowMagnetoButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowIncorporealityButton",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_incorporeality_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIncorporealityButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowSoulSplitButton",
+      "type": "procedure",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_soul_split_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowSoulSplitButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowObsessionButton",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_obsession_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowObsessionButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowLevitationButton",
+      "type": "procedure",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_levitation_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowLevitationButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowTeleportButton",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_teleport_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowTeleportButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowIntangibButton",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_intangib_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIntangibButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowManifestButton",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_manifest_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowManifestButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
+    },
+    {
+      "name": "ShowRevivalButton",
+      "type": "procedure",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_revival_button",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalButtonProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowAcceptButton"
     }
   ],
   "variable_elements": [
@@ -2887,6 +3310,54 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "IncorporealityIronQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IncorporealityCopperQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IncorporealityGoldQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "meetGraver",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "VengefulSpiritBonesQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "VengefulSpiritFleshQuest",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Revival",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "RevivalButton",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -2918,10 +3389,12 @@
   "language_map": {
     "en_us": {
       "gui.deathnote.levitation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете взлетать",
-      "gui.deathnote.obsession_gui.button_priniat": "Принять",
       "gui.deathnote.intangibility_gui.label_lomat_bloki": "ломать блоки.",
+      "gui.deathnote.obsession_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_gui.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в размере 3 сердечек",
       "gui.deathnote.ghostly_hunger_gui.label_ochki": "Очки:",
+      "block.deathnote.altar": "Altar",
+      "gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot": "- Добыть16 костей и 16 гнилой плоти",
       "gui.deathnote.levitation_gui.button_empty1": "-",
       "gui.deathnote.levitation_gui.label_ziemlie": "земле.",
       "gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia": "на некоторое время.",
@@ -2935,13 +3408,14 @@
       "gui.deathnote.manifestation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете на кнопку",
       "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти по-",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
-      "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "gui.deathnote.ghostly_hunger_gui.button_empty": "+",
+      "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "gui.deathnote.teleport_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Око перемещения]",
       "gui.deathnote.vengeful_spirit_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Ваше здоровье сни-",
       "gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании ",
       "gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_prizrachnyi_gholod": "Расщепление души:",
+      "gui.deathnote.revival_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительности",
       "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "- Принести 1 железную кирку",
       "gui.deathnote.levitation_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Душа легкая как перо] - Принести",
       "gui.deathnote.soul_split.button_empty1": "-",
@@ -2953,13 +3427,15 @@
       "gui.deathnote.skillls.tooltip_odierzhimost": "Одержимость",
       "gui.deathnote.levitation_gui.label_mieshchaieties_po_briennoi_ziemlie": "мещаетесь по бренной",
       "gui.deathnote.magnetokinesis_gui.label_prizrachnyi_gholod": "Магнитокинез:",
+      "gui.deathnote.revival_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona1": "-1 секунда отката.",
+      "gui.deathnote.vengeful_spirit_task_2.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.levitation_gui.label_ochki": "Очки:",
       "gui.deathnote.incorporeality_gui.label_zhielieznoi_rudoi": "железной рудой",
       "gui.deathnote.skillls.tooltip_empty": "Призрачный голод",
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
       "gui.deathnote.soul_split.label_razmierie_3_sierdiechiek": "-мере 3 сердечек.",
-      "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод воспол-",
+      "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод восполня-",
       "gui.deathnote.incorporeality_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Сокровище мертвеца] - Добыть",
       "gui.deathnote.levitation_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.vengeful_spirit_gui.label_5": "/ 5",
@@ -2967,54 +3443,59 @@
       "gui.deathnote.teleport_gui.label_ochki": "Очки:",
       "gui.deathnote.obsession_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.manifestation_gui.label_prizrachnyi_gholod": "Проявление:",
+      "gui.deathnote.revival_gui.label_rie_3_sierdiechiek": "ре 3 сердечек.",
       "gui.deathnote.incorporeality_gui.label_ochki": "Очки:",
       "gui.deathnote.teleport_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Боязнь святой воды.",
       "gui.deathnote.teleport_gui.label_niie": "-ние:",
       "entity.deathnote.undertaker": "Undertaker",
       "gui.deathnote.skillls.tooltip_proiavlieniie": "Проявление",
       "gui.deathnote.ghostly_hunger_gui.label_plot": "- Съесть гнилую плоть.",
+      "gui.deathnote.revival_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы перестаете вести",
       "gui.deathnote.teleport_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.teleport_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.vengeful_spirit_gui.label_ubil1": "убил.",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona": "длительности двойников,",
+      "gui.deathnote.revival_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
       "gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете создать",
       "gui.deathnote.soul_split.label_kak_otkryt_zadacha_miertvietskii": "Задача [Раздробить душу] - Принести 1",
-      "gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie": "-лучаете урон в  разме-",
+      "gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie": "получаете урон в раз-",
       "gui.deathnote.manifestation_gui.label_5": "/ 3",
       "gui.deathnote.manifestation_gui.label_ochki": "Очки:",
       "gui.deathnote.obsession_gui.label_prizrachnyi_gholod": "Одержимость:",
       "gui.deathnote.obsession_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Незримость] - Принести",
-      "gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Получаете +10% к",
+      "gui.deathnote.incorporeality_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Получаете +10% к ско-",
       "gui.deathnote.manifestation_gui.label_na_niekotoroie_vriemia": "ломать блоки.",
+      "gui.deathnote.revival_gui.label_5": "/ 3",
       "gui.deathnote.vengeful_spirit_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_gui.label_budut_atakovat_mobov": "-мому вами урону.",
       "gui.deathnote.teleport_task.label_siest_ghniluiu_plot": "- Добыть 1 эндер жемчуг",
       "gui.deathnote.magnetokinesis_gui.label_1_zhielieznuiu_kirku": "1 железную кирку.",
-      "gui.deathnote.obsession_gui.label_10_k_uronu": "+10% к урону",
+      "gui.deathnote.obsession_gui.label_10_k_uronu": "+10% к урону.",
       "gui.deathnote.intangibility_gui.label_na_niekotoroie_vriemia": "-руете урон.",
       "gui.deathnote.teleport_gui.label_5": "/ 3",
       "subtitles.soulsplit": "",
       "gui.deathnote.magnetokinesis_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод:",
       "gui.deathnote.ghostly_hunger_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "gui.deathnote.soul_split.label_1_klon_1_siekunda_dlitielnosti": "+1 клон, +1 секунда",
+      "gui.deathnote.ghostly_hunger_gui.label_prizrachnyi_gholod": "Призрачный голод:",
+      "gui.deathnote.revival_gui.label_na_niekotoroie_vriemia": "жизнь духа и станови-",
+      "gui.deathnote.soul_split.label_1_klon_1_siekunda_dlitielnosti": "+1 клон, +1 секунда,",
       "gui.deathnote.vengeful_spirit_gui.label_poluchaietie_bieskoniechnyi": "-лучаете бесконечный",
       "gui.deathnote.soul_split.label_1_zhielieznuiu_kirku": "наковальню.",
       "gui.deathnote.levitation_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда полета,",
-      "gui.deathnote.soul_split.label_3": "/ 3",
+      "gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Еда больше не воспол-",
       "gui.deathnote.incorporeality_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "gui.deathnote.ghostly_hunger_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Еда больше не вос-",
-      "gui.deathnote.magnetokinesis_gui.label_otkata": "отката.",
+      "gui.deathnote.soul_split.label_3": "/ 3",
+      "gui.deathnote.magnetokinesis_gui.label_otkata": "-нда отката.",
       "gui.deathnote.skillls.button_skill1": "Skill1",
       "gui.deathnote.magnetokinesis_gui.button_empty": "+",
       "gui.deathnote.magnetokinesis_gui.label_3": "/ 3",
-      "gui.deathnote.manifestation_gui.label_uron": "-1 секунда отката.",
+      "gui.deathnote.manifestation_gui.label_uron": "-сти,-1 секунда отката.",
       "gui.deathnote.ghostly_hunger_gui.button_priniat": "Принять",
       "gui.deathnote.vengeful_spirit_gui.label_ot_moba_kotoryi_vas_ubil": "эффект в зависимости",
       "gui.deathnote.soul_split_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Раздробить душу]",
       "entity.deathnote.uni_ghost": "Uni Ghost Clone",
-      "gui.deathnote.manifestation_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительности",
+      "gui.deathnote.manifestation_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительно-",
       "gui.deathnote.manifestation_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "key.deathnote.levitation_bind": "Levitation Skill",
       "gui.deathnote.levitation_gui.button_empty": "+",
@@ -3023,30 +3504,35 @@
       "gui.deathnote.soul_split.label_budut_atakovat_mobov": "свои копии которые бу-",
       "gui.deathnote.teleport_gui.label_mieshchaieties_po_briennoi_ziemlie": "(Нельзя входить в воду)",
       "gui.deathnote.teleport_gui.label_1_siekunda_polieta_03_siekundy": "-1 секунда отката.",
-      "gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu": "+1 ед сытости в",
+      "gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu": "+1 ед сытости в минуту.",
       "gui.deathnote.levitation_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.intangibility_gui.label_ochki": "Очки:",
       "gui.deathnote.levitation_gui.label_prizrachnyi_gholod": "Левитация:",
       "gui.deathnote.vengeful_spirit_gui.label_upokoit_niezhit": "упокоить нежить.",
-      "gui.deathnote.incorporeality_gui.label_pieriedvizhieniia": "передвижения.",
+      "gui.deathnote.revival_gui.label_prizrachnyi_gholod": "Воскрешение:",
+      "gui.deathnote.incorporeality_gui.label_pieriedvizhieniia": "-движения.",
       "gui.deathnote.incorporeality_gui.label_5": "/ 5",
       "gui.deathnote.levitation_gui.label_5": "/ 5",
       "gui.deathnote.vengeful_spirit_gui.label_prizrachnyi_gholod": "Мстительный дух:",
       "gui.deathnote.teleport_gui.label_na_niekotoroie_vriemia": "20 блоков в строну ку-",
       "gui.deathnote.intangibility_gui.label_prizrachnyi_gholod": "Неосязаемость:",
       "gui.deathnote.obsession_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Не можете спать.",
+      "gui.deathnote.revival_gui.label_lomat_bloki": "этой способности вы по-",
       "item.deathnote.book_of_death": "Book Of Death",
       "gui.deathnote.vengeful_spirit_gui.label_1_urovien_k_effiektu": "+1 уровень к эффекту.",
       "key.deathnote.teleport_bind": "Teleport Skill",
-      "gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod": "-полняет тебе голод.",
+      "gui.deathnote.ghostly_hunger_gui.label_vospolniaiet_tiebie_gholod": "-няет тебе голод.",
       "gui.deathnote.obsession_gui.label_ochki": "Очки:",
       "gui.deathnote.intangibility_gui.label_5": "/ 3",
       "gui.deathnote.obsession_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Ночью вы получаете",
       "gui.deathnote.soul_split.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в раз-",
       "gui.deathnote.ghostly_hunger_gui.label_sam1": "сам.",
-      "gui.deathnote.manifestation_gui.label_rie_3_sierdiechiek": "ре 3 сердечек.",
+      "gui.deathnote.manifestation_gui.label_rie_3_sierdiechiek": "-мере 3 сердечек.",
+      "gui.deathnote.revival_gui.label_uron": "-1 секунда отката.",
       "gui.deathnote.incorporeality_gui.label_1_zhielieznuiu_kirku": "10 медной, 10 железной руды, 10 золотой руды.",
+      "gui.deathnote.revival_gui.label_ties_chieloviekom": "тесь человеком.",
       "gui.deathnote.magnetokinesis_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Уменьшает ваш урон.",
+      "gui.deathnote.revival_gui.label_ochki": "Очки:",
       "gui.deathnote.magnetokinesis_gui.label_ochki": "Очки:",
       "gui.deathnote.soul_split.label_etoi_sposobnosti_vy": "этой способности вы",
       "gui.deathnote.obsession_gui.button_empty": "+",
@@ -3054,17 +3540,20 @@
       "subtitles.magnetokinesis": "",
       "gui.deathnote.vengeful_spirit_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.manifestation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
-      "gui.deathnote.manifestation_gui.label_lomat_bloki": "этой способности вы по-",
+      "gui.deathnote.manifestation_gui.label_lomat_bloki": "этой способности вы",
       "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "бесконечный эффект",
-      "gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi": "-вится рудой.",
+      "gui.deathnote.revival_task.label_siest_ghniluiu_plot": "- Принести духу яйцо дракона",
+      "gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi": "рудой.",
       "gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Мертвецкий голод]",
-      "gui.deathnote.incorporeality_gui.label_10_k_skorosti": "+10% к скорости",
+      "gui.deathnote.incorporeality_gui.label_10_k_skorosti": "+10% к скорости пере-",
       "gui.deathnote.magnetokinesis_gui.button_empty1": "-",
-      "gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Случайный камень",
+      "gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Случайный камень ря-",
       "gui.deathnote.intangibility_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ С шансом 50% игнори-",
+      "gui.deathnote.revival_task.label_v_zabroshiennom_pomiestie": "в заброшенном поместье",
       "gui.deathnote.incorporeality_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_task.label_siest_ghniluiu_plot": "- Принести 1 алмазный меч",
-      "gui.deathnote.magnetokinesis_gui.label_5_ruda_1_siekunda_kd": "+5 руда, - 1 секунда",
+      "gui.deathnote.revival_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Дар духа]",
+      "gui.deathnote.magnetokinesis_gui.label_5_ruda_1_siekunda_kd": "Больше руды, -1 секу-",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
       "gui.deathnote.vengeful_spirit_gui.button_empty1": "-",
       "gui.deathnote.teleport_gui.label_prizrachnyi_gholod": "Бестелесное перемеще-",
@@ -3081,11 +3570,12 @@
       "gui.deathnote.manifestation_task.label_v_zabroshiennom_pomiestie": "в заброшенном поместье",
       "gui.deathnote.intangibility_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.vengeful_spirit_gui.label_effiektu": "эффекту.",
+      "gui.deathnote.revival_gui.label_luchaietie_uron_v_razmie": "-лучаете урон в  разме-",
       "key.deathnote.soul_split_bind": "Soul Split Skill",
       "gui.deathnote.intangibility_task.label_siest_ghniluiu_plot": "- Принести 1 мембрану фантома",
       "gui.deathnote.ghostly_hunger_gui.label_3": "/ 3",
       "gui.deathnote.soul_split.label_atakovat_mobov": "-дут атаковать мобов.",
-      "gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia": "скорости передвижения.",
+      "gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia": "-рости передвижения.",
       "gui.deathnote.soul_split_task.label_siest_ghniluiu_plot": "- Принести 1 наковальню",
       "gui.deathnote.incorporeality_task.label_rudy_10_zolotoi_rudy": "руды, 10 золотой руды.",
       "gui.deathnote.incorporeality_gui.button_empty1": "-",
@@ -3093,14 +3583,14 @@
       "gui.deathnote.incorporeality_gui.label_broniu": "броню.",
       "gui.deathnote.ghostly_hunger_gui.button_empty1": "-",
       "gui.deathnote.vengeful_spirit_gui.label_ochki": "Очки:",
-      "gui.deathnote.magnetokinesis_gui.label_riadom_s_vami": "рядом с вами стано-",
+      "gui.deathnote.magnetokinesis_gui.label_riadom_s_vami": "-дом с вами становится",
       "gui.deathnote.incorporeality_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Сокровище мертвеца]",
       "gui.deathnote.skillls.tooltip_nieosiazaiemost": "Неосязаемость",
-      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить",
+      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Найти Могильщика на Кладбище",
       "gui.deathnote.ghostly_hunger_gui.label_gholod": "голод.",
-      "gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Не можете носить",
+      "gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы не можете носить",
       "gui.deathnote.skillls.tooltip_rasshchieplieniie_dushi": "Расщепление души",
-      "gui.deathnote.ghostly_hunger_gui.label_sam": "-няется сам.",
+      "gui.deathnote.ghostly_hunger_gui.label_sam": "-ется сам.",
       "gui.deathnote.intangibility_gui.label_da_smotritie": "-да смотрите.",
       "item.deathnote.undertaker_spawn_egg": "Undertaker Spawn Egg",
       "item_group.deathnote.death": "Death",
@@ -3109,7 +3599,9 @@
       "gui.deathnote.vengeful_spirit_gui.label_snizhaietsia_20_maks_zdorovia": "-жается (-20%).",
       "gui.deathnote.soul_split.button_priniat": "Принять",
       "gui.deathnote.manifestation_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Автопортрет]",
+      "item.deathnote.soul_shard": "Soul Shard",
       "gui.deathnote.intangibility_gui.label_uron": "урон.",
+      "gui.deathnote.skillls.tooltip_voskrieshieniie": "Воскрешение",
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "key.deathnote.magnetokinesis_skill": "Magnetokinesis Skill",
       "gui.deathnote.incorporeality_gui.button_empty": "+",
@@ -3164,6 +3656,10 @@
       },
       {
         "name": "OutPuts",
+        "children": []
+      },
+      {
+        "name": "ShowAcceptButton",
         "children": []
       }
     ]

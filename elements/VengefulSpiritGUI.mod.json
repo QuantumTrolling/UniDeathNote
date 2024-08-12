@@ -22,7 +22,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 62
+          "y": 44
         }
       },
       {
@@ -37,7 +37,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 80
+          "y": 62
         }
       },
       {
@@ -52,7 +52,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 116
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 87,
+          "y": 143
         }
       },
       {
@@ -82,7 +82,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 89
+          "y": 71
         }
       },
       {
@@ -97,7 +97,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 80
         }
       },
       {
@@ -112,7 +112,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 107
+          "y": 89
         }
       },
       {
@@ -127,7 +127,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 143
+          "y": 125
         }
       },
       {
@@ -141,38 +141,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ubil1",
-          "text": {
-            "fixedValue": "убил."
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
           "x": 87,
-          "y": 116
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 134
+          "y": 161
         }
       },
       {
@@ -187,8 +157,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 134
+          "x": 195,
+          "y": 35
         }
       },
       {
@@ -202,8 +172,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 303,
-          "y": 62
+          "x": 294,
+          "y": 143
         }
       },
       {
@@ -218,17 +188,59 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 285,
+          "y": 143
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritPowerUp"
+          },
+          "x": 267,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritLowering"
+          },
+          "x": 303,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept4.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpirit"
+          },
+          "displayCondition": {
+            "name": "ShowVenSpitButton"
+          },
+          "x": 195,
+          "y": 179
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
           "x": 42,
-          "y": 44
+          "y": 26
         }
       },
       {
@@ -236,47 +248,23 @@
         "data": {
           "image": "vengeful_spirit.png",
           "use1Xscale": false,
-          "x": 186,
-          "y": -1
+          "x": 258,
+          "y": 62
         }
       },
       {
-        "type": "imagebutton",
+        "type": "label",
         "data": {
-          "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "VengefulSpiritPowerUp"
+          "name": "label_ubil1",
+          "text": {
+            "fixedValue": "убил."
           },
-          "x": 249,
-          "y": 107
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "VengefulSpiritLowering"
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
           },
-          "x": 285,
-          "y": 107
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_accept2",
-          "image": "accept2.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "VengefulSpirit"
-          },
-          "x": 186,
-          "y": 179
+          "x": 87,
+          "y": 98
         }
       }
     ],

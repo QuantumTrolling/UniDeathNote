@@ -1,0 +1,9 @@
+{
+  "parent": "deathnote:custom/altar_godd",
+  "textures": {
+    "all": "deathnote:block/texture_altar_uni",
+    "particle": "deathnote:block/texture_altar_uni",
+    "0": "deathnote:block/texture_altar_uni"
+  },
+  "render_type": "solid"
+}

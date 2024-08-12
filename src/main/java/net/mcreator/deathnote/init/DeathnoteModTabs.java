@@ -20,6 +20,8 @@ public class DeathnoteModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.deathnote.death")).icon(() -> new ItemStack(DeathnoteModItems.BOOK_OF_DEATH.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(DeathnoteModItems.BOOK_OF_DEATH.get());
 				tabData.accept(DeathnoteModItems.UNDERTAKER_SPAWN_EGG.get());
+				tabData.accept(DeathnoteModBlocks.ALTAR.get().asItem());
+				tabData.accept(DeathnoteModItems.SOUL_SHARD.get());
 			})
 
 					.build());

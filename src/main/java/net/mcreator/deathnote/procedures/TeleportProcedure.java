@@ -16,13 +16,6 @@ public class TeleportProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Teleport = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		}
 	}
 }

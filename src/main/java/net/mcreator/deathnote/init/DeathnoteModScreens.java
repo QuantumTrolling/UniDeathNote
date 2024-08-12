@@ -15,6 +15,7 @@ import net.mcreator.deathnote.client.gui.VengefulSpiritGUIScreen;
 import net.mcreator.deathnote.client.gui.TeleportGUIScreen;
 import net.mcreator.deathnote.client.gui.SoulSplitScreen;
 import net.mcreator.deathnote.client.gui.SkilllsScreen;
+import net.mcreator.deathnote.client.gui.RevivalGUIScreen;
 import net.mcreator.deathnote.client.gui.ObsessionGUIScreen;
 import net.mcreator.deathnote.client.gui.ManifestationGUIScreen;
 import net.mcreator.deathnote.client.gui.MagnetokinesisGUIScreen;
@@ -39,6 +40,7 @@ public class DeathnoteModScreens {
 			MenuScreens.register(DeathnoteModMenus.TELEPORT_GUI.get(), TeleportGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.INTANGIBILITY_GUI.get(), IntangibilityGUIScreen::new);
 			MenuScreens.register(DeathnoteModMenus.MANIFESTATION_GUI.get(), ManifestationGUIScreen::new);
+			MenuScreens.register(DeathnoteModMenus.REVIVAL_GUI.get(), RevivalGUIScreen::new);
 		});
 	}
 }

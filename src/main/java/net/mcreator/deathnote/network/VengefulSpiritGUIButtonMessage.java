@@ -74,7 +74,7 @@ public class VengefulSpiritGUIButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			VengefulSpiritProcedure.execute(world, entity);
+			VengefulSpiritProcedure.execute(entity);
 		}
 	}
 

@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -30,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Случайный камень"
+            "fixedValue": "+ Случайный камень ря-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -51,8 +51,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 78,
+          "y": 116
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_zhielieznoi_rudoi",
           "text": {
-            "fixedValue": "-вится рудой."
+            "fixedValue": "рудой."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 98
+          "x": 78,
+          "y": 80
         }
       },
       {
@@ -90,14 +90,14 @@
         "data": {
           "name": "label_riadom_s_vami",
           "text": {
-            "fixedValue": "рядом с вами стано-"
+            "fixedValue": "-дом с вами становится"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -112,8 +112,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 285,
-          "y": 62
+          "x": 276,
+          "y": 143
         }
       },
       {
@@ -127,8 +127,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 285,
+          "y": 143
         }
       },
       {
@@ -136,14 +136,14 @@
         "data": {
           "name": "label_5_ruda_1_siekunda_kd",
           "text": {
-            "fixedValue": "+5 руда, - 1 секунда"
+            "fixedValue": "Больше руды, -1 секу-"
           },
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
+          "x": 78,
+          "y": 134
         }
       },
       {
@@ -151,28 +151,13 @@
         "data": {
           "name": "label_otkata",
           "text": {
-            "fixedValue": "отката."
+            "fixedValue": "-нда отката."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 89
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
+          "x": 78,
           "y": 143
         }
       },
@@ -188,17 +173,59 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 143
+          "x": 186,
+          "y": 35
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plus_1",
+          "image": "plus1.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisPowerUp"
+          },
+          "x": 258,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_minus_1",
+          "image": "minus2.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "MagnetokinesisLowering"
+          },
+          "x": 294,
+          "y": 152
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_accept2",
+          "image": "accept4.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "Magnetokinesis"
+          },
+          "displayCondition": {
+            "name": "ShowMagnetoButton"
+          },
+          "x": 186,
+          "y": 179
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
@@ -206,47 +233,8 @@
         "data": {
           "image": "magnetogenesis.png",
           "use1Xscale": false,
-          "x": 186,
-          "y": -1
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "MagnetokinesisPowerUp"
-          },
           "x": 249,
-          "y": 116
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "MagnetokinesisLowering"
-          },
-          "x": 285,
-          "y": 116
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_accept2",
-          "image": "accept2.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "Magnetokinesis"
-          },
-          "x": 186,
-          "y": 179
+          "y": 53
         }
       }
     ],

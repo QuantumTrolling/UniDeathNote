@@ -15,6 +15,6 @@ public class UniGhostRenderer extends MobRenderer<UniGhostEntity, ModelUniGhostC
 
 	@Override
 	public ResourceLocation getTextureLocation(UniGhostEntity entity) {
-		return new ResourceLocation("deathnote:textures/entities/uni_games_ghost.png");
+		return new ResourceLocation("deathnote:textures/entities/uni_games_2.png");
 	}
 }

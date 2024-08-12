@@ -22,7 +22,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 62
+          "y": 44
         }
       },
       {
@@ -37,7 +37,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 80
+          "y": 62
         }
       },
       {
@@ -52,7 +52,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 116
+          "y": 98
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 62
+          "x": 87,
+          "y": 143
         }
       },
       {
@@ -82,7 +82,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 89
+          "y": 71
         }
       },
       {
@@ -97,16 +97,16 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 134
+          "y": 116
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
           "x": 42,
-          "y": 44
+          "y": 26
         }
       },
       {
@@ -121,7 +121,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 98
+          "y": 80
         }
       },
       {
@@ -136,7 +136,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 125
+          "y": 107
         }
       },
       {
@@ -151,7 +151,7 @@
             "falpha": 0.0
           },
           "x": 87,
-          "y": 143
+          "y": 125
         }
       },
       {
@@ -159,14 +159,14 @@
         "data": {
           "name": "label_1_klon_1_siekunda_dlitielnosti",
           "text": {
-            "fixedValue": "+1 клон, +1 секунда"
+            "fixedValue": "+1 клон, +1 секунда,"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 80
+          "x": 87,
+          "y": 161
         }
       },
       {
@@ -180,8 +180,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 89
+          "x": 87,
+          "y": 170
         }
       },
       {
@@ -195,8 +195,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 222,
-          "y": 98
+          "x": 87,
+          "y": 179
         }
       },
       {
@@ -212,7 +212,7 @@
             "falpha": 0.0
           },
           "x": 285,
-          "y": 62
+          "y": 143
         }
       },
       {
@@ -227,21 +227,6 @@
             "falpha": 0.0
           },
           "x": 294,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
           "y": 143
         }
       },
@@ -257,47 +242,59 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 143
+          "x": 195,
+          "y": 35
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
+          "image": "plus1.png",
           "hoveredImage": "",
           "onClick": {
             "name": "SoulSplitPowerUp"
           },
-          "x": 249,
-          "y": 116
+          "x": 267,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
+          "image": "minus2.png",
           "hoveredImage": "",
           "onClick": {
             "name": "SoulSplitLowering"
           },
-          "x": 285,
-          "y": 116
+          "x": 303,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_accept2",
-          "image": "accept2.png",
+          "image": "accept4.png",
           "hoveredImage": "",
           "onClick": {
             "name": "SoulSplitSkill"
           },
+          "displayCondition": {
+            "name": "ShowSoulSplitButton"
+          },
           "x": 186,
           "y": 179
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "splitting_soul.png",
+          "use1Xscale": false,
+          "x": 258,
+          "y": 62
         }
       }
     ],

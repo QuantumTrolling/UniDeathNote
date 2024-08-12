@@ -34,6 +34,7 @@ import net.mcreator.deathnote.init.DeathnoteModSounds;
 import net.mcreator.deathnote.init.DeathnoteModMenus;
 import net.mcreator.deathnote.init.DeathnoteModItems;
 import net.mcreator.deathnote.init.DeathnoteModEntities;
+import net.mcreator.deathnote.init.DeathnoteModBlocks;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -53,6 +54,7 @@ public class DeathnoteMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		DeathnoteModSounds.REGISTRY.register(bus);
+		DeathnoteModBlocks.REGISTRY.register(bus);
 
 		DeathnoteModItems.REGISTRY.register(bus);
 		DeathnoteModEntities.REGISTRY.register(bus);

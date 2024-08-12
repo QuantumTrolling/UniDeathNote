@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -36,8 +36,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -51,8 +51,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 78,
+          "y": 116
         }
       },
       {
@@ -81,17 +81,17 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 98
+          "x": 78,
+          "y": 80
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
@@ -105,8 +105,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -114,14 +114,14 @@
         "data": {
           "name": "label_10_k_uronu",
           "text": {
-            "fixedValue": "+10% к урону"
+            "fixedValue": "+10% к урону."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
+          "x": 78,
+          "y": 134
         }
       },
       {
@@ -135,8 +135,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 285,
+          "y": 143
         }
       },
       {
@@ -151,23 +151,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 285,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 125
+          "x": 276,
+          "y": 143
         }
       },
       {
@@ -182,8 +167,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 125
+          "x": 186,
+          "y": 35
         }
       },
       {
@@ -191,44 +176,47 @@
         "data": {
           "image": "obsession.png",
           "use1Xscale": false,
-          "x": 177,
-          "y": -1
+          "x": 249,
+          "y": 53
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
+          "image": "plus1.png",
           "hoveredImage": "",
           "onClick": {
             "name": "ObsessionPowerUp"
           },
-          "x": 249,
-          "y": 98
+          "x": 258,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
+          "image": "minus2.png",
           "hoveredImage": "",
           "onClick": {
             "name": "ObsessionLowering"
           },
-          "x": 285,
-          "y": 98
+          "x": 294,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_accept2",
-          "image": "accept2.png",
+          "image": "accept4.png",
           "hoveredImage": "",
           "onClick": {
             "name": "Obsession"
+          },
+          "displayCondition": {
+            "name": "ShowObsessionButton"
           },
           "x": 186,
           "y": 188

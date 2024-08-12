@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -36,8 +36,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -51,8 +51,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 107
+          "x": 78,
+          "y": 89
         }
       },
       {
@@ -66,17 +66,17 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 78,
+          "y": 125
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
@@ -90,8 +90,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -105,8 +105,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -120,8 +120,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 125
+          "x": 78,
+          "y": 107
         }
       },
       {
@@ -135,8 +135,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
+          "x": 78,
+          "y": 143
         }
       },
       {
@@ -150,8 +150,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 89
+          "x": 78,
+          "y": 152
         }
       },
       {
@@ -165,8 +165,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 285,
+          "y": 143
         }
       },
       {
@@ -181,23 +181,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 285,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
-          "y": 134
+          "x": 276,
+          "y": 143
         }
       },
       {
@@ -212,47 +197,59 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 134
+          "x": 186,
+          "y": 35
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
+          "image": "plus1.png",
           "hoveredImage": "",
           "onClick": {
             "name": "LevitationPowerUp"
           },
-          "x": 249,
-          "y": 107
+          "x": 258,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
+          "image": "minus2.png",
           "hoveredImage": "",
           "onClick": {
             "name": "LevitationLowering"
           },
-          "x": 285,
-          "y": 107
+          "x": 294,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_accept2",
-          "image": "accept2.png",
+          "image": "accept4.png",
           "hoveredImage": "",
           "onClick": {
             "name": "Levitation"
           },
+          "displayCondition": {
+            "name": "ShowLevitationButton"
+          },
           "x": 186,
           "y": 179
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "levitation.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 53
         }
       }
     ],

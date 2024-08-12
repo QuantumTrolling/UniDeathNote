@@ -21,8 +21,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 62
+          "x": 78,
+          "y": 44
         }
       },
       {
@@ -30,14 +30,14 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Получаете +10% к"
+            "fixedValue": "+ Получаете +10% к ско-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 80
+          "x": 78,
+          "y": 62
         }
       },
       {
@@ -45,14 +45,14 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- Не можете носить"
+            "fixedValue": "- Вы не можете носить"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 107
+          "x": 78,
+          "y": 89
         }
       },
       {
@@ -66,8 +66,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 62
+          "x": 78,
+          "y": 116
         }
       },
       {
@@ -75,14 +75,14 @@
         "data": {
           "name": "label_skorosti_pieriedvizhieniia",
           "text": {
-            "fixedValue": "скорости передвижения."
+            "fixedValue": "-рости передвижения."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 89
+          "x": 78,
+          "y": 71
         }
       },
       {
@@ -96,8 +96,8 @@
             "value": -12829636,
             "falpha": 0.0
           },
-          "x": 87,
-          "y": 116
+          "x": 78,
+          "y": 98
         }
       },
       {
@@ -105,14 +105,14 @@
         "data": {
           "name": "label_10_k_skorosti",
           "text": {
-            "fixedValue": "+10% к скорости"
+            "fixedValue": "+10% к скорости пере-"
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 80
+          "x": 78,
+          "y": 134
         }
       },
       {
@@ -120,14 +120,14 @@
         "data": {
           "name": "label_pieriedvizhieniia",
           "text": {
-            "fixedValue": "передвижения."
+            "fixedValue": "-движения."
           },
           "color": {
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 231,
-          "y": 98
+          "x": 78,
+          "y": 143
         }
       },
       {
@@ -141,8 +141,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 294,
-          "y": 62
+          "x": 285,
+          "y": 143
         }
       },
       {
@@ -157,22 +157,7 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 285,
-          "y": 62
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_ochki",
-          "text": {
-            "fixedValue": "Очки:"
-          },
-          "color": {
-            "value": -16764109,
-            "falpha": 0.0
-          },
-          "x": 240,
+          "x": 276,
           "y": 143
         }
       },
@@ -188,27 +173,30 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 267,
-          "y": 143
+          "x": 186,
+          "y": 35
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guilonglong.png",
+          "image": "gui_final.png",
           "use1Xscale": false,
-          "x": 42,
-          "y": 44
+          "x": 33,
+          "y": 26
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_accept2",
-          "image": "accept2.png",
+          "image": "accept4.png",
           "hoveredImage": "",
           "onClick": {
             "name": "Incorporeality"
+          },
+          "displayCondition": {
+            "name": "ShowIncorporealityButton"
           },
           "x": 186,
           "y": 179
@@ -218,26 +206,35 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_plus_1",
-          "image": "plus_1.png",
+          "image": "plus1.png",
           "hoveredImage": "",
           "onClick": {
             "name": "IncorporealityPowerUp"
           },
-          "x": 249,
-          "y": 116
+          "x": 258,
+          "y": 152
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_minus_1",
-          "image": "minus_1.png",
+          "image": "minus2.png",
           "hoveredImage": "",
           "onClick": {
             "name": "IncorporealityLowering"
           },
-          "x": 285,
-          "y": 116
+          "x": 294,
+          "y": 152
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "disembodied.png",
+          "use1Xscale": false,
+          "x": 249,
+          "y": 62
         }
       }
     ],

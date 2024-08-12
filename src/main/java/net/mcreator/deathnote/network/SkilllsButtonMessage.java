@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritGUIShowProcedure;
 import net.mcreator.deathnote.procedures.TeleportGUIShowProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitGUIShowProcedure;
+import net.mcreator.deathnote.procedures.RevivalGUIShowProcedure;
 import net.mcreator.deathnote.procedures.ObsessionGUIShowProcedure;
 import net.mcreator.deathnote.procedures.ManifestationGUIShowProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisGUIShowProcedure;
@@ -85,31 +86,35 @@ public class SkilllsButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			IncorporealityGUIShowProcedure.execute(world, x, y, z, entity);
+			SoulSplitGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			SoulSplitGUIShowProcedure.execute(world, x, y, z, entity);
+			ObsessionGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			ObsessionGUIShowProcedure.execute(world, x, y, z, entity);
+			LevitationGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 6) {
 
-			LevitationGUIShowProcedure.execute(world, x, y, z, entity);
+			TeleportGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 7) {
 
-			TeleportGUIShowProcedure.execute(world, x, y, z, entity);
+			IntangibilityGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 8) {
 
-			IntangibilityGUIShowProcedure.execute(world, x, y, z, entity);
+			ManifestationGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 9) {
 
-			ManifestationGUIShowProcedure.execute(world, x, y, z, entity);
+			IncorporealityGUIShowProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 10) {
+
+			RevivalGUIShowProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

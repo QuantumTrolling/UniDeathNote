@@ -89,19 +89,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_1ghostly_hunger1",
-          "image": "1ghostly_hunger.png",
-          "hoveredImage": "",
-          "onClick": {
-            "name": "IncorporealityGUIShow"
-          },
-          "x": 203,
-          "y": 106
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_biestieliesnost",
@@ -110,15 +97,15 @@
           },
           "width": 24,
           "height": 24,
-          "x": 198,
-          "y": 102
+          "x": 196,
+          "y": 64
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1ghostly_hunger2",
-          "image": "1ghostly_hunger.png",
+          "image": "5splitting_soul.png",
           "hoveredImage": "",
           "onClick": {
             "name": "SoulSplitGUIShow"
@@ -136,7 +123,7 @@
           },
           "width": 24,
           "height": 24,
-          "x": 227,
+          "x": 226,
           "y": 131
         }
       },
@@ -149,8 +136,8 @@
           "onClick": {
             "name": "ObsessionGUIShow"
           },
-          "x": 202,
-          "y": 143
+          "x": 173,
+          "y": 77
         }
       },
       {
@@ -162,21 +149,21 @@
           },
           "width": 24,
           "height": 24,
-          "x": 197,
-          "y": 140
+          "x": 166,
+          "y": 73
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1ghostly_hunger3",
-          "image": "1ghostly_hunger.png",
+          "image": "7levitation.png",
           "hoveredImage": "",
           "onClick": {
             "name": "LevitationGUIShow"
           },
-          "x": 175,
-          "y": 135
+          "x": 202,
+          "y": 145
         }
       },
       {
@@ -188,21 +175,21 @@
           },
           "width": 24,
           "height": 24,
-          "x": 168,
-          "y": 131
+          "x": 198,
+          "y": 141
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1ghostly_hunger4",
-          "image": "1ghostly_hunger.png",
+          "image": "8disembodied_movement.png",
           "hoveredImage": "",
           "onClick": {
             "name": "TeleportGUIShow"
           },
-          "x": 203,
-          "y": 68
+          "x": 161,
+          "y": 106
         }
       },
       {
@@ -214,21 +201,21 @@
           },
           "width": 24,
           "height": 24,
-          "x": 197,
-          "y": 64
+          "x": 156,
+          "y": 103
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1ghostly_hunger5",
-          "image": "1ghostly_hunger.png",
+          "image": "9intangibility.png",
           "hoveredImage": "",
           "onClick": {
             "name": "IntangibilityGUIShow"
           },
-          "x": 174,
-          "y": 77
+          "x": 201,
+          "y": 106
         }
       },
       {
@@ -240,21 +227,21 @@
           },
           "width": 24,
           "height": 24,
-          "x": 169,
-          "y": 73
+          "x": 197,
+          "y": 102
         }
       },
       {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_1ghostly_hunger6",
-          "image": "1ghostly_hunger.png",
+          "image": "10manifestation.png",
           "hoveredImage": "",
           "onClick": {
             "name": "ManifestationGUIShow"
           },
-          "x": 163,
-          "y": 106
+          "x": 173,
+          "y": 135
         }
       },
       {
@@ -266,23 +253,62 @@
           },
           "width": 24,
           "height": 24,
-          "x": 157,
-          "y": 102
+          "x": 168,
+          "y": 132
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_4disembodied",
+          "image": "4disembodied.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "IncorporealityGUIShow"
+          },
+          "x": 202,
+          "y": 68
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_11resurrection",
+          "image": "11resurrection.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "RevivalGUIShow"
+          },
+          "x": 150,
+          "y": 159
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_voskrieshieniie",
+          "text": {
+            "fixedValue": "Воскрешение"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 146,
+          "y": 155
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "guii2.png",
+          "image": "guii.png",
           "use1Xscale": false,
-          "x": 92,
+          "x": 95,
           "y": 33
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "gui_for_skills2.png",
+          "image": "gui_for_skills3.png",
           "use1Xscale": false,
           "x": 90,
           "y": 26

@@ -16,14 +16,6 @@ public class LevitationProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Levitation = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			LevitationDebuffProcedure.execute(entity);
 		}
 	}
 }

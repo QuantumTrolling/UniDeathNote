@@ -16,13 +16,6 @@ public class ManifestationProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Manifestation = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		}
 	}
 }

@@ -14,7 +14,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.deathnote.procedures.ShowSoulSplitTaskProcedure;
+import net.mcreator.deathnote.procedures.ShowObsessionTaskProcedure;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class ObsessionTaskOverlay {
@@ -35,7 +35,7 @@ public class ObsessionTaskOverlay {
 			y = entity.getY();
 			z = entity.getZ();
 		}
-		if (ShowSoulSplitTaskProcedure.execute(entity)) {
+		if (ShowObsessionTaskProcedure.execute(entity)) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.obsession_task.label_zadacha_miertvietskii_gholod_sies"), posX + -234, posY + -112, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.obsession_task.label_siest_ghniluiu_plot"), posX + -234, posY + -103, -1, false);
 		}

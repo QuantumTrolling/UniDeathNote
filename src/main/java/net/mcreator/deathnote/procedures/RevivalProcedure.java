@@ -1,0 +1,21 @@
+package net.mcreator.deathnote.procedures;
+
+import net.minecraft.world.entity.Entity;
+
+import net.mcreator.deathnote.network.DeathnoteModVariables;
+
+public class RevivalProcedure {
+	public static void execute(Entity entity) {
+		if (entity == null)
+			return;
+		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival == false) {
+			{
+				boolean _setval = true;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.RevivalButton = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
+	}
+}

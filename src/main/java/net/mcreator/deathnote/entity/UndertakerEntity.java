@@ -94,7 +94,7 @@ public class UndertakerEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level();
 
-		UndertakerRightClickedOnEntityProcedure.execute();
+		UndertakerRightClickedOnEntityProcedure.execute(entity);
 		return retval;
 	}
 

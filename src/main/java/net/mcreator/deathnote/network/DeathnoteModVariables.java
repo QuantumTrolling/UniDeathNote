@@ -109,6 +109,14 @@ public class DeathnoteModVariables {
 			clone.ManifestationButton = original.ManifestationButton;
 			clone.ManifestationLevel = original.ManifestationLevel;
 			clone.ManifestationCD = original.ManifestationCD;
+			clone.IncorporealityIronQuest = original.IncorporealityIronQuest;
+			clone.IncorporealityCopperQuest = original.IncorporealityCopperQuest;
+			clone.IncorporealityGoldQuest = original.IncorporealityGoldQuest;
+			clone.meetGraver = original.meetGraver;
+			clone.VengefulSpiritBonesQuest = original.VengefulSpiritBonesQuest;
+			clone.VengefulSpiritFleshQuest = original.VengefulSpiritFleshQuest;
+			clone.Revival = original.Revival;
+			clone.RevivalButton = original.RevivalButton;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -188,6 +196,14 @@ public class DeathnoteModVariables {
 		public boolean ManifestationButton = false;
 		public double ManifestationLevel = 0;
 		public boolean ManifestationCD = false;
+		public boolean IncorporealityIronQuest = false;
+		public boolean IncorporealityCopperQuest = false;
+		public boolean IncorporealityGoldQuest = false;
+		public boolean meetGraver = false;
+		public boolean VengefulSpiritBonesQuest = false;
+		public boolean VengefulSpiritFleshQuest = false;
+		public boolean Revival = false;
+		public boolean RevivalButton = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -239,6 +255,14 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("ManifestationButton", ManifestationButton);
 			nbt.putDouble("ManifestationLevel", ManifestationLevel);
 			nbt.putBoolean("ManifestationCD", ManifestationCD);
+			nbt.putBoolean("IncorporealityIronQuest", IncorporealityIronQuest);
+			nbt.putBoolean("IncorporealityCopperQuest", IncorporealityCopperQuest);
+			nbt.putBoolean("IncorporealityGoldQuest", IncorporealityGoldQuest);
+			nbt.putBoolean("meetGraver", meetGraver);
+			nbt.putBoolean("VengefulSpiritBonesQuest", VengefulSpiritBonesQuest);
+			nbt.putBoolean("VengefulSpiritFleshQuest", VengefulSpiritFleshQuest);
+			nbt.putBoolean("Revival", Revival);
+			nbt.putBoolean("RevivalButton", RevivalButton);
 			return nbt;
 		}
 
@@ -287,6 +311,14 @@ public class DeathnoteModVariables {
 			ManifestationButton = nbt.getBoolean("ManifestationButton");
 			ManifestationLevel = nbt.getDouble("ManifestationLevel");
 			ManifestationCD = nbt.getBoolean("ManifestationCD");
+			IncorporealityIronQuest = nbt.getBoolean("IncorporealityIronQuest");
+			IncorporealityCopperQuest = nbt.getBoolean("IncorporealityCopperQuest");
+			IncorporealityGoldQuest = nbt.getBoolean("IncorporealityGoldQuest");
+			meetGraver = nbt.getBoolean("meetGraver");
+			VengefulSpiritBonesQuest = nbt.getBoolean("VengefulSpiritBonesQuest");
+			VengefulSpiritFleshQuest = nbt.getBoolean("VengefulSpiritFleshQuest");
+			Revival = nbt.getBoolean("Revival");
+			RevivalButton = nbt.getBoolean("RevivalButton");
 		}
 	}
 
@@ -354,6 +386,14 @@ public class DeathnoteModVariables {
 					variables.ManifestationButton = message.data.ManifestationButton;
 					variables.ManifestationLevel = message.data.ManifestationLevel;
 					variables.ManifestationCD = message.data.ManifestationCD;
+					variables.IncorporealityIronQuest = message.data.IncorporealityIronQuest;
+					variables.IncorporealityCopperQuest = message.data.IncorporealityCopperQuest;
+					variables.IncorporealityGoldQuest = message.data.IncorporealityGoldQuest;
+					variables.meetGraver = message.data.meetGraver;
+					variables.VengefulSpiritBonesQuest = message.data.VengefulSpiritBonesQuest;
+					variables.VengefulSpiritFleshQuest = message.data.VengefulSpiritFleshQuest;
+					variables.Revival = message.data.Revival;
+					variables.RevivalButton = message.data.RevivalButton;
 				}
 			});
 			context.setPacketHandled(true);

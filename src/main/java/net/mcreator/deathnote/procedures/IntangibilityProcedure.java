@@ -16,20 +16,6 @@ public class IntangibilityProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.Intangibility = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				boolean _setval = true;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.IntangibilityDebuff = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		}
 	}
 }
