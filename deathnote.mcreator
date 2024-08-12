@@ -2842,16 +2842,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowVenSpitButton",
+      "name": "ShowVengefulSpiritButton",
       "type": "procedure",
-      "sortid": 135,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_ven_spit_button",
+      "registry_name": "show_vengeful_spirit_button",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowVenSpitButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritButtonProcedure.java"
         ],
         "dependencies": [
           {
@@ -2863,16 +2863,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowMagnetoButton",
+      "name": "ShowMagnetokinesisButton",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_magneto_button",
+      "registry_name": "show_magnetokinesis_button",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowMagnetoButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowMagnetokinesisButtonProcedure.java"
         ],
         "dependencies": [
           {
@@ -2884,16 +2884,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowIncorporealityButton",
+      "name": "ShowIncorporealityButt",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_incorporeality_button",
+      "registry_name": "show_incorporeality_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowIncorporealityButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIncorporealityButtProcedure.java"
         ],
         "dependencies": [
           {
@@ -2905,16 +2905,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowSoulSplitButton",
+      "name": "ShowSoulSplitButt",
       "type": "procedure",
-      "sortid": 138,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_soul_split_button",
+      "registry_name": "show_soul_split_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowSoulSplitButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowSoulSplitButtProcedure.java"
         ],
         "dependencies": [
           {
@@ -2926,16 +2926,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowObsessionButton",
+      "name": "ShowObsessionButt",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_obsession_button",
+      "registry_name": "show_obsession_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowObsessionButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowObsessionButtProcedure.java"
         ],
         "dependencies": [
           {
@@ -2947,16 +2947,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowLevitationButton",
+      "name": "ShowLevitationButt",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_levitation_button",
+      "registry_name": "show_levitation_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowLevitationButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowLevitationButtProcedure.java"
         ],
         "dependencies": [
           {
@@ -2968,16 +2968,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowTeleportButton",
+      "name": "ShowTeleportButt",
       "type": "procedure",
-      "sortid": 141,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_teleport_button",
+      "registry_name": "show_teleport_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowTeleportButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowTeleportButtProcedure.java"
         ],
         "dependencies": [
           {
@@ -2989,16 +2989,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowIntangibButton",
+      "name": "ShowIntangibilityButton",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_intangib_button",
+      "registry_name": "show_intangibility_button",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowIntangibButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIntangibilityButtonProcedure.java"
         ],
         "dependencies": [
           {
@@ -3010,16 +3010,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowManifestButton",
+      "name": "ShowManifestationButton",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_manifest_button",
+      "registry_name": "show_manifestation_button",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowManifestButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowManifestationButtonProcedure.java"
         ],
         "dependencies": [
           {
@@ -3031,16 +3031,16 @@
       "path": "~/ShowAcceptButton"
     },
     {
-      "name": "ShowRevivalButton",
+      "name": "ShowRevivalButt",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "show_revival_button",
+      "registry_name": "show_revival_butt",
       "metadata": {
         "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalButtonProcedure.java"
+          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalButtProcedure.java"
         ],
         "dependencies": [
           {

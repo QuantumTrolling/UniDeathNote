@@ -11,7 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritLevelOutPutProcedure;
-import net.mcreator.deathnote.procedures.ShowVenSpitButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowVengefulSpiritButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.VengefulSpiritGUIButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -120,14 +120,14 @@ public class VengefulSpiritGUIScreen extends AbstractContainerScreen<VengefulSpi
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 69, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowVenSpitButtonProcedure.execute(entity)) {
+			if (ShowVengefulSpiritButtonProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new VengefulSpiritGUIButtonMessage(2, x, y, z));
 				VengefulSpiritGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowVenSpitButtonProcedure.execute(entity))
+				if (ShowVengefulSpiritButtonProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

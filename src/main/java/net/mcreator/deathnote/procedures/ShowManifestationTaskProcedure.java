@@ -14,7 +14,7 @@ public class ShowManifestationTaskProcedure {
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Manifestation) {
 			return true;
 		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof ManifestationGUIMenu
-				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Manifestation) {
+				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Manifestation && ShowManifestationButtonProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

@@ -10,7 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
-import net.mcreator.deathnote.procedures.ShowManifestButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowManifestationButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.ManifestationLevelOutPutProcedure;
 import net.mcreator.deathnote.network.ManifestationGUIButtonMessage;
@@ -120,14 +120,14 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowManifestButtonProcedure.execute(entity)) {
+			if (ShowManifestationButtonProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ManifestationGUIButtonMessage(2, x, y, z));
 				ManifestationGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowManifestButtonProcedure.execute(entity))
+				if (ShowManifestationButtonProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

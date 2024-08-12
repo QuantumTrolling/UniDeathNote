@@ -13,7 +13,8 @@ public class ShowRevivalTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).RevivalButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof RevivalGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival) {
+		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof RevivalGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival
+				&& ShowRevivalButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

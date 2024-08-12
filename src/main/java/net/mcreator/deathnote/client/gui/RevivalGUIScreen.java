@@ -10,7 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.RevivalGUIMenu;
-import net.mcreator.deathnote.procedures.ShowRevivalButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowRevivalButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.RevivalGUIButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -91,14 +91,14 @@ public class RevivalGUIScreen extends AbstractContainerScreen<RevivalGUIMenu> {
 	public void init() {
 		super.init();
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowRevivalButtonProcedure.execute(entity)) {
+			if (ShowRevivalButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new RevivalGUIButtonMessage(0, x, y, z));
 				RevivalGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowRevivalButtonProcedure.execute(entity))
+				if (ShowRevivalButtProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

@@ -11,7 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.TeleportGUIMenu;
 import net.mcreator.deathnote.procedures.TeleportLevelOutPutProcedure;
-import net.mcreator.deathnote.procedures.ShowTeleportButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowTeleportButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.TeleportGUIButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -118,14 +118,14 @@ public class TeleportGUIScreen extends AbstractContainerScreen<TeleportGUIMenu> 
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowTeleportButtonProcedure.execute(entity)) {
+			if (ShowTeleportButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new TeleportGUIButtonMessage(2, x, y, z));
 				TeleportGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowTeleportButtonProcedure.execute(entity))
+				if (ShowTeleportButtProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

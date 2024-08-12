@@ -237,7 +237,7 @@
             "name": "Levitation"
           },
           "displayCondition": {
-            "name": "ShowLevitationButton"
+            "name": "ShowLevitationButt"
           },
           "x": 186,
           "y": 179

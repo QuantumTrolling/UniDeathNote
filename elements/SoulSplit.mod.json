@@ -282,7 +282,7 @@
             "name": "SoulSplitSkill"
           },
           "displayCondition": {
-            "name": "ShowSoulSplitButton"
+            "name": "ShowSoulSplitButt"
           },
           "x": 186,
           "y": 179

@@ -13,7 +13,8 @@ public class ShowObsessionTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).ObsessionButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof ObsessionGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession) {
+		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof ObsessionGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession
+				&& ShowObsessionButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

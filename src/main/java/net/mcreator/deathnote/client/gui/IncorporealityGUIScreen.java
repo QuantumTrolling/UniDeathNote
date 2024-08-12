@@ -10,7 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
-import net.mcreator.deathnote.procedures.ShowIncorporealityButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowIncorporealityButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityLevelOutPutProcedure;
 import net.mcreator.deathnote.network.IncorporealityGUIButtonMessage;
@@ -102,14 +102,14 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 	public void init() {
 		super.init();
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowIncorporealityButtonProcedure.execute(entity)) {
+			if (ShowIncorporealityButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new IncorporealityGUIButtonMessage(0, x, y, z));
 				IncorporealityGUIButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowIncorporealityButtonProcedure.execute(entity))
+				if (ShowIncorporealityButtProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

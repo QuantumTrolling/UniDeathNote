@@ -213,7 +213,7 @@
             "name": "Magnetokinesis"
           },
           "displayCondition": {
-            "name": "ShowMagnetoButton"
+            "name": "ShowMagnetokinesisButton"
           },
           "x": 186,
           "y": 179

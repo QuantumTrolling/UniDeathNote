@@ -74,7 +74,7 @@
             "name": "Revival"
           },
           "displayCondition": {
-            "name": "ShowRevivalButton"
+            "name": "ShowRevivalButt"
           },
           "x": 186,
           "y": 179

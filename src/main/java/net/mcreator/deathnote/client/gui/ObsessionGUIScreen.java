@@ -10,7 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
-import net.mcreator.deathnote.procedures.ShowObsessionButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowObsessionButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.ObsessionLevelOutPutProcedure;
 import net.mcreator.deathnote.network.ObsessionGUIButtonMessage;
@@ -116,15 +116,15 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 		});
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
-		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 151, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowObsessionButtonProcedure.execute(entity)) {
+		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
+			if (ShowObsessionButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new ObsessionGUIButtonMessage(2, x, y, z));
 				ObsessionGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowObsessionButtonProcedure.execute(entity))
+				if (ShowObsessionButtProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

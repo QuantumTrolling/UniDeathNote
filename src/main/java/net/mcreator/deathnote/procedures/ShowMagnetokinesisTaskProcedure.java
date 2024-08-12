@@ -14,7 +14,7 @@ public class ShowMagnetokinesisTaskProcedure {
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Magnetokinesis) {
 			return true;
 		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof MagnetokinesisGUIMenu
-				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Magnetokinesis) {
+				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Magnetokinesis && ShowMagnetokinesisButtonProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

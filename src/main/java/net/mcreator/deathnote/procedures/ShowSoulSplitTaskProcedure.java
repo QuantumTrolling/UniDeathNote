@@ -13,7 +13,8 @@ public class ShowSoulSplitTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplitButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplit) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof SoulSplitMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplit) {
+		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof SoulSplitMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplit
+				&& ShowSoulSplitButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

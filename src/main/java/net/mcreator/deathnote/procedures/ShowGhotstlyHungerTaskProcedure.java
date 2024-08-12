@@ -13,7 +13,7 @@ public class ShowGhotstlyHungerTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHungerButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof GhostlyHungerGUIMenu
+		} else if (ShowGHButtonProcedure.execute(entity) && entity instanceof Player _plr0 && _plr0.containerMenu instanceof GhostlyHungerGUIMenu
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
 			return true;
 		}

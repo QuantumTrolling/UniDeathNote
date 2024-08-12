@@ -11,7 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.procedures.SoulSplitLevelOutPutProcedure;
-import net.mcreator.deathnote.procedures.ShowSoulSplitButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowSoulSplitButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.SoulSplitButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
@@ -122,14 +122,14 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowSoulSplitButtonProcedure.execute(entity)) {
+			if (ShowSoulSplitButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(2, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowSoulSplitButtonProcedure.execute(entity))
+				if (ShowSoulSplitButtProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

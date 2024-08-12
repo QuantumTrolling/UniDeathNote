@@ -13,7 +13,8 @@ public class ShowTeleportTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).TeleportButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Teleport) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof TeleportGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Teleport) {
+		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof TeleportGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Teleport
+				&& ShowTeleportButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

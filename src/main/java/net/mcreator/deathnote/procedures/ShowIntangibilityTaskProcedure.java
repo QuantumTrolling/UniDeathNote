@@ -13,7 +13,7 @@ public class ShowIntangibilityTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IntangibilityButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Intangibility) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof IntangibilityGUIMenu
+		} else if (ShowIntangibilityButtonProcedure.execute(entity) && entity instanceof Player _plr0 && _plr0.containerMenu instanceof IntangibilityGUIMenu
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Intangibility) {
 			return true;
 		}

@@ -10,7 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
-import net.mcreator.deathnote.procedures.ShowMagnetoButtonProcedure;
+import net.mcreator.deathnote.procedures.ShowMagnetokinesisButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.MagnitokinesisLevelOutPutProcedure;
 import net.mcreator.deathnote.network.MagnetokinesisGUIButtonMessage;
@@ -118,14 +118,14 @@ public class MagnetokinesisGUIScreen extends AbstractContainerScreen<Magnetokine
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
 		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
-			if (ShowMagnetoButtonProcedure.execute(entity)) {
+			if (ShowMagnetokinesisButtonProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new MagnetokinesisGUIButtonMessage(2, x, y, z));
 				MagnetokinesisGUIButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (ShowMagnetoButtonProcedure.execute(entity))
+				if (ShowMagnetokinesisButtonProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

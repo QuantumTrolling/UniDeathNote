@@ -192,7 +192,7 @@
             "name": "Manifestation"
           },
           "displayCondition": {
-            "name": "ShowManifestButton"
+            "name": "ShowManifestationButton"
           },
           "x": 186,
           "y": 179

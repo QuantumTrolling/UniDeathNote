@@ -13,8 +13,8 @@ public class ShowLevitationTaskProcedure {
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationButton
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Levitation) {
 			return true;
-		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof LevitationGUIMenu
-				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Levitation) {
+		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof LevitationGUIMenu && !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Levitation
+				&& ShowLevitationButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

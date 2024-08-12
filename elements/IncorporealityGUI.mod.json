@@ -196,7 +196,7 @@
             "name": "Incorporeality"
           },
           "displayCondition": {
-            "name": "ShowIncorporealityButton"
+            "name": "ShowIncorporealityButt"
           },
           "x": 186,
           "y": 179

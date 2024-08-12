@@ -14,7 +14,7 @@ public class ShowIncorporealityTaskProcedure {
 				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality) {
 			return true;
 		} else if (entity instanceof Player _plr0 && _plr0.containerMenu instanceof IncorporealityGUIMenu
-				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality) {
+				&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality && ShowIncorporealityButtProcedure.execute(entity)) {
 			return true;
 		}
 		return false;

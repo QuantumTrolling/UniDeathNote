@@ -216,10 +216,10 @@
             "name": "Obsession"
           },
           "displayCondition": {
-            "name": "ShowObsessionButton"
+            "name": "ShowObsessionButt"
           },
           "x": 186,
-          "y": 188
+          "y": 179
         }
       }
     ],
