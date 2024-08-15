@@ -55,7 +55,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -83, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/splitting_soul.png"), this.leftPos + 132, this.topPos + 25, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/splitting_soul.png"), this.leftPos + 135, this.topPos + 21, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -94,7 +94,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.soul_split.label_3"), 168, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 69, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 72, -1, -16764109, false);
 	}
 
 	@Override
@@ -121,7 +121,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		});
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
-		imagebutton_accept2 = new ImageButton(this.leftPos + 60, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
+		imagebutton_accept2 = new ImageButton(this.leftPos + 66, this.topPos + 142, 55, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_accept2.png"), 55, 42, e -> {
 			if (ShowSoulSplitButtProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(2, x, y, z));
 				SoulSplitButtonMessage.handleButtonAction(entity, 2, x, y, z);

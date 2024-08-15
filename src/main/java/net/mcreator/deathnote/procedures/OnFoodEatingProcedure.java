@@ -53,10 +53,11 @@ public class OnFoodEatingProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-			} else if (itemstack.getItem().isEdible() && (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
-				if (entity instanceof Player _player)
-					_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) - (itemstack.getItem().isEdible() ? itemstack.getItem().getFoodProperties().getNutrition() : 0)));
 			}
+		}
+		if (itemstack.getItem().isEdible() && (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {
+			if (entity instanceof Player _player)
+				_player.getFoodData().setFoodLevel((int) ((entity instanceof Player _plr ? _plr.getFoodData().getFoodLevel() : 0) - (itemstack.getItem().isEdible() ? itemstack.getItem().getFoodProperties().getNutrition() : 0)));
 		}
 	}
 }

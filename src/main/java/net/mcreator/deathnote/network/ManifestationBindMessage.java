@@ -52,7 +52,7 @@ public class ManifestationBindMessage {
 			return;
 		if (type == 0) {
 
-			BreakingBlocksProcedure.execute(world, entity);
+			BreakingBlocksProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

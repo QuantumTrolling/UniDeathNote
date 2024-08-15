@@ -57,7 +57,7 @@ public class UndertakerEntity extends Monster {
 		this.goalSelector.addGoal(1, new OpenDoorGoal(this, true));
 		this.goalSelector.addGoal(2, new OpenDoorGoal(this, false));
 		this.goalSelector.addGoal(3, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
 		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
@@ -94,7 +94,7 @@ public class UndertakerEntity extends Monster {
 		Entity entity = this;
 		Level world = this.level();
 
-		UndertakerRightClickedOnEntityProcedure.execute(entity);
+		UndertakerRightClickedOnEntityProcedure.execute(sourceentity);
 		return retval;
 	}
 

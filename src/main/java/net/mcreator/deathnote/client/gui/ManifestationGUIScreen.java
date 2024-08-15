@@ -55,7 +55,7 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/manifestation.png"), this.leftPos + 123, this.topPos + 16, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/manifestation.png"), this.leftPos + 125, this.topPos + 20, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -88,11 +88,12 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 				ManifestationLevelOutPutProcedure.execute(entity), 150, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_lomat_bloki"), -47, 61, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_uron"), -47, 115, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie"), -47, 70, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_rie_3_sierdiechiek"), -47, 79, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.manifestation_gui.label_knopka_aktivatsii_5"), -47, 133, -16764109, false);
 	}
 
 	@Override

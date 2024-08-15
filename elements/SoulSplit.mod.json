@@ -45,7 +45,7 @@
         "data": {
           "name": "label_ieda_bolshie_nie_vospolniaiet_tiebie",
           "text": {
-            "fixedValue": "- При использовании "
+            "fixedValue": "- При использовании"
           },
           "color": {
             "value": -16764109,
@@ -90,7 +90,7 @@
         "data": {
           "name": "label_poluchaietie_uron_v_razmierie_3_sierdie",
           "text": {
-            "fixedValue": "получаете урон в раз-"
+            "fixedValue": "вы получаете урон"
           },
           "color": {
             "value": -16764109,
@@ -129,7 +129,7 @@
         "data": {
           "name": "label_etoi_sposobnosti_vy",
           "text": {
-            "fixedValue": "этой способности вы"
+            "fixedValue": "способности (кнопка '2')"
           },
           "color": {
             "value": -16764109,
@@ -144,7 +144,7 @@
         "data": {
           "name": "label_razmierie_3_sierdiechiek",
           "text": {
-            "fixedValue": "-мере 3 сердечек."
+            "fixedValue": "в размере 3 сердечек."
           },
           "color": {
             "value": -16764109,
@@ -242,8 +242,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 195,
-          "y": 35
+          "x": 198,
+          "y": 36
         }
       },
       {
@@ -284,7 +284,7 @@
           "displayCondition": {
             "name": "ShowSoulSplitButt"
           },
-          "x": 186,
+          "x": 192,
           "y": 179
         }
       },
@@ -293,8 +293,8 @@
         "data": {
           "image": "splitting_soul.png",
           "use1Xscale": false,
-          "x": 258,
-          "y": 62
+          "x": 261,
+          "y": 58
         }
       }
     ],
@@ -303,7 +303,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

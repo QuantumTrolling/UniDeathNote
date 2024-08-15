@@ -55,7 +55,7 @@ public class VengefulSpiritGUIScreen extends AbstractContainerScreen<VengefulSpi
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -83, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/vengeful_spirit.png"), this.leftPos + 132, this.topPos + 25, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/vengeful_spirit.png"), this.leftPos + 135, this.topPos + 20, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,7 +87,7 @@ public class VengefulSpiritGUIScreen extends AbstractContainerScreen<VengefulSpi
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_1_urovien_k_effiektu"), -38, 124, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 69, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 72, -1, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.vengeful_spirit_gui.label_5"), 168, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 

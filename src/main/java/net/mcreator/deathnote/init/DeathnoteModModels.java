@@ -10,6 +10,7 @@ import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.deathnote.client.model.Modelundertaker;
+import net.mcreator.deathnote.client.model.Modelenemy_ghost;
 import net.mcreator.deathnote.client.model.ModelUniGhostClone;
 import net.mcreator.deathnote.client.model.ModelUniGhost;
 
@@ -20,5 +21,6 @@ public class DeathnoteModModels {
 		event.registerLayerDefinition(ModelUniGhostClone.LAYER_LOCATION, ModelUniGhostClone::createBodyLayer);
 		event.registerLayerDefinition(ModelUniGhost.LAYER_LOCATION, ModelUniGhost::createBodyLayer);
 		event.registerLayerDefinition(Modelundertaker.LAYER_LOCATION, Modelundertaker::createBodyLayer);
+		event.registerLayerDefinition(Modelenemy_ghost.LAYER_LOCATION, Modelenemy_ghost::createBodyLayer);
 	}
 }

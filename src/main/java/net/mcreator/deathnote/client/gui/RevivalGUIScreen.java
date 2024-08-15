@@ -52,7 +52,7 @@ public class RevivalGUIScreen extends AbstractContainerScreen<RevivalGUIMenu> {
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/resurrection.png"), this.leftPos + 123, this.topPos + 16, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/resurrection.png"), this.leftPos + 125, this.topPos + 20, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -79,7 +79,7 @@ public class RevivalGUIScreen extends AbstractContainerScreen<RevivalGUIMenu> {
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.revival_gui.label_ties_chieloviekom"), -47, 43, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 	}
 
 	@Override

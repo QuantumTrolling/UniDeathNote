@@ -13,7 +13,7 @@ import net.mcreator.deathnote.procedures.BookOfDeathRightclickedProcedure;
 
 public class BookOfDeathItem extends Item {
 	public BookOfDeathItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override

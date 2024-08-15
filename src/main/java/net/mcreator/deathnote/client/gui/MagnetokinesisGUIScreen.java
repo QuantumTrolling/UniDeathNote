@@ -90,7 +90,8 @@ public class MagnetokinesisGUIScreen extends AbstractContainerScreen<Magnetokine
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_otkata"), -47, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.magnetokinesis_gui.label_klavisha_1"), -47, 124, -16764109, false);
 	}
 
 	@Override

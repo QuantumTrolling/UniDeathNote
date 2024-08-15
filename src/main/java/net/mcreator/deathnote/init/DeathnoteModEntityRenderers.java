@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.mcreator.deathnote.client.renderer.UniGhostRenderer;
 import net.mcreator.deathnote.client.renderer.UndertakerRenderer;
+import net.mcreator.deathnote.client.renderer.CursedGhostRenderer;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DeathnoteModEntityRenderers {
@@ -18,5 +19,6 @@ public class DeathnoteModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(DeathnoteModEntities.UNI_GHOST.get(), UniGhostRenderer::new);
 		event.registerEntityRenderer(DeathnoteModEntities.UNDERTAKER.get(), UndertakerRenderer::new);
+		event.registerEntityRenderer(DeathnoteModEntities.CURSED_GHOST.get(), CursedGhostRenderer::new);
 	}
 }

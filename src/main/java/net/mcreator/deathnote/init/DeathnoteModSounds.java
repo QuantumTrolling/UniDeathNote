@@ -18,4 +18,6 @@ public class DeathnoteModSounds {
 	public static final RegistryObject<SoundEvent> MAGNETOKINESIS = REGISTRY.register("magnetokinesis", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "magnetokinesis")));
 	public static final RegistryObject<SoundEvent> SOULSPLIT = REGISTRY.register("soulsplit", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "soulsplit")));
 	public static final RegistryObject<SoundEvent> LEVITATION = REGISTRY.register("levitation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "levitation")));
+	public static final RegistryObject<SoundEvent> GHOST_LIVING_SOUND = REGISTRY.register("ghost_living_sound", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "ghost_living_sound")));
+	public static final RegistryObject<SoundEvent> MANIFESTATION = REGISTRY.register("manifestation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("deathnote", "manifestation")));
 }

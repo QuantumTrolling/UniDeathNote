@@ -5,7 +5,7 @@
     "mobName": "Uni Ghost Clone",
     "mobLabel": "",
     "mobModelName": "ModelUniGhostClone",
-    "mobModelTexture": "uni_games_2.png",
+    "mobModelTexture": "uni_games_3.png",
     "mobModelGlowTexture": "",
     "solidBoundingBox": {
       "fixedValue": false
@@ -24,7 +24,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:Death"
+      "value": "No creative tab entry"
     },
     "isBoss": false,
     "bossBarColor": "PINK",

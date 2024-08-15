@@ -15,7 +15,7 @@
             "value": -1,
             "falpha": 0.0
           },
-          "x": -21,
+          "x": -12,
           "y": 8
         }
       },
@@ -24,7 +24,7 @@
         "data": {
           "name": "label_siest_ghniluiu_plot",
           "text": {
-            "fixedValue": "- Добыть16 костей и 16 гнилой плоти"
+            "fixedValue": "- Добыть 16 костей и 16 гнилой плоти"
           },
           "color": {
             "value": -1,

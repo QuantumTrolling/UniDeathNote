@@ -35,6 +35,13 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				MagnetokinesisDebuffProcedure.execute(entity);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality
@@ -69,6 +76,13 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Points = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.RAW_COPPER && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() >= 10
 					&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IncorporealityCopperQuest) {
@@ -97,6 +111,13 @@ public class AltarOnBlockRightClickedProcedure {
 						boolean _setval = false;
 						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.incorporealityButton = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					{
+						double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Points = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
@@ -131,6 +152,13 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Points = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplit
@@ -154,6 +182,13 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).ObsessionButton) {
@@ -170,9 +205,16 @@ public class AltarOnBlockRightClickedProcedure {
 					});
 				}
 				{
-					boolean _setval = true;
+					boolean _setval = false;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.ObsessionButton = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -198,6 +240,13 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 				LevitationDebuffProcedure.execute(entity);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Teleport
@@ -218,6 +267,13 @@ public class AltarOnBlockRightClickedProcedure {
 					boolean _setval = false;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.TeleportButton = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -247,6 +303,13 @@ public class AltarOnBlockRightClickedProcedure {
 					boolean _setval = false;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.IntangibilityButton = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
 						capability.syncPlayerVariables(entity);
 					});
 				}
@@ -282,6 +345,13 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Points = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.ROTTEN_FLESH && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() >= 16
 					&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).VengefulSpiritFleshQuest) {
@@ -312,6 +382,13 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					{
+						double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+						entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.Points = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Manifestation
@@ -335,6 +412,43 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				{
+					double _setval = (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Points + 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival
+				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).RevivalButton) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.DRAGON_EGG.asItem()) {
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = new ItemStack(Blocks.DRAGON_EGG);
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+				}
+				{
+					boolean _setval = true;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Revival = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					boolean _setval = false;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.RevivalButton = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				{
+					double _setval = 0;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.Points = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				AliveAgainProcedure.execute(entity);
 			}
 		}
 	}

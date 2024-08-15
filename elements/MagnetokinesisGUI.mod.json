@@ -173,8 +173,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 186,
-          "y": 35
+          "x": 189,
+          "y": 36
         }
       },
       {
@@ -235,6 +235,21 @@
           "use1Xscale": false,
           "x": 249,
           "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_klavisha_1",
+          "text": {
+            "fixedValue": "Кнопка активации - '1'"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 161
         }
       }
     ],

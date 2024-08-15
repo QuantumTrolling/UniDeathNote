@@ -1,0 +1,51 @@
+{
+  "_fv": 47,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_zadacha_miertvietskii_gholod_sies",
+          "text": {
+            "fixedValue": "Задача [Автопортрет]"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": -21,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_siest_ghniluiu_plot",
+          "text": {
+            "fixedValue": "- Принесите 10 осколков душ"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "x": -21,
+          "y": 17
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "displayCondition": {
+      "name": "ShowManifestationTaskDop"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

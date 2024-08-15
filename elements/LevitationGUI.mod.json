@@ -197,8 +197,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 186,
-          "y": 35
+          "x": 189,
+          "y": 36
         }
       },
       {
@@ -248,8 +248,23 @@
         "data": {
           "image": "levitation.png",
           "use1Xscale": false,
-          "x": 249,
-          "y": 53
+          "x": 251,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knopka_aktivatsii_3",
+          "text": {
+            "fixedValue": "Кнопка активации - '3'"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 78,
+          "y": 170
         }
       }
     ],

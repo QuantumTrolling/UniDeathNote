@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.deathnote.entity.UniGhostEntity;
 import net.mcreator.deathnote.entity.UndertakerEntity;
+import net.mcreator.deathnote.entity.CursedGhostEntity;
 import net.mcreator.deathnote.DeathnoteMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -31,6 +32,10 @@ public class DeathnoteModEntities {
 			EntityType.Builder.<UndertakerEntity>of(UndertakerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(UndertakerEntity::new)
 
 					.sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<CursedGhostEntity>> CURSED_GHOST = register("cursed_ghost",
+			EntityType.Builder.<CursedGhostEntity>of(CursedGhostEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(84).setUpdateInterval(3).setCustomClientFactory(CursedGhostEntity::new)
+
+					.sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -41,6 +46,7 @@ public class DeathnoteModEntities {
 		event.enqueueWork(() -> {
 			UniGhostEntity.init();
 			UndertakerEntity.init();
+			CursedGhostEntity.init();
 		});
 	}
 
@@ -48,5 +54,6 @@ public class DeathnoteModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(UNI_GHOST.get(), UniGhostEntity.createAttributes().build());
 		event.put(UNDERTAKER.get(), UndertakerEntity.createAttributes().build());
+		event.put(CURSED_GHOST.get(), CursedGhostEntity.createAttributes().build());
 	}
 }

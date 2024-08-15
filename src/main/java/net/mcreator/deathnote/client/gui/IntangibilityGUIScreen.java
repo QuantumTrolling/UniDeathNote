@@ -88,7 +88,7 @@ public class IntangibilityGUIScreen extends AbstractContainerScreen<Intangibilit
 				IntangibilityLevelOutPutProcedure.execute(entity), 150, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.intangibility_gui.label_lomat_bloki"), -47, 61, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.intangibility_gui.label_uron"), -47, 106, -16764109, false);
 	}

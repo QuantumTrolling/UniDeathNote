@@ -55,7 +55,7 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/disembodied.png"), this.leftPos + 123, this.topPos + 25, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/disembodied.png"), this.leftPos + 126, this.topPos + 21, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -90,7 +90,7 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 				IncorporealityLevelOutPutProcedure.execute(entity), 150, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 	}
 
 	@Override

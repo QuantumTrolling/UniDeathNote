@@ -152,8 +152,8 @@
             "value": -16764109,
             "falpha": 0.0
           },
-          "x": 195,
-          "y": 35
+          "x": 198,
+          "y": 36
         }
       },
       {
@@ -233,8 +233,23 @@
         "data": {
           "image": "disembodied_movement.png",
           "use1Xscale": false,
-          "x": 258,
-          "y": 53
+          "x": 261,
+          "y": 57
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_knopka_aktivatsii_4",
+          "text": {
+            "fixedValue": "Кнопка активации - '4'"
+          },
+          "color": {
+            "value": -16764109,
+            "falpha": 0.0
+          },
+          "x": 87,
+          "y": 161
         }
       }
     ],

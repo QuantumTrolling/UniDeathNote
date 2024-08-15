@@ -55,7 +55,7 @@ public class TeleportGUIScreen extends AbstractContainerScreen<TeleportGUIMenu> 
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -83, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/disembodied_movement.png"), this.leftPos + 132, this.topPos + 16, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/disembodied_movement.png"), this.leftPos + 135, this.topPos + 20, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -88,9 +88,10 @@ public class TeleportGUIScreen extends AbstractContainerScreen<TeleportGUIMenu> 
 				TeleportLevelOutPutProcedure.execute(entity), 159, 106, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 69, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 72, -1, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_da_smotritie"), -38, 52, -16764109, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_niie"), -38, 16, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.teleport_gui.label_knopka_aktivatsii_4"), -38, 124, -16764109, false);
 	}
 
 	@Override

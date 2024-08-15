@@ -85,7 +85,7 @@ public class GhostlyHungerGUIScreen extends AbstractContainerScreen<GhostlyHunge
 		guiGraphics.drawString(this.font, Component.translatable("gui.deathnote.ghostly_hunger_gui.label_1_ied_sytosti_v_minutu"), -47, 97, -16764109, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 		guiGraphics.drawString(this.font,
 
 				GhostlyHungerLevelOutPutProcedure.execute(entity), 150, 106, -12829636, false);

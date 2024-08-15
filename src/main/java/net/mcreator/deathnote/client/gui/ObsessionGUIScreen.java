@@ -55,7 +55,7 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 
 		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/gui_final.png"), this.leftPos + -92, this.topPos + -11, 0, 0, 355, 182, 355, 182);
 
-		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/obsession.png"), this.leftPos + 123, this.topPos + 16, 0, 0, 64, 64, 64, 64);
+		guiGraphics.blit(new ResourceLocation("deathnote:textures/screens/obsession.png"), this.leftPos + 125, this.topPos + 18, 0, 0, 64, 64, 64, 64);
 
 		RenderSystem.disableBlend();
 	}
@@ -89,7 +89,7 @@ public class ObsessionGUIScreen extends AbstractContainerScreen<ObsessionGUIMenu
 				ObsessionLevelOutPutProcedure.execute(entity), 150, 106, -12829636, false);
 		guiGraphics.drawString(this.font,
 
-				OutPutProcedure.execute(entity), 60, -2, -16764109, false);
+				OutPutProcedure.execute(entity), 63, -1, -16764109, false);
 	}
 
 	@Override

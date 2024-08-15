@@ -22,5 +22,21 @@
         "stream": false
       }
     ]
+  },
+  "ghost_living_sound": {
+    "sounds": [
+      {
+        "name": "deathnote:ghost_living_sound",
+        "stream": false
+      }
+    ]
+  },
+  "manifestation": {
+    "sounds": [
+      {
+        "name": "deathnote:manifestation",
+        "stream": false
+      }
+    ]
   }
 }

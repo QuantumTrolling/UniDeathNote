@@ -117,6 +117,8 @@ public class DeathnoteModVariables {
 			clone.VengefulSpiritFleshQuest = original.VengefulSpiritFleshQuest;
 			clone.Revival = original.Revival;
 			clone.RevivalButton = original.RevivalButton;
+			clone.found_soulshard = original.found_soulshard;
+			clone.BookTakenFirstTime = original.BookTakenFirstTime;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -183,7 +185,7 @@ public class DeathnoteModVariables {
 		public boolean LevitationButton = false;
 		public double LevitationLevel = 0;
 		public boolean LevitationCD = false;
-		public double Points = 10.0;
+		public double Points = 0.0;
 		public boolean Teleport = false;
 		public boolean TeleportButton = false;
 		public double TeleportLevel = 0;
@@ -204,6 +206,8 @@ public class DeathnoteModVariables {
 		public boolean VengefulSpiritFleshQuest = false;
 		public boolean Revival = false;
 		public boolean RevivalButton = false;
+		public boolean found_soulshard = false;
+		public boolean BookTakenFirstTime = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -263,6 +267,8 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("VengefulSpiritFleshQuest", VengefulSpiritFleshQuest);
 			nbt.putBoolean("Revival", Revival);
 			nbt.putBoolean("RevivalButton", RevivalButton);
+			nbt.putBoolean("found_soulshard", found_soulshard);
+			nbt.putBoolean("BookTakenFirstTime", BookTakenFirstTime);
 			return nbt;
 		}
 
@@ -319,6 +325,8 @@ public class DeathnoteModVariables {
 			VengefulSpiritFleshQuest = nbt.getBoolean("VengefulSpiritFleshQuest");
 			Revival = nbt.getBoolean("Revival");
 			RevivalButton = nbt.getBoolean("RevivalButton");
+			found_soulshard = nbt.getBoolean("found_soulshard");
+			BookTakenFirstTime = nbt.getBoolean("BookTakenFirstTime");
 		}
 	}
 
@@ -394,6 +402,8 @@ public class DeathnoteModVariables {
 					variables.VengefulSpiritFleshQuest = message.data.VengefulSpiritFleshQuest;
 					variables.Revival = message.data.Revival;
 					variables.RevivalButton = message.data.RevivalButton;
+					variables.found_soulshard = message.data.found_soulshard;
+					variables.BookTakenFirstTime = message.data.BookTakenFirstTime;
 				}
 			});
 			context.setPacketHandled(true);
