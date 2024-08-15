@@ -3,11 +3,11 @@ package net.mcreator.deathnote.procedures;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.deathnote.network.DeathnoteModVariables;
@@ -18,10 +18,10 @@ import javax.annotation.Nullable;
 @Mod.EventBusSubscriber
 public class CheckIfFirstTimeWithBookProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player);
-		}
+	public static void onRightClickItem(PlayerInteractEvent.RightClickItem event) {
+		if (event.getHand() != event.getEntity().getUsedItemHand())
+			return;
+		execute(event, event.getLevel(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -32,7 +32,7 @@ public class CheckIfFirstTimeWithBookProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).BookTakenFirstTime
-				&& (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(DeathnoteModItems.BOOK_OF_DEATH.get())) : false)) {
+				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DeathnoteModItems.BOOK_OF_DEATH.get()) {
 			{
 				boolean _setval = false;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -41,6 +41,9 @@ public class CheckIfFirstTimeWithBookProcedure {
 				});
 			}
 			GoddnessFirstProcedure.execute(world);
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
+			}
 		}
 	}
 }

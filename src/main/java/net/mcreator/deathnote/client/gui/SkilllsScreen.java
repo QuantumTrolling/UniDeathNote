@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
+import net.mcreator.deathnote.procedures.ShowRevivalSkillProcedure;
 import net.mcreator.deathnote.network.SkilllsButtonMessage;
 import net.mcreator.deathnote.DeathnoteMod;
 
@@ -66,12 +67,13 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_lievitatsiia"), mouseX, mouseY);
 		if (mouseX > leftPos + 30 && mouseX < leftPos + 54 && mouseY > topPos + 66 && mouseY < topPos + 90)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_biestieliesnoie_pieriemieshchieniie"), mouseX, mouseY);
-		if (mouseX > leftPos + 71 && mouseX < leftPos + 95 && mouseY > topPos + 65 && mouseY < topPos + 89)
+		if (mouseX > leftPos + 42 && mouseX < leftPos + 66 && mouseY > topPos + 94 && mouseY < topPos + 118)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_nieosiazaiemost"), mouseX, mouseY);
-		if (mouseX > leftPos + 42 && mouseX < leftPos + 66 && mouseY > topPos + 95 && mouseY < topPos + 119)
+		if (mouseX > leftPos + 19 && mouseX < leftPos + 43 && mouseY > topPos + 118 && mouseY < topPos + 142)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_proiavlieniie"), mouseX, mouseY);
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 118 && mouseY < topPos + 142)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_voskrieshieniie"), mouseX, mouseY);
+		if (ShowRevivalSkillProcedure.execute(entity))
+			if (mouseX > leftPos + 72 && mouseX < leftPos + 96 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.deathnote.skillls.tooltip_voskrieshieniie"), mouseX, mouseY);
 	}
 
 	@Override
@@ -169,7 +171,7 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		});
 		guistate.put("button:imagebutton_1ghostly_hunger4", imagebutton_1ghostly_hunger4);
 		this.addRenderableWidget(imagebutton_1ghostly_hunger4);
-		imagebutton_1ghostly_hunger5 = new ImageButton(this.leftPos + 75, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_1ghostly_hunger5.png"), 16, 32, e -> {
+		imagebutton_1ghostly_hunger5 = new ImageButton(this.leftPos + 47, this.topPos + 97, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_1ghostly_hunger5.png"), 16, 32, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SkilllsButtonMessage(7, x, y, z));
 				SkilllsButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -177,7 +179,7 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		});
 		guistate.put("button:imagebutton_1ghostly_hunger5", imagebutton_1ghostly_hunger5);
 		this.addRenderableWidget(imagebutton_1ghostly_hunger5);
-		imagebutton_1ghostly_hunger6 = new ImageButton(this.leftPos + 47, this.topPos + 98, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_1ghostly_hunger6.png"), 16, 32, e -> {
+		imagebutton_1ghostly_hunger6 = new ImageButton(this.leftPos + 24, this.topPos + 122, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_1ghostly_hunger6.png"), 16, 32, e -> {
 			if (true) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SkilllsButtonMessage(8, x, y, z));
 				SkilllsButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -193,12 +195,18 @@ public class SkilllsScreen extends AbstractContainerScreen<SkilllsMenu> {
 		});
 		guistate.put("button:imagebutton_4disembodied", imagebutton_4disembodied);
 		this.addRenderableWidget(imagebutton_4disembodied);
-		imagebutton_11resurrection = new ImageButton(this.leftPos + 24, this.topPos + 122, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_11resurrection.png"), 16, 32, e -> {
-			if (true) {
+		imagebutton_11resurrection = new ImageButton(this.leftPos + 76, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_11resurrection.png"), 16, 32, e -> {
+			if (ShowRevivalSkillProcedure.execute(entity)) {
 				DeathnoteMod.PACKET_HANDLER.sendToServer(new SkilllsButtonMessage(10, x, y, z));
 				SkilllsButtonMessage.handleButtonAction(entity, 10, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowRevivalSkillProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_11resurrection", imagebutton_11resurrection);
 		this.addRenderableWidget(imagebutton_11resurrection);
 	}

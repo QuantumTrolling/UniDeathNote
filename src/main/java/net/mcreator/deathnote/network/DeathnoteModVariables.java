@@ -119,6 +119,9 @@ public class DeathnoteModVariables {
 			clone.RevivalButton = original.RevivalButton;
 			clone.found_soulshard = original.found_soulshard;
 			clone.BookTakenFirstTime = original.BookTakenFirstTime;
+			clone.Greetings = original.Greetings;
+			clone.haveGraverPage = original.haveGraverPage;
+			clone.Finiish = original.Finiish;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -208,6 +211,9 @@ public class DeathnoteModVariables {
 		public boolean RevivalButton = false;
 		public boolean found_soulshard = false;
 		public boolean BookTakenFirstTime = true;
+		public boolean Greetings = false;
+		public boolean haveGraverPage = false;
+		public boolean Finiish = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -269,6 +275,9 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("RevivalButton", RevivalButton);
 			nbt.putBoolean("found_soulshard", found_soulshard);
 			nbt.putBoolean("BookTakenFirstTime", BookTakenFirstTime);
+			nbt.putBoolean("Greetings", Greetings);
+			nbt.putBoolean("haveGraverPage", haveGraverPage);
+			nbt.putBoolean("Finiish", Finiish);
 			return nbt;
 		}
 
@@ -327,6 +336,9 @@ public class DeathnoteModVariables {
 			RevivalButton = nbt.getBoolean("RevivalButton");
 			found_soulshard = nbt.getBoolean("found_soulshard");
 			BookTakenFirstTime = nbt.getBoolean("BookTakenFirstTime");
+			Greetings = nbt.getBoolean("Greetings");
+			haveGraverPage = nbt.getBoolean("haveGraverPage");
+			Finiish = nbt.getBoolean("Finiish");
 		}
 	}
 
@@ -404,6 +416,9 @@ public class DeathnoteModVariables {
 					variables.RevivalButton = message.data.RevivalButton;
 					variables.found_soulshard = message.data.found_soulshard;
 					variables.BookTakenFirstTime = message.data.BookTakenFirstTime;
+					variables.Greetings = message.data.Greetings;
+					variables.haveGraverPage = message.data.haveGraverPage;
+					variables.Finiish = message.data.Finiish;
 				}
 			});
 			context.setPacketHandled(true);

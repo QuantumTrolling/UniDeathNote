@@ -214,8 +214,8 @@
           "onClick": {
             "name": "IntangibilityGUIShow"
           },
-          "x": 201,
-          "y": 106
+          "x": 173,
+          "y": 134
         }
       },
       {
@@ -227,8 +227,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 197,
-          "y": 102
+          "x": 168,
+          "y": 131
         }
       },
       {
@@ -240,8 +240,8 @@
           "onClick": {
             "name": "ManifestationGUIShow"
           },
-          "x": 173,
-          "y": 135
+          "x": 150,
+          "y": 159
         }
       },
       {
@@ -253,8 +253,8 @@
           },
           "width": 24,
           "height": 24,
-          "x": 168,
-          "y": 132
+          "x": 145,
+          "y": 155
         }
       },
       {
@@ -279,8 +279,11 @@
           "onClick": {
             "name": "RevivalGUIShow"
           },
-          "x": 150,
-          "y": 159
+          "displayCondition": {
+            "name": "ShowRevivalSkill"
+          },
+          "x": 202,
+          "y": 106
         }
       },
       {
@@ -290,10 +293,13 @@
           "text": {
             "fixedValue": "Воскрешение"
           },
+          "displayCondition": {
+            "name": "ShowRevivalSkill"
+          },
           "width": 24,
           "height": 24,
-          "x": 146,
-          "y": 155
+          "x": 198,
+          "y": 102
         }
       },
       {

@@ -71,7 +71,7 @@ public class AltarBlock extends Block {
 		double hitY = hit.getLocation().y;
 		double hitZ = hit.getLocation().z;
 		Direction direction = hit.getDirection();
-		AltarOnBlockRightClickedProcedure.execute(entity);
+		AltarOnBlockRightClickedProcedure.execute(world, entity);
 		return InteractionResult.SUCCESS;
 	}
 }

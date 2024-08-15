@@ -2,6 +2,6 @@
   "_fv": 47,
   "_type": "procedure",
   "definition": {
-    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"wait\"><value name=\"ticks\"><block type=\"math_number\"><field name=\"NUM\">20</field></block></value><statement name=\"do\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">[Великий дух (Богиня смерти)] -  l̨̩̪̂̎́͂͢͡ͅả̻̥̜̱̽͗̅d̩̹̔̕f̥͍̎̈̔͟nl̻̳͖̠͈̃̈̓͆̅s̞͓̒̐͟͝k̜̲̣̗̩̀̏̅͠͞ä̭̙̗̭̎̓͗s̛̳͖͇̚͘a̱͓͈͛͒̾̇ͅş͚̟̆̋͠f̨̺̩͇̽̊̏̓</field></block></value></block></statement></block></next></block></xml>"
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"wait\"><value name=\"ticks\"><block type=\"math_number\"><field name=\"NUM\">20</field></block></value><statement name=\"do\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">[§5Великий дух (Богиня смерти)§f] - 𐌴Ꙁ𐍁Ꙁ `×`𐍀`ꡕ = 𐄘`ζ'𐄗 𐄔# 𑀌`×𐄖𐄒</field></block></value></block></statement></block></next></block></xml>"
   }
 }

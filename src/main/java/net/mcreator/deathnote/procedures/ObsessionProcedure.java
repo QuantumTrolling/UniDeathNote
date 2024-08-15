@@ -16,6 +16,14 @@ public class ObsessionProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else {
+			{
+				boolean _setval = false;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.ObsessionButton = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

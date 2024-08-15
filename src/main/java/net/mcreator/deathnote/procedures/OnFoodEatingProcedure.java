@@ -5,6 +5,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -19,15 +20,15 @@ public class OnFoodEatingProcedure {
 	@SubscribeEvent
 	public static void onUseItemFinish(LivingEntityUseItemEvent.Finish event) {
 		if (event != null && event.getEntity() != null) {
-			execute(event, event.getEntity(), event.getItem());
+			execute(event, event.getEntity().level(), event.getEntity(), event.getItem());
 		}
 	}
 
-	public static void execute(Entity entity, ItemStack itemstack) {
-		execute(null, entity, itemstack);
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
+		execute(null, world, entity, itemstack);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, ItemStack itemstack) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHungerButton) {
@@ -53,6 +54,7 @@ public class OnFoodEatingProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				GhostlyHungerSpeechProcedure.execute(world);
 			}
 		}
 		if (itemstack.getItem().isEdible() && (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).GhostlyHunger) {

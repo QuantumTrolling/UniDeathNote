@@ -1,6 +1,7 @@
 package net.mcreator.deathnote.procedures;
 
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -11,7 +12,7 @@ import net.mcreator.deathnote.network.DeathnoteModVariables;
 import net.mcreator.deathnote.init.DeathnoteModItems;
 
 public class AltarOnBlockRightClickedProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Magnetokinesis
@@ -43,6 +44,7 @@ public class AltarOnBlockRightClickedProcedure {
 					});
 				}
 				MagnetokinesisDebuffProcedure.execute(entity);
+				MagnetokinesisSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporeality
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).incorporealityButton) {
@@ -83,6 +85,7 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					IncorporealitySpeechProcedure.execute(world);
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.RAW_COPPER && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() >= 10
 					&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IncorporealityCopperQuest) {
@@ -121,6 +124,7 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					IncorporealitySpeechProcedure.execute(world);
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.RAW_GOLD && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() >= 10
 					&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IncorporealityGoldQuest) {
@@ -159,6 +163,7 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					IncorporealitySpeechProcedure.execute(world);
 				}
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).SoulSplit
@@ -189,6 +194,7 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				SoulSplitSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Obsession
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).ObsessionButton) {
@@ -218,6 +224,7 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				ObsessionSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Levitation
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationButton) {
@@ -248,6 +255,7 @@ public class AltarOnBlockRightClickedProcedure {
 					});
 				}
 				LevitationDebuffProcedure.execute(entity);
+				LevitationSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Teleport
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).TeleportButton) {
@@ -277,6 +285,7 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				TeleportSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Intangibility
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IntangibilityButton) {
@@ -313,6 +322,7 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				IntangibilitySpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).VengefulSpirit
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).VengefulspiritButton) {
@@ -352,6 +362,8 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					VengefulSpiritSpeechProcedure.execute(world);
+					VengefulSpiritDebuffProcedure.execute(world, entity);
 				}
 			} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.ROTTEN_FLESH && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getCount() >= 16
 					&& !(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).VengefulSpiritFleshQuest) {
@@ -389,6 +401,8 @@ public class AltarOnBlockRightClickedProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					VengefulSpiritSpeechProcedure.execute(world);
+					VengefulSpiritDebuffProcedure.execute(world, entity);
 				}
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Manifestation
@@ -419,6 +433,7 @@ public class AltarOnBlockRightClickedProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+				ManifestationSpeechProcedure.execute(world);
 			}
 		} else if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).Revival
 				&& (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).RevivalButton) {
@@ -449,6 +464,7 @@ public class AltarOnBlockRightClickedProcedure {
 					});
 				}
 				AliveAgainProcedure.execute(entity);
+				RevivalSpeechProcedure.execute(world);
 			}
 		}
 	}

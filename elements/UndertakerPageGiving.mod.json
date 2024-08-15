@@ -1,0 +1,7 @@
+{
+  "_fv": 47,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"wait\"><value name=\"ticks\"><block type=\"math_number\"><field name=\"NUM\">20</field></block></value><statement name=\"do\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">[§0Гробовщик§f] - Молодец, хороший дух, хоть один день отдохнул благодаря тебя, чтож время снова браться за лопату, вот тебе страница книге смерти, тебе она явна нужнее</field></block></value><next><block type=\"wait\"><value name=\"ticks\"><block type=\"math_number\"><field name=\"NUM\">100</field></block></value><statement name=\"do\"><block type=\"world_send_chat\"><value name=\"text\"><block type=\"text\"><field name=\"TEXT\">[§5Великий дух (Богиня смерти)§f] - Да это та самая страница с таинством воскрешения, но тебе еще нужно познать полную силу книги смерти, до тех пор, это обычная бумажка.</field></block></value></block></statement></block></next></block></statement></block></next></block></xml>"
+  }
+}

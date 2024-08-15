@@ -138,6 +138,10 @@
           {
             "name": "itemstack",
             "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -1900,8 +1904,16 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "sourceentity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -2668,6 +2680,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       }
@@ -3212,6 +3228,506 @@
           }
         ]
       }
+    },
+    {
+      "name": "GoddnessGreeting",
+      "type": "procedure",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "goddness_greeting",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/GoddnessGreetingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "CheckForGreetings",
+      "type": "procedure",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_for_greetings",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/CheckForGreetingsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ResetAll",
+      "type": "command",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset_all",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/command/ResetAllCommand.java"
+        ]
+      }
+    },
+    {
+      "name": "Reset",
+      "type": "procedure",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GhostlyHungerSpeech",
+      "type": "procedure",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ghostly_hunger_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/GhostlyHungerSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "UndertakerSpeech",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/UndertakerSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "UndertakerOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/UndertakerOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CheckIfPlayerNear",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_player_near",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/CheckIfPlayerNearProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UndertakerPageGiving",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker_page_giving",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/UndertakerPageGivingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "ShowRevivalSkill",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_revival_skill",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalSkillProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VengefulSpiritSpeech",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/VengefulSpiritSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "MagnetokinesisSpeech",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetokinesis_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/MagnetokinesisSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "IncorporealitySpeech",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "incorporeality_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/IncorporealitySpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "SoulSplitSpeech",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_split_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SoulSplitSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "VengefulSpiritFinalTask",
+      "type": "overlay",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_final_task",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/VengefulSpiritFinalTaskOverlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "ShowVengefulSpiritFinalTask",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_vengeful_spirit_final_task",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritFinalTaskProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "ObsessionSpeech",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obsession_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ObsessionSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "LevitationSpeech",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "TeleportSpeech",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "IntangibilitySpeech",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intangibility_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/IntangibilitySpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "ManifestationSpeech",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manifestation_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ManifestationSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "AlmostAllSkills",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "almost_all_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/AlmostAllSkillsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "RevivalSpeech",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revival_speech",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/RevivalSpeechProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "CheckIfAlmostAllSkills",
+      "type": "procedure",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_almost_all_skills",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/CheckIfAlmostAllSkillsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -3532,6 +4048,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "true"
+    },
+    {
+      "name": "Greetings",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "haveGraverPage",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "Finiish",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -3579,12 +4113,12 @@
   "language_map": {
     "en_us": {
       "gui.deathnote.levitation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете взлетать",
-      "gui.deathnote.obsession_gui.button_priniat": "Принять",
       "gui.deathnote.intangibility_gui.label_lomat_bloki": "ломать блоки.",
+      "gui.deathnote.obsession_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_gui.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в размере 3 сердечек",
       "gui.deathnote.ghostly_hunger_gui.label_ochki": "Очки:",
       "block.deathnote.altar": "Altar",
-      "gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot": "- Добыть 16 костей и 16 гнилой плоти",
+      "gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить",
       "gui.deathnote.levitation_gui.button_empty1": "-",
       "gui.deathnote.levitation_gui.label_ziemlie": "земле.",
       "gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia": "на некоторое время.",
@@ -3596,8 +4130,8 @@
       "gui.deathnote.levitation_gui.label_budut_atakovat_mobov": "наносимому вами урону.",
       "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Добыть 10 медной, 10 железной",
       "gui.deathnote.manifestation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете на кнопку",
-      "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти по-",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
+      "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти по-",
       "gui.deathnote.ghostly_hunger_gui.button_empty": "+",
       "gui.deathnote.skillls.tooltip_empty1": "Мстительный дух:",
       "gui.deathnote.teleport_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Око перемещения]",
@@ -3605,8 +4139,8 @@
       "gui.deathnote.soul_split.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
       "gui.deathnote.magnetokinesis_gui.label_klavisha_1": "Кнопка активации - \u00271\u0027",
       "gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "gui.deathnote.revival_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительности",
       "gui.deathnote.soul_split.label_prizrachnyi_gholod": "Расщепление души:",
+      "gui.deathnote.revival_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительности",
       "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "- Принести 1 железную кирку",
       "gui.deathnote.levitation_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Душа легкая как перо] - Принести",
       "gui.deathnote.soul_split.button_empty1": "-",
@@ -3617,8 +4151,8 @@
       "gui.deathnote.ghostly_hunger_gui.label_v_minutu": "минуту.",
       "gui.deathnote.skillls.tooltip_odierzhimost": "Одержимость",
       "gui.deathnote.levitation_gui.label_mieshchaieties_po_briennoi_ziemlie": "мещаетесь по бренной",
-      "gui.deathnote.revival_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.magnetokinesis_gui.label_prizrachnyi_gholod": "Магнитокинез:",
+      "gui.deathnote.revival_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona1": "-1 секунда отката.",
       "gui.deathnote.vengeful_spirit_task_2.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.levitation_gui.label_ochki": "Очки:",
@@ -3627,9 +4161,9 @@
       "gui.deathnote.skillls.tooltip_prizrachnyi_gholod": "Призрачный голод",
       "gui.deathnote.soul_split.label_razmierie_3_sierdiechiek": "в размере 3 сердечек.",
       "gui.deathnote.ghostly_hunger_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Твой голод восполня-",
-      "gui.deathnote.levitation_gui.label_siekundy_otkata": "-0.3 секунды отката.",
-      "gui.deathnote.incorporeality_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Сокровище мертвеца] - Добыть",
       "gui.deathnote.levitation_gui.label_knopka_aktivatsii_3": "Кнопка активации - \u00273\u0027",
+      "gui.deathnote.incorporeality_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Сокровище мертвеца] - Добыть",
+      "gui.deathnote.levitation_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.vengeful_spirit_gui.label_5": "/ 5",
       "gui.deathnote.magnetokinesis_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Магнитное прикосновение] - Принести",
       "gui.deathnote.teleport_gui.label_ochki": "Очки:",
@@ -3645,9 +4179,9 @@
       "gui.deathnote.revival_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы перестаете вести",
       "gui.deathnote.teleport_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.teleport_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "item.deathnote.cursed_ghost_spawn_egg": "Cursed Ghost Spawn Egg",
-      "gui.deathnote.vengeful_spirit_gui.label_ubil1": "убил.",
       "gui.deathnote.manifestation_task_dop.label_siest_ghniluiu_plot": "- Принесите 10 осколков душ",
+      "gui.deathnote.vengeful_spirit_gui.label_ubil1": "убил.",
+      "item.deathnote.cursed_ghost_spawn_egg": "Cursed Ghost Spawn Egg",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona": "длительности двойников,",
       "gui.deathnote.revival_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
       "gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
@@ -3746,9 +4280,11 @@
       "gui.deathnote.incorporeality_gui.label_10_k_skorosti": "+10% к скорости пере-",
       "gui.deathnote.magnetokinesis_gui.button_empty1": "-",
       "gui.deathnote.magnetokinesis_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Случайный камень ря-",
+      "gui.deathnote.vengeful_spirit_final_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.intangibility_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ С шансом 50% игнори-",
       "gui.deathnote.manifestation_task_dop.label_zadacha_miertvietskii_gholod_sies": "Задача [Автопортрет]",
       "gui.deathnote.revival_task.label_v_zabroshiennom_pomiestie": "в заброшенном поместье",
+      "gui.deathnote.vengeful_spirit_final_task.label_siest_ghniluiu_plot": "- Добыть 16 костей и 16 гнилой плоти",
       "gui.deathnote.incorporeality_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_task.label_siest_ghniluiu_plot": "- Принести 1 алмазный меч",
       "gui.deathnote.revival_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Дар духа]",

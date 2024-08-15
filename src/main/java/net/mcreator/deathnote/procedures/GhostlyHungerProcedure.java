@@ -16,6 +16,14 @@ public class GhostlyHungerProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else {
+			{
+				boolean _setval = false;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.GhostlyHungerButton = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

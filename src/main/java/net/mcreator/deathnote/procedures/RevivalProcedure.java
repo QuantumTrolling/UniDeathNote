@@ -16,6 +16,14 @@ public class RevivalProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+		} else {
+			{
+				boolean _setval = false;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.RevivalButton = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }
