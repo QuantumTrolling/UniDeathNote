@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.IntangibilityGUIMenu;
+import net.mcreator.deathnote.procedures.ShowIntangibilityDeclineProcedure;
 import net.mcreator.deathnote.procedures.ShowIntangibilityButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.IntangibilityLevelOutPutProcedure;
@@ -28,6 +29,7 @@ public class IntangibilityGUIScreen extends AbstractContainerScreen<Intangibilit
 	ImageButton imagebutton_plus_1;
 	ImageButton imagebutton_minus_1;
 	ImageButton imagebutton_accept2;
+	ImageButton imagebutton_dismiss;
 
 	public IntangibilityGUIScreen(IntangibilityGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -131,5 +133,19 @@ public class IntangibilityGUIScreen extends AbstractContainerScreen<Intangibilit
 		};
 		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
 		this.addRenderableWidget(imagebutton_accept2);
+		imagebutton_dismiss = new ImageButton(this.leftPos + 51, this.topPos + 163, 73, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_dismiss.png"), 73, 42, e -> {
+			if (ShowIntangibilityDeclineProcedure.execute(entity)) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new IntangibilityGUIButtonMessage(3, x, y, z));
+				IntangibilityGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowIntangibilityDeclineProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_dismiss", imagebutton_dismiss);
+		this.addRenderableWidget(imagebutton_dismiss);
 	}
 }

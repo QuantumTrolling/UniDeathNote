@@ -221,6 +221,22 @@
           "x": 249,
           "y": 53
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ChostlyHungerDecline"
+          },
+          "displayCondition": {
+            "name": "ShowGHDecline"
+          },
+          "x": 177,
+          "y": 197
+        }
       }
     ],
     "gridSettings": {

@@ -11,6 +11,7 @@ import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.procedures.SoulSplitLevelOutPutProcedure;
+import net.mcreator.deathnote.procedures.ShowSoulSplitDeclineProcedure;
 import net.mcreator.deathnote.procedures.ShowSoulSplitButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.network.SoulSplitButtonMessage;
@@ -28,6 +29,7 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 	ImageButton imagebutton_plus_1;
 	ImageButton imagebutton_minus_1;
 	ImageButton imagebutton_accept2;
+	ImageButton imagebutton_dismiss;
 
 	public SoulSplitScreen(SoulSplitMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -135,5 +137,19 @@ public class SoulSplitScreen extends AbstractContainerScreen<SoulSplitMenu> {
 		};
 		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
 		this.addRenderableWidget(imagebutton_accept2);
+		imagebutton_dismiss = new ImageButton(this.leftPos + 56, this.topPos + 162, 73, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_dismiss.png"), 73, 42, e -> {
+			if (ShowSoulSplitDeclineProcedure.execute(entity)) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new SoulSplitButtonMessage(3, x, y, z));
+				SoulSplitButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowSoulSplitDeclineProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_dismiss", imagebutton_dismiss);
+		this.addRenderableWidget(imagebutton_dismiss);
 	}
 }

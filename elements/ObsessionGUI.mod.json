@@ -221,6 +221,22 @@
           "x": 186,
           "y": 179
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ObsessionDecline"
+          },
+          "displayCondition": {
+            "name": "ShowObsessionDecline"
+          },
+          "x": 177,
+          "y": 200
+        }
       }
     ],
     "gridSettings": {

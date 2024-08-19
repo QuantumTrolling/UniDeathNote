@@ -236,6 +236,22 @@
           "x": 252,
           "y": 58
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "IncirporealityDecline"
+          },
+          "displayCondition": {
+            "name": "ShowIncorporealityDecline"
+          },
+          "x": 177,
+          "y": 198
+        }
       }
     ],
     "gridSettings": {

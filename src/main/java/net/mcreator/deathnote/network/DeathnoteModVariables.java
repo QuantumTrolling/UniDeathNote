@@ -15,9 +15,15 @@ import net.minecraftforge.common.capabilities.CapabilityToken;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.common.capabilities.Capability;
 
+import net.minecraft.world.level.saveddata.SavedData;
+import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.Tag;
@@ -33,6 +39,7 @@ import java.util.function.Supplier;
 public class DeathnoteModVariables {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
+		DeathnoteMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
 		DeathnoteMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
 	}
 
@@ -122,8 +129,169 @@ public class DeathnoteModVariables {
 			clone.Greetings = original.Greetings;
 			clone.haveGraverPage = original.haveGraverPage;
 			clone.Finiish = original.Finiish;
+			clone.IfUniDead = original.IfUniDead;
+			clone.firstSpawn = original.firstSpawn;
+			clone.GraverTaskZombies = original.GraverTaskZombies;
+			clone.GraverTaskSkeletons = original.GraverTaskSkeletons;
+			clone.PageDelivered = original.PageDelivered;
 			if (!event.isWasDeath()) {
 			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+			if (!event.getEntity().level().isClientSide()) {
+				SavedData mapdata = MapVariables.get(event.getEntity().level());
+				SavedData worlddata = WorldVariables.get(event.getEntity().level());
+				if (mapdata != null)
+					DeathnoteMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
+				if (worlddata != null)
+					DeathnoteMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+
+		@SubscribeEvent
+		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
+			if (!event.getEntity().level().isClientSide()) {
+				SavedData worlddata = WorldVariables.get(event.getEntity().level());
+				if (worlddata != null)
+					DeathnoteMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+			}
+		}
+	}
+
+	public static class WorldVariables extends SavedData {
+		public static final String DATA_NAME = "deathnote_worldvars";
+		public double ZombieX = 0;
+		public double ZombieY = 0;
+		public double ZombieZ = 0.0;
+		public double TeleportX = 10.0;
+		public double TeleportY = 70.0;
+		public double TeleportZ = 10.0;
+		public ItemStack note = ItemStack.EMPTY;
+		public double UndertakerPointX = 0;
+		public double UndertakerPointY = 0;
+		public double UndertakerPointZ = 0;
+
+		public static WorldVariables load(CompoundTag tag) {
+			WorldVariables data = new WorldVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+			ZombieX = nbt.getDouble("ZombieX");
+			ZombieY = nbt.getDouble("ZombieY");
+			ZombieZ = nbt.getDouble("ZombieZ");
+			TeleportX = nbt.getDouble("TeleportX");
+			TeleportY = nbt.getDouble("TeleportY");
+			TeleportZ = nbt.getDouble("TeleportZ");
+			note = ItemStack.of(nbt.getCompound("note"));
+			UndertakerPointX = nbt.getDouble("UndertakerPointX");
+			UndertakerPointY = nbt.getDouble("UndertakerPointY");
+			UndertakerPointZ = nbt.getDouble("UndertakerPointZ");
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			nbt.putDouble("ZombieX", ZombieX);
+			nbt.putDouble("ZombieY", ZombieY);
+			nbt.putDouble("ZombieZ", ZombieZ);
+			nbt.putDouble("TeleportX", TeleportX);
+			nbt.putDouble("TeleportY", TeleportY);
+			nbt.putDouble("TeleportZ", TeleportZ);
+			nbt.put("note", note.save(new CompoundTag()));
+			nbt.putDouble("UndertakerPointX", UndertakerPointX);
+			nbt.putDouble("UndertakerPointY", UndertakerPointY);
+			nbt.putDouble("UndertakerPointZ", UndertakerPointZ);
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level level && !level.isClientSide())
+				DeathnoteMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+		}
+
+		static WorldVariables clientSide = new WorldVariables();
+
+		public static WorldVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevel level) {
+				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class MapVariables extends SavedData {
+		public static final String DATA_NAME = "deathnote_mapvars";
+
+		public static MapVariables load(CompoundTag tag) {
+			MapVariables data = new MapVariables();
+			data.read(tag);
+			return data;
+		}
+
+		public void read(CompoundTag nbt) {
+		}
+
+		@Override
+		public CompoundTag save(CompoundTag nbt) {
+			return nbt;
+		}
+
+		public void syncData(LevelAccessor world) {
+			this.setDirty();
+			if (world instanceof Level && !world.isClientSide())
+				DeathnoteMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
+		}
+
+		static MapVariables clientSide = new MapVariables();
+
+		public static MapVariables get(LevelAccessor world) {
+			if (world instanceof ServerLevelAccessor serverLevelAcc) {
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
+			} else {
+				return clientSide;
+			}
+		}
+	}
+
+	public static class SavedDataSyncMessage {
+		public int type;
+		public SavedData data;
+
+		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
+			this.type = buffer.readInt();
+			this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
+			if (this.data instanceof MapVariables _mapvars)
+				_mapvars.read(buffer.readNbt());
+			else if (this.data instanceof WorldVariables _worldvars)
+				_worldvars.read(buffer.readNbt());
+		}
+
+		public SavedDataSyncMessage(int type, SavedData data) {
+			this.type = type;
+			this.data = data;
+		}
+
+		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
+			buffer.writeInt(message.type);
+			buffer.writeNbt(message.data.save(new CompoundTag()));
+		}
+
+		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+			NetworkEvent.Context context = contextSupplier.get();
+			context.enqueueWork(() -> {
+				if (!context.getDirection().getReceptionSide().isServer()) {
+					if (message.type == 0)
+						MapVariables.clientSide = (MapVariables) message.data;
+					else
+						WorldVariables.clientSide = (WorldVariables) message.data;
+				}
+			});
+			context.setPacketHandled(true);
 		}
 	}
 
@@ -214,6 +382,11 @@ public class DeathnoteModVariables {
 		public boolean Greetings = false;
 		public boolean haveGraverPage = false;
 		public boolean Finiish = false;
+		public boolean IfUniDead = false;
+		public boolean firstSpawn = true;
+		public double GraverTaskZombies = 0;
+		public double GraverTaskSkeletons = 0;
+		public boolean PageDelivered = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -278,6 +451,11 @@ public class DeathnoteModVariables {
 			nbt.putBoolean("Greetings", Greetings);
 			nbt.putBoolean("haveGraverPage", haveGraverPage);
 			nbt.putBoolean("Finiish", Finiish);
+			nbt.putBoolean("IfUniDead", IfUniDead);
+			nbt.putBoolean("firstSpawn", firstSpawn);
+			nbt.putDouble("GraverTaskZombies", GraverTaskZombies);
+			nbt.putDouble("GraverTaskSkeletons", GraverTaskSkeletons);
+			nbt.putBoolean("PageDelivered", PageDelivered);
 			return nbt;
 		}
 
@@ -339,6 +517,11 @@ public class DeathnoteModVariables {
 			Greetings = nbt.getBoolean("Greetings");
 			haveGraverPage = nbt.getBoolean("haveGraverPage");
 			Finiish = nbt.getBoolean("Finiish");
+			IfUniDead = nbt.getBoolean("IfUniDead");
+			firstSpawn = nbt.getBoolean("firstSpawn");
+			GraverTaskZombies = nbt.getDouble("GraverTaskZombies");
+			GraverTaskSkeletons = nbt.getDouble("GraverTaskSkeletons");
+			PageDelivered = nbt.getBoolean("PageDelivered");
 		}
 	}
 
@@ -419,6 +602,11 @@ public class DeathnoteModVariables {
 					variables.Greetings = message.data.Greetings;
 					variables.haveGraverPage = message.data.haveGraverPage;
 					variables.Finiish = message.data.Finiish;
+					variables.IfUniDead = message.data.IfUniDead;
+					variables.firstSpawn = message.data.firstSpawn;
+					variables.GraverTaskZombies = message.data.GraverTaskZombies;
+					variables.GraverTaskSkeletons = message.data.GraverTaskSkeletons;
+					variables.PageDelivered = message.data.PageDelivered;
 				}
 			});
 			context.setPacketHandled(true);

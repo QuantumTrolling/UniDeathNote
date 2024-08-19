@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
 import net.mcreator.deathnote.procedures.ManifestationProcedure;
 import net.mcreator.deathnote.procedures.ManifestationPowerUpProcedure;
 import net.mcreator.deathnote.procedures.ManifestationLoweringProcedure;
+import net.mcreator.deathnote.procedures.ManifestationDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class ManifestationGUIButtonMessage {
 		if (buttonID == 2) {
 
 			ManifestationProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			ManifestationDeclineProcedure.execute(entity);
 		}
 	}
 

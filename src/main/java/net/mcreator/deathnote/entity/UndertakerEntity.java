@@ -12,8 +12,6 @@ import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.OpenDoorGoal;
-import net.minecraft.world.entity.ai.goal.MoveBackToVillageGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -58,8 +56,7 @@ public class UndertakerEntity extends Monster {
 		this.getNavigation().getNodeEvaluator().setCanOpenDoors(true);
 		this.goalSelector.addGoal(1, new OpenDoorGoal(this, true));
 		this.goalSelector.addGoal(2, new OpenDoorGoal(this, false));
-		this.goalSelector.addGoal(3, new MoveBackToVillageGoal(this, 0.6, false));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8) {
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.6) {
 			@Override
 			public boolean canUse() {
 				double x = UndertakerEntity.this.getX();
@@ -80,7 +77,7 @@ public class UndertakerEntity extends Monster {
 				return super.canContinueToUse() && CheckIfPlayerNearProcedure.execute(world, x, y, z);
 			}
 		});
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this) {
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this) {
 			@Override
 			public boolean canUse() {
 				double x = UndertakerEntity.this.getX();
@@ -101,8 +98,7 @@ public class UndertakerEntity extends Monster {
 				return super.canContinueToUse() && CheckIfPlayerNearProcedure.execute(world, x, y, z);
 			}
 		});
-		this.goalSelector.addGoal(6, new FloatGoal(this));
-		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
 	}
 
 	@Override

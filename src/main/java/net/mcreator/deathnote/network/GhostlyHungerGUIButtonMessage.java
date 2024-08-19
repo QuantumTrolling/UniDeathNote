@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.GhostlyHungerGUIMenu;
 import net.mcreator.deathnote.procedures.GhostlyHungerProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerPowerUpProcedure;
 import net.mcreator.deathnote.procedures.GhostlyHungerLoweringProcedure;
+import net.mcreator.deathnote.procedures.ChostlyHungerDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class GhostlyHungerGUIButtonMessage {
 		if (buttonID == 2) {
 
 			GhostlyHungerProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			ChostlyHungerDeclineProcedure.execute(entity);
 		}
 	}
 

@@ -296,6 +296,22 @@
           "x": 261,
           "y": 58
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "SoulSplitDecline"
+          },
+          "displayCondition": {
+            "name": "ShowSoulSplitDecline"
+          },
+          "x": 182,
+          "y": 199
+        }
       }
     ],
     "gridSettings": {

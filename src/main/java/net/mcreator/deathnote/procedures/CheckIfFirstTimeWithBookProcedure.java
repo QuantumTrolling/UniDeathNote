@@ -31,15 +31,8 @@ public class CheckIfFirstTimeWithBookProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).BookTakenFirstTime
+		if (!(entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).IfUniDead
 				&& (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == DeathnoteModItems.BOOK_OF_DEATH.get()) {
-			{
-				boolean _setval = false;
-				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.BookTakenFirstTime = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			GoddnessFirstProcedure.execute(world);
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);

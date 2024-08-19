@@ -266,6 +266,22 @@
           "x": 87,
           "y": 98
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "VengefulSpiritDecline"
+          },
+          "displayCondition": {
+            "name": "ShowVengefulSpiritDecline"
+          },
+          "x": 185,
+          "y": 200
+        }
       }
     ],
     "gridSettings": {

@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.TeleportGUIMenu;
 import net.mcreator.deathnote.procedures.TeleportProcedure;
 import net.mcreator.deathnote.procedures.TeleportPowerUpProcedure;
 import net.mcreator.deathnote.procedures.TeleportLoweringProcedure;
+import net.mcreator.deathnote.procedures.TeleportDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class TeleportGUIButtonMessage {
 		if (buttonID == 2) {
 
 			TeleportProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			TeleportDeclineProcedure.execute(entity);
 		}
 	}
 

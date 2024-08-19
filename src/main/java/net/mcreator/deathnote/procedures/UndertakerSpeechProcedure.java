@@ -16,7 +16,7 @@ public class UndertakerSpeechProcedure {
 				if (!world.isClientSide() && world.getServer() != null)
 					world.getServer().getPlayerList().broadcastSystemMessage(
 							Component.literal("[\u00A70\u0413\u0440\u043E\u0431\u043E\u0432\u0449\u0438\u043A\u00A7f] - \u0422\u0430\u043A\u043E\u0439 \u0440\u0435\u0430\u043A\u0446\u0438\u044F \u0442\u044B \u0436\u0434\u0430\u043B\u0430?"), false);
-				DeathnoteMod.queueServerWork(180, () -> {
+				DeathnoteMod.queueServerWork(140, () -> {
 					if (!world.isClientSide() && world.getServer() != null)
 						world.getServer().getPlayerList().broadcastSystemMessage(Component.literal("[\u00A70\u0413\u0440\u043E\u0431\u043E\u0432\u0449\u0438\u043A\u00A7f] - \u0425\u0430-\u0445\u0430-\u0445\u0430-\u0445\u0430!"), false);
 					DeathnoteMod.queueServerWork(60, () -> {

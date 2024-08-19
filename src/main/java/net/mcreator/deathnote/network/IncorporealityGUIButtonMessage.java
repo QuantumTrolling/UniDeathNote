@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
 import net.mcreator.deathnote.procedures.IncorporealityProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityPowerUpProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityLoweringProcedure;
+import net.mcreator.deathnote.procedures.IncirporealityDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class IncorporealityGUIButtonMessage {
 		if (buttonID == 2) {
 
 			IncorporealityLoweringProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			IncirporealityDeclineProcedure.execute(entity);
 		}
 	}
 

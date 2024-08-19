@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.SoulSplitMenu;
 import net.mcreator.deathnote.procedures.SoulSplitSkillProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitPowerUpProcedure;
 import net.mcreator.deathnote.procedures.SoulSplitLoweringProcedure;
+import net.mcreator.deathnote.procedures.SoulSplitDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class SoulSplitButtonMessage {
 		if (buttonID == 2) {
 
 			SoulSplitSkillProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			SoulSplitDeclineProcedure.execute(entity);
 		}
 	}
 

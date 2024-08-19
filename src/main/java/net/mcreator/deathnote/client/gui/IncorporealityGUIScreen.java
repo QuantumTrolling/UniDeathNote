@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.IncorporealityGUIMenu;
+import net.mcreator.deathnote.procedures.ShowIncorporealityDeclineProcedure;
 import net.mcreator.deathnote.procedures.ShowIncorporealityButtProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.IncorporealityLevelOutPutProcedure;
@@ -28,6 +29,7 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 	ImageButton imagebutton_accept2;
 	ImageButton imagebutton_plus_1;
 	ImageButton imagebutton_minus_1;
+	ImageButton imagebutton_dismiss;
 
 	public IncorporealityGUIScreen(IncorporealityGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -131,5 +133,19 @@ public class IncorporealityGUIScreen extends AbstractContainerScreen<Incorporeal
 		});
 		guistate.put("button:imagebutton_minus_1", imagebutton_minus_1);
 		this.addRenderableWidget(imagebutton_minus_1);
+		imagebutton_dismiss = new ImageButton(this.leftPos + 51, this.topPos + 161, 73, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_dismiss.png"), 73, 42, e -> {
+			if (ShowIncorporealityDeclineProcedure.execute(entity)) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new IncorporealityGUIButtonMessage(3, x, y, z));
+				IncorporealityGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowIncorporealityDeclineProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_dismiss", imagebutton_dismiss);
+		this.addRenderableWidget(imagebutton_dismiss);
 	}
 }

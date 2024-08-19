@@ -3283,7 +3283,8 @@
         "files": [
           "src/main/java/net/mcreator/deathnote/command/ResetAllCommand.java"
         ]
-      }
+      },
+      "path": "~/Commands"
     },
     {
       "name": "Reset",
@@ -3639,6 +3640,10 @@
         ],
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "world",
             "type": "world"
           }
@@ -3723,9 +3728,843 @@
             "type": "entity"
           },
           {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
             "name": "world",
             "type": "world"
           }
+        ]
+      }
+    },
+    {
+      "name": "ShowGHDecline",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_gh_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowGHDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ChostlyHungerDecline",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chostly_hunger_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ChostlyHungerDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "SetZombieSPawnPoint",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_zombie_s_pawn_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SetZombieSPawnPointProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetTeleportPoint",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_teleport_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SetTeleportPointProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ZombieSpawnPoint",
+      "type": "command",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zombie_spawn_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/command/ZombieSpawnPointCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "TeleportPoint",
+      "type": "command",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/command/TeleportPointCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "SpawnMobsGraveyard",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_mobs_graveyard",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SpawnMobsGraveyardProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TeleportToPoint",
+      "type": "procedure",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_to_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportToPointProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShowVengefulSpiritDecline",
+      "type": "procedure",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_vengeful_spirit_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowMagnetokinesisDecline",
+      "type": "procedure",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_magnetokinesis_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowMagnetokinesisDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowIncorporealityDecline",
+      "type": "procedure",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_incorporeality_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIncorporealityDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowObsessionDecline",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_obsession_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowObsessionDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowSoulSplitDecline",
+      "type": "procedure",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_soul_split_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowSoulSplitDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowLevitationDecline",
+      "type": "procedure",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_levitation_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowLevitationDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowTeleportDecline",
+      "type": "procedure",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_teleport_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowTeleportDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowIntangibilityDecline",
+      "type": "procedure",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_intangibility_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowIntangibilityDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowManifestationDecline",
+      "type": "procedure",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_manifestation_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowManifestationDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "ShowRevivalDecline",
+      "type": "procedure",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_revival_decline",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowRevivalDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowDeclineButton"
+    },
+    {
+      "name": "VengefulSpiritDecline",
+      "type": "procedure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/VengefulSpiritDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "MagnetokinesisDecline",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnetokinesis_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/MagnetokinesisDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "IncirporealityDecline",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "incirporeality_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/IncirporealityDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "SoulSplitDecline",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_split_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SoulSplitDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "ObsessionDecline",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "obsession_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ObsessionDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "LevitationDecline",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "levitation_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/LevitationDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "TeleportDecline",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/TeleportDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "IntangibilityDecline",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "intangibility_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/IntangibilityDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "ManifestationDecline",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "manifestation_decline",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ManifestationDeclineProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/OnDeclineButtonClick"
+    },
+    {
+      "name": "EndCritalls",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "end_critalls",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/EndCritallsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "DragonFight",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_fight",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/DragonFightProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "DragonDeath",
+      "type": "procedure",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dragon_death",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/DragonDeathProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Diologs"
+    },
+    {
+      "name": "CheckIfUniDead",
+      "type": "procedure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_uni_dead",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/CheckIfUniDeadProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SaveNote",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SaveNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SaveCoordinats",
+      "type": "command",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "save_coordinats",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/command/SaveCoordinatsCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "GiveSavedNote",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_saved_note",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/GiveSavedNoteProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetUndertakerPoint",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_undertaker_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/SetUndertakerPointProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "UndertakerPoint",
+      "type": "command",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "undertaker_point",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/command/UndertakerPointCommand.java"
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "CheckIfKilled",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "check_if_killed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/CheckIfKilledProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ShowVengefulSpiritTaskExtra",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_vengeful_spirit_task_extra",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/deathnote/procedures/ShowVengefulSpiritTaskExtraProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ShowSkillTask"
+    },
+    {
+      "name": "VengefulSpiritTaskExtra",
+      "type": "overlay",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vengeful_spirit_task_extra",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/client/screens/VengefulSpiritTaskExtraOverlay.java"
+        ]
+      },
+      "path": "~/GUIs/Overlays"
+    },
+    {
+      "name": "PageofRevival",
+      "type": "item",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pageof_revival",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/deathnote/item/PageofRevivalItem.java",
+          "src/main/resources/assets/deathnote/models/item/pageof_revival.json"
         ]
       }
     }
@@ -4066,6 +4905,96 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ZombieX",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "ZombieY",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "ZombieZ",
+      "type": "number",
+      "scope": "world",
+      "value": "0.0"
+    },
+    {
+      "name": "TeleportX",
+      "type": "number",
+      "scope": "world",
+      "value": "10.0"
+    },
+    {
+      "name": "TeleportY",
+      "type": "number",
+      "scope": "world",
+      "value": "70.0"
+    },
+    {
+      "name": "TeleportZ",
+      "type": "number",
+      "scope": "world",
+      "value": "10.0"
+    },
+    {
+      "name": "IfUniDead",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "note",
+      "type": "itemstack",
+      "scope": "world",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "firstSpawn",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "UndertakerPointX",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "UndertakerPointY",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "UndertakerPointZ",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
+    },
+    {
+      "name": "GraverTaskZombies",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "GraverTaskSkeletons",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "PageDelivered",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -4118,7 +5047,7 @@
       "gui.deathnote.obsession_gui.label_poluchaietie_uron_v_razmierie_3_sierdie": "получаете урон в размере 3 сердечек",
       "gui.deathnote.ghostly_hunger_gui.label_ochki": "Очки:",
       "block.deathnote.altar": "Altar",
-      "gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot": "- Помочь могильщику упокоить нежить",
+      "gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot": "- Убить 4 зомби и 4 скелета на кладбище",
       "gui.deathnote.levitation_gui.button_empty1": "-",
       "gui.deathnote.levitation_gui.label_ziemlie": "земле.",
       "gui.deathnote.levitation_gui.label_na_niekotoroie_vriemia": "на некоторое время.",
@@ -4128,7 +5057,7 @@
       "subtitles.levitation": "",
       "gui.deathnote.levitation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы медленнее пере-",
       "gui.deathnote.levitation_gui.label_budut_atakovat_mobov": "наносимому вами урону.",
-      "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Добыть 10 медной, 10 железной",
+      "gui.deathnote.incorporeality_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 10 медной,",
       "gui.deathnote.manifestation_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете на кнопку",
       "gui.deathnote.skillls.tooltip_mstitielnyi_dukh": "Мстительный дух",
       "gui.deathnote.vengeful_spirit_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы после смерти по-",
@@ -4141,9 +5070,11 @@
       "gui.deathnote.vengeful_spirit_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_prizrachnyi_gholod": "Расщепление души:",
       "gui.deathnote.revival_gui.label_1_siekunda_polieta_03_siekundy": "+1 секунда длительности",
-      "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "- Принести 1 железную кирку",
+      "gui.deathnote.vengeful_spirit_final_task.label_i_16_ghniloi_ploti": "и 16 гнилой плоти.",
+      "gui.deathnote.magnetokinesis_task.label_siest_ghniluiu_plot": "-  Преподнести на алтарь 1 железную кирку",
       "gui.deathnote.levitation_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Душа легкая как перо] - Принести",
       "gui.deathnote.soul_split.button_empty1": "-",
+      "item.deathnote.pageof_revival": "Страница книги смерти",
       "key.deathnote.manifestation_bind": "Manifestation Skill",
       "gui.deathnote.levitation_gui.button_priniat": "Принять",
       "gui.deathnote.intangibility_gui.label_1_siekunda_polieta_03_siekundy": "+10% шанс игнорировать",
@@ -4179,13 +5110,14 @@
       "gui.deathnote.revival_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы перестаете вести",
       "gui.deathnote.teleport_gui.label_siekundy_otkata": "-0.3 секунды отката.",
       "gui.deathnote.teleport_gui.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
-      "gui.deathnote.manifestation_task_dop.label_siest_ghniluiu_plot": "- Принесите 10 осколков душ",
+      "gui.deathnote.manifestation_task_dop.label_siest_ghniluiu_plot": "- Преподнести на алтарь 10 осколков душ",
       "gui.deathnote.vengeful_spirit_gui.label_ubil1": "убил.",
       "item.deathnote.cursed_ghost_spawn_egg": "Cursed Ghost Spawn Egg",
       "gui.deathnote.soul_split.label_1_siekunda_otkata_2_urona": "длительности двойников,",
       "gui.deathnote.revival_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
       "gui.deathnote.soul_split.label_prokachka_1_ied_sytosti_v_minutu": "Прокачка:",
       "gui.deathnote.soul_split.label_tvoi_gholod_vospolniaietsia_sam_1": "+ Вы можете создать",
+      "gui.deathnote.vengeful_spirit_task_extra.label_zadacha_miertvietskii_gholod_sies": "Задача [Могильный дар]",
       "gui.deathnote.soul_split.label_kak_otkryt_zadacha_miertvietskii": "Задача [Раздробить душу] - Принести 1",
       "gui.deathnote.manifestation_gui.label_luchaietie_uron_v_razmie": "получаете урон в раз-",
       "gui.deathnote.manifestation_gui.label_5": "/ 3",
@@ -4198,7 +5130,7 @@
       "gui.deathnote.revival_gui.label_5": "/ 3",
       "gui.deathnote.vengeful_spirit_gui.button_priniat": "Принять",
       "gui.deathnote.obsession_gui.label_budut_atakovat_mobov": "-мому вами урону.",
-      "gui.deathnote.teleport_task.label_siest_ghniluiu_plot": "- Добыть 1 эндер жемчуг",
+      "gui.deathnote.teleport_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 1 эндер жемчуг",
       "gui.deathnote.magnetokinesis_gui.label_1_zhielieznuiu_kirku": "1 железную кирку.",
       "gui.deathnote.obsession_gui.label_10_k_uronu": "+10% к урону.",
       "gui.deathnote.intangibility_gui.label_na_niekotoroie_vriemia": "-руете урон.",
@@ -4274,7 +5206,7 @@
       "gui.deathnote.manifestation_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- При использовании",
       "gui.deathnote.manifestation_gui.label_lomat_bloki": "этой способности вы",
       "gui.deathnote.vengeful_spirit_gui.label_v_zavisimosti_ot_moba_kotoryi_va": "бесконечный эффект",
-      "gui.deathnote.revival_task.label_siest_ghniluiu_plot": "- Принести духу яйцо дракона",
+      "gui.deathnote.revival_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь яйцо дракона",
       "gui.deathnote.magnetokinesis_gui.label_zhielieznoi_rudoi": "рудой.",
       "gui.deathnote.ghostly_hunger_gui.label_kak_otkryt_zadacha_miertvietskii": "Задача [Мертвецкий голод]",
       "gui.deathnote.incorporeality_gui.label_10_k_skorosti": "+10% к скорости пере-",
@@ -4284,9 +5216,9 @@
       "gui.deathnote.intangibility_gui.label_tvoi_gholod_vospolniaietsia_sam_1": "+ С шансом 50% игнори-",
       "gui.deathnote.manifestation_task_dop.label_zadacha_miertvietskii_gholod_sies": "Задача [Автопортрет]",
       "gui.deathnote.revival_task.label_v_zabroshiennom_pomiestie": "в заброшенном поместье",
-      "gui.deathnote.vengeful_spirit_final_task.label_siest_ghniluiu_plot": "- Добыть 16 костей и 16 гнилой плоти",
+      "gui.deathnote.vengeful_spirit_final_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь страницу",
       "gui.deathnote.incorporeality_gui.button_priniat": "Принять",
-      "gui.deathnote.obsession_task.label_siest_ghniluiu_plot": "- Принести 1 алмазный меч",
+      "gui.deathnote.obsession_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 1 алмазный меч",
       "gui.deathnote.revival_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Дар духа]",
       "gui.deathnote.magnetokinesis_gui.label_5_ruda_1_siekunda_kd": "Больше руды, -1 секу-",
       "gui.deathnote.skillls.tooltip_biestieliesnost": "Бестелесность",
@@ -4309,12 +5241,12 @@
       "subtitles.ghost_living_sound": "",
       "gui.deathnote.revival_gui.label_luchaietie_uron_v_razmie": "-лучаете урон в  разме-",
       "key.deathnote.soul_split_bind": "Soul Split Skill",
-      "gui.deathnote.intangibility_task.label_siest_ghniluiu_plot": "- Принести 1 мембрану фантома",
+      "gui.deathnote.intangibility_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 1 мембрану фантома",
       "gui.deathnote.ghostly_hunger_gui.label_3": "/ 3",
       "gui.deathnote.soul_split.label_atakovat_mobov": "-дут атаковать мобов.",
       "gui.deathnote.incorporeality_gui.label_skorosti_pieriedvizhieniia": "-рости передвижения.",
-      "gui.deathnote.soul_split_task.label_siest_ghniluiu_plot": "- Принести 1 наковальню",
-      "gui.deathnote.incorporeality_task.label_rudy_10_zolotoi_rudy": "руды, 10 золотой руды.",
+      "gui.deathnote.soul_split_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 1 наковальню",
+      "gui.deathnote.incorporeality_task.label_rudy_10_zolotoi_rudy": "10 железной руды, 10 золотой руды.",
       "gui.deathnote.incorporeality_gui.button_empty1": "-",
       "gui.deathnote.intangibility_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Фантомизация]",
       "gui.deathnote.incorporeality_gui.label_broniu": "броню.",
@@ -4323,7 +5255,7 @@
       "gui.deathnote.magnetokinesis_gui.label_riadom_s_vami": "-дом с вами становится",
       "gui.deathnote.incorporeality_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Сокровище мертвеца]",
       "gui.deathnote.skillls.tooltip_nieosiazaiemost": "Неосязаемость",
-      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Найти Могильщика на Кладбище",
+      "gui.deathnote.vengeful_spirit_task.label_siest_ghniluiu_plot": "- Найти Могильщика на кладбище",
       "gui.deathnote.ghostly_hunger_gui.label_gholod": "голод.",
       "gui.deathnote.incorporeality_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы не можете носить",
       "gui.deathnote.skillls.tooltip_rasshchieplieniie_dushi": "Расщепление души",
@@ -4337,12 +5269,13 @@
       "gui.deathnote.soul_split.button_priniat": "Принять",
       "gui.deathnote.manifestation_task.label_zadacha_miertvietskii_gholod_sies": "Задача [Автопортрет]",
       "item.deathnote.soul_shard": "Осколок Души",
+      "gui.deathnote.vengeful_spirit_task_extra.label_siest_ghniluiu_plot": "- Поговорить с Могильщиком",
       "gui.deathnote.intangibility_gui.label_uron": "урон.",
       "gui.deathnote.skillls.tooltip_voskrieshieniie": "Воскрешение",
       "gui.deathnote.skillls.tooltip_maghnitokiniez": "Магнитокинез",
       "key.deathnote.magnetokinesis_skill": "Magnetokinesis Skill",
       "gui.deathnote.incorporeality_gui.button_empty": "+",
-      "gui.deathnote.levitation_task.label_siest_ghniluiu_plot": "- Принести 1 перо",
+      "gui.deathnote.levitation_task.label_siest_ghniluiu_plot": "- Преподнести на алтарь 1 перо",
       "gui.deathnote.vengeful_spirit_gui.button_empty": "+",
       "gui.deathnote.obsession_gui.label_bonus_50_k_nanosimomu": "бонус  +50% к наноси-",
       "gui.deathnote.intangibility_gui.label_ieda_bolshie_nie_vospolniaiet_tiebie": "- Вы больше не можете",
@@ -4401,6 +5334,18 @@
       },
       {
         "name": "Diologs",
+        "children": []
+      },
+      {
+        "name": "ShowDeclineButton",
+        "children": []
+      },
+      {
+        "name": "OnDeclineButtonClick",
+        "children": []
+      },
+      {
+        "name": "Commands",
         "children": []
       }
     ]

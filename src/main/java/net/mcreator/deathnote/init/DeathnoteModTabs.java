@@ -23,6 +23,7 @@ public class DeathnoteModTabs {
 				tabData.accept(DeathnoteModBlocks.ALTAR.get().asItem());
 				tabData.accept(DeathnoteModItems.SOUL_SHARD.get());
 				tabData.accept(DeathnoteModItems.CURSED_GHOST_SPAWN_EGG.get());
+				tabData.accept(DeathnoteModItems.PAGEOF_REVIVAL.get());
 			})
 
 					.build());

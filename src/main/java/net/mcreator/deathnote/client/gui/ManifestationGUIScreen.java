@@ -10,6 +10,7 @@ import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.deathnote.world.inventory.ManifestationGUIMenu;
+import net.mcreator.deathnote.procedures.ShowManifestationDeclineProcedure;
 import net.mcreator.deathnote.procedures.ShowManifestationButtonProcedure;
 import net.mcreator.deathnote.procedures.OutPutProcedure;
 import net.mcreator.deathnote.procedures.ManifestationLevelOutPutProcedure;
@@ -28,6 +29,7 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 	ImageButton imagebutton_plus_1;
 	ImageButton imagebutton_minus_1;
 	ImageButton imagebutton_accept2;
+	ImageButton imagebutton_dismiss;
 
 	public ManifestationGUIScreen(ManifestationGUIMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -134,5 +136,19 @@ public class ManifestationGUIScreen extends AbstractContainerScreen<Manifestatio
 		};
 		guistate.put("button:imagebutton_accept2", imagebutton_accept2);
 		this.addRenderableWidget(imagebutton_accept2);
+		imagebutton_dismiss = new ImageButton(this.leftPos + 51, this.topPos + 160, 73, 21, 0, 0, 21, new ResourceLocation("deathnote:textures/screens/atlas/imagebutton_dismiss.png"), 73, 42, e -> {
+			if (ShowManifestationDeclineProcedure.execute(entity)) {
+				DeathnoteMod.PACKET_HANDLER.sendToServer(new ManifestationGUIButtonMessage(3, x, y, z));
+				ManifestationGUIButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (ShowManifestationDeclineProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_dismiss", imagebutton_dismiss);
+		this.addRenderableWidget(imagebutton_dismiss);
 	}
 }

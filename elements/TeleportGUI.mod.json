@@ -251,6 +251,22 @@
           "x": 87,
           "y": 161
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "TeleportDecline"
+          },
+          "displayCondition": {
+            "name": "ShowTeleportDecline"
+          },
+          "x": 177,
+          "y": 197
+        }
       }
     ],
     "gridSettings": {

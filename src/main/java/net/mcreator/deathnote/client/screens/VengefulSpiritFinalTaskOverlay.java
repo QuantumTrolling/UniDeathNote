@@ -36,7 +36,7 @@ public class VengefulSpiritFinalTaskOverlay {
 			z = entity.getZ();
 		}
 		if (ShowVengefulSpiritFinalTaskProcedure.execute(entity)) {
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_final_task.label_zadacha_miertvietskii_gholod_sies"), posX + -225, posY + -112, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_final_task.label_zadacha_miertvietskii_gholod_sies"), posX + -234, posY + -112, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_final_task.label_siest_ghniluiu_plot"), posX + -234, posY + -103, -1, false);
 		}
 	}

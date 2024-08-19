@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.MagnetokinesisGUIMenu;
 import net.mcreator.deathnote.procedures.MagnetokinesisProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisPowerUpProcedure;
 import net.mcreator.deathnote.procedures.MagnetokinesisLoweringProcedure;
+import net.mcreator.deathnote.procedures.MagnetokinesisDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class MagnetokinesisGUIButtonMessage {
 		if (buttonID == 2) {
 
 			MagnetokinesisProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			MagnetokinesisDeclineProcedure.execute(entity);
 		}
 	}
 

@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.LevitationGUIMenu;
 import net.mcreator.deathnote.procedures.LevitationProcedure;
 import net.mcreator.deathnote.procedures.LevitationPowerUpProcedure;
 import net.mcreator.deathnote.procedures.LevitationLoweringProcedure;
+import net.mcreator.deathnote.procedures.LevitationDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class LevitationGUIButtonMessage {
 		if (buttonID == 2) {
 
 			LevitationProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			LevitationDeclineProcedure.execute(entity);
 		}
 	}
 

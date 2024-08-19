@@ -12,6 +12,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.gui.screens.Screen;
 
 import net.mcreator.deathnote.world.inventory.SkilllsMenu;
 
@@ -21,7 +22,7 @@ public class BookOfDeathRightclickedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof Player _plr0 && _plr0.containerMenu instanceof SkilllsMenu)) {
+		if (!(entity instanceof Player _plr0 && _plr0.containerMenu instanceof SkilllsMenu) && !Screen.hasShiftDown()) {
 			{
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
@@ -38,9 +39,6 @@ public class BookOfDeathRightclickedProcedure {
 					}, _bpos);
 				}
 			}
-		} else {
-			if (entity instanceof Player _player)
-				_player.closeContainer();
 		}
 	}
 }

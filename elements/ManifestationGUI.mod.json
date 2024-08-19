@@ -281,6 +281,22 @@
           "x": 78,
           "y": 170
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_dismiss",
+          "image": "dismiss.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ManifestationDecline"
+          },
+          "displayCondition": {
+            "name": "ShowManifestationDecline"
+          },
+          "x": 177,
+          "y": 197
+        }
       }
     ],
     "gridSettings": {

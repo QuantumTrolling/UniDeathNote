@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.VengefulSpiritGUIMenu;
 import net.mcreator.deathnote.procedures.VengefulSpiritProcedure;
 import net.mcreator.deathnote.procedures.VengefulSpiritPowerUpProcedure;
 import net.mcreator.deathnote.procedures.VengefulSpiritLoweringProcedure;
+import net.mcreator.deathnote.procedures.VengefulSpiritDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class VengefulSpiritGUIButtonMessage {
 		if (buttonID == 2) {
 
 			VengefulSpiritProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			VengefulSpiritDeclineProcedure.execute(entity);
 		}
 	}
 

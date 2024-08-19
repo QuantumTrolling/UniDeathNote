@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.IntangibilityGUIMenu;
 import net.mcreator.deathnote.procedures.IntangibilityProcedure;
 import net.mcreator.deathnote.procedures.IntangibilityPowerUpProcedure;
 import net.mcreator.deathnote.procedures.IntangibilityLoweringProcedure;
+import net.mcreator.deathnote.procedures.IntangibilityDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class IntangibilityGUIButtonMessage {
 		if (buttonID == 2) {
 
 			IntangibilityProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			IntangibilityDeclineProcedure.execute(entity);
 		}
 	}
 

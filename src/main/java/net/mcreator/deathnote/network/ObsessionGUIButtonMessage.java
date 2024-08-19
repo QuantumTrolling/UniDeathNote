@@ -15,6 +15,7 @@ import net.mcreator.deathnote.world.inventory.ObsessionGUIMenu;
 import net.mcreator.deathnote.procedures.ObsessionProcedure;
 import net.mcreator.deathnote.procedures.ObsessionPowerUpProcedure;
 import net.mcreator.deathnote.procedures.ObsessionLoweringProcedure;
+import net.mcreator.deathnote.procedures.ObsessionDeclineProcedure;
 import net.mcreator.deathnote.DeathnoteMod;
 
 import java.util.function.Supplier;
@@ -75,6 +76,10 @@ public class ObsessionGUIButtonMessage {
 		if (buttonID == 2) {
 
 			ObsessionProcedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			ObsessionDeclineProcedure.execute(entity);
 		}
 	}
 
