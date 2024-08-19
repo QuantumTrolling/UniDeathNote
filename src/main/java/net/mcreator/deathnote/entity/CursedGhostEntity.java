@@ -64,6 +64,7 @@ public class CursedGhostEntity extends Monster {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+		this.getNavigation().getNodeEvaluator().setCanOpenDoors(true);
 		this.goalSelector.addGoal(1, new Goal() {
 			{
 				this.setFlags(EnumSet.of(Goal.Flag.MOVE));
@@ -119,9 +120,9 @@ public class CursedGhostEntity extends Monster {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
-		this.targetSelector.addGoal(6, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.targetSelector.addGoal(6, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
 	}
 
 	@Override
@@ -174,7 +175,7 @@ public class CursedGhostEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 70);
+		builder = builder.add(Attributes.MAX_HEALTH, 85);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 40);

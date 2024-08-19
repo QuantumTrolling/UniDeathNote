@@ -36,8 +36,8 @@ public class VengefulSpiritTask2Overlay {
 			z = entity.getZ();
 		}
 		if (ShowVengefulSpiritTaskDopProcedure.execute(entity)) {
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_task_2.label_zadacha_miertvietskii_gholod_sies"), posX + -225, posY + -112, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot"), posX + -234, posY + -103, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_task_2.label_zadacha_miertvietskii_gholod_sies"), posX + -234, posY + -121, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.deathnote.vengeful_spirit_task_2.label_siest_ghniluiu_plot"), posX + -234, posY + -112, -1, false);
 		}
 	}
 }

@@ -30,7 +30,7 @@
         "data": {
           "name": "label_tvoi_gholod_vospolniaietsia_sam_1",
           "text": {
-            "fixedValue": "+ Твой голод восполня-"
+            "fixedValue": "+ Ваш голод восполня-"
           },
           "color": {
             "value": -16764109,
@@ -90,7 +90,7 @@
         "data": {
           "name": "label_vospolniaiet_tiebie_gholod",
           "text": {
-            "fixedValue": "-няет тебе голод."
+            "fixedValue": "-няет вам голод."
           },
           "color": {
             "value": -16764109,
