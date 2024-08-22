@@ -17,7 +17,7 @@ public class LevitationCDProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		DeathnoteMod.queueServerWork((int) (20 * (3 - (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationLevel)), () -> {
+		DeathnoteMod.queueServerWork((int) (20 * (5 - (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationLevel)), () -> {
 			{
 				boolean _setval = false;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -33,6 +33,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.deathnote.procedures.CursedGhostOnEntityTickUpdateProcedure;
 import net.mcreator.deathnote.init.DeathnoteModEntities;
 
 import java.util.EnumSet;
@@ -153,6 +154,12 @@ public class CursedGhostEntity extends Monster {
 	@Override
 	public boolean causeFallDamage(float l, float d, DamageSource source) {
 		return false;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		CursedGhostOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

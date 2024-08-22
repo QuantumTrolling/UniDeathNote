@@ -134,6 +134,7 @@ public class DeathnoteModVariables {
 			clone.GraverTaskZombies = original.GraverTaskZombies;
 			clone.GraverTaskSkeletons = original.GraverTaskSkeletons;
 			clone.PageDelivered = original.PageDelivered;
+			clone.teleported = original.teleported;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -387,6 +388,7 @@ public class DeathnoteModVariables {
 		public double GraverTaskZombies = 0;
 		public double GraverTaskSkeletons = 0;
 		public boolean PageDelivered = false;
+		public boolean teleported = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -456,6 +458,7 @@ public class DeathnoteModVariables {
 			nbt.putDouble("GraverTaskZombies", GraverTaskZombies);
 			nbt.putDouble("GraverTaskSkeletons", GraverTaskSkeletons);
 			nbt.putBoolean("PageDelivered", PageDelivered);
+			nbt.putBoolean("teleported", teleported);
 			return nbt;
 		}
 
@@ -522,6 +525,7 @@ public class DeathnoteModVariables {
 			GraverTaskZombies = nbt.getDouble("GraverTaskZombies");
 			GraverTaskSkeletons = nbt.getDouble("GraverTaskSkeletons");
 			PageDelivered = nbt.getBoolean("PageDelivered");
+			teleported = nbt.getBoolean("teleported");
 		}
 	}
 
@@ -607,6 +611,7 @@ public class DeathnoteModVariables {
 					variables.GraverTaskZombies = message.data.GraverTaskZombies;
 					variables.GraverTaskSkeletons = message.data.GraverTaskSkeletons;
 					variables.PageDelivered = message.data.PageDelivered;
+					variables.teleported = message.data.teleported;
 				}
 			});
 			context.setPacketHandled(true);

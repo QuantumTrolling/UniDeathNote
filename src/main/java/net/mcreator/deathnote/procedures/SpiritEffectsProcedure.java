@@ -11,6 +11,7 @@ import net.minecraft.world.entity.monster.Spider;
 import net.minecraft.world.entity.monster.Skeleton;
 import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.monster.Drowned;
+import net.minecraft.world.entity.monster.Creeper;
 import net.minecraft.world.entity.monster.Blaze;
 import net.minecraft.world.entity.Entity;
 
@@ -78,6 +79,14 @@ public class SpiritEffectsProcedure {
 			} else if (sourceentity instanceof Zombie) {
 				{
 					double _setval = 1;
+					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.NimberofEffect = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if (sourceentity instanceof Creeper) {
+				{
+					double _setval = 7;
 					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.NimberofEffect = _setval;
 						capability.syncPlayerVariables(entity);
