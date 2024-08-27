@@ -38,13 +38,6 @@ public class TeleportToPointProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 							("execute in minecraft:the_end run tp @a " + 10 + " " + 70 + " " + 10));
-				{
-					boolean _setval = true;
-					entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.teleported = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 				AfterSpiritusProcedure.execute(world);
 			}
 		}

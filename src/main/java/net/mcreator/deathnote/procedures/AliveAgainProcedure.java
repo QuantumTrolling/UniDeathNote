@@ -97,6 +97,13 @@ public class AliveAgainProcedure {
 				});
 			}
 			{
+				boolean _setval = true;
+				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.teleported = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
 				double _setval = 0;
 				entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.foodLevel = _setval;

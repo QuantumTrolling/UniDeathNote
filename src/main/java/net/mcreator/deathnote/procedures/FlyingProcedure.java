@@ -35,7 +35,8 @@ public class FlyingProcedure {
 			}
 			DeathnoteMod.queueServerWork((int) (20 * (3 + (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationLevel)), () -> {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 60, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING,
+							(int) (60 + 10 * (entity.getCapability(DeathnoteModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new DeathnoteModVariables.PlayerVariables())).LevitationLevel), 0, false, false));
 				if (entity instanceof Player _player) {
 					_player.getAbilities().flying = false;
 					_player.onUpdateAbilities();
